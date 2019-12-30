@@ -40,3 +40,7 @@ yarn-debug.log*
 *.swp
 .DS_Store
 .env*
+
+# ignore locales images
+/pieces
+/videos-gifs

@@ -6,7 +6,6 @@ class CreateWorks < ActiveRecord::Migration[5.2]
       t.string :dimensions
       t.integer :year
       t.string :image
-      t.string :upload_photo
       t.string :youtube_link
       t.string :category
       t.string :collection
