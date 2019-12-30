@@ -1,3 +1,54 @@
+<div class="container plus-navbar">
+  <div class="row justify-content-center">
+    <div class="col-xs-8 col-xs-offset-2">
+      <div class="form-post">
+        <h1>🐲 Rogeeeeeeeeeeeeeer ! 🐲</h1>
+        <p>Pour ajouter une nouvelle oeuvre , rentre les informations ci-dessous :</p>
+
+        <%= simple_form_for(@work) do |f| %>
+          <%= f.input :name, label: 'Nom', placeholder: 'Circonvolutions 17' %>
+          <%= f.input :description, label: 'Description', placeholder: 'Musée Pompidou, ou toute autre précision' %>
+          <div class="row d-flex justify-content-around">
+            <div class="col-xs-6">
+              <%= f.input :year, label: 'Année', placeholder:'2040' %>
+            </div>
+            <div class="col-xs-6">
+              <%= f.input :dimensions, label: 'Dimensions', placeholder:'Format : 150 x 150 x 18 cm' %>
+            </div>
+          </div>
+          <%= f.input :category, as: :radio_buttons, collection: Work::CATEGORIES, label: 'Categorie', wrapper: :horizontal_collection_inline %>
+          <%= f.input :collection, as: :radio_buttons, collection: Work::COLLECTIONS, label: 'Collection', wrapper: :vertical_collection_inline %>
+
+          <!-- laaaaaaaaaaa -->
+          <%= f.input :photo, as: :file %>
+          <!-- llaaaaaaa -->
+
+
+
+          <div class="button">
+            <%= f.submit "Envoyer", class: "btn btn-roger" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+
+
 <h1>bisou bisou bouyah Wouh</h1>
 
+
+
+
+
+
 <%#= cl_image_tag @work.photo.key, height: 300, width: 400, crop: :fill %>
+
+
