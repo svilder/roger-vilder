@@ -42,5 +42,5 @@ yarn-debug.log*
 .env*
 
 # ignore locales images
-/pieces
-/videos-gifs
+/pieces/*
+/videos-gifs/*
