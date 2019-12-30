@@ -1,0 +1,138 @@
+.my-cards {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-gap: 10px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+
+.my-card {
+  background-color: white;
+  border-radius: 3px;
+  box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  transition: all .5s ease-out;
+  &:hover {
+    flex-direction: column;
+    height: 200px;
+    padding: 10px 10px 0 10px;
+    .my-card-image {
+      max-width: 150px;
+      max-height: 150px;
+      margin-bottom: 5px;
+    }
+    .my-card-details {
+      display: block;
+      text-align: center;
+      font-size: 8px;
+    }
+    transform: scale(2.1);
+  }
+
+}
+
+.my-card-image {
+  max-width: 100px;
+  max-height: 100px;
+}
+
+.my-card-details {
+  display: none;
+}
+
+
+.my-cards-category {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.my-card-category {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  width: 150px;
+  height: 80px;
+  margin: 15px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  border-radius: 5px;
+  transition: transform .3s ease-in-out;
+  &:hover{
+    transform: scale(1.1);
+  }
+  a {
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.2);
+    border-radius: 5px;
+  }
+}
+
+.my-card-category > a {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.logo {
+  max-height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#all {
+  background-color: black;
+  width: 250px;
+  height: 60px;
+}
+
+#margin-bottom {
+  margin-bottom: 50px;
+}
+
+
+// Smallest device
+@media (min-width: 100px) and (max-width: 575px) {
+  .my-cards {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) {
+  .my-cards {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .my-cards {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) {
+  .my-cards {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) {
+  .my-cards {
+    grid-template-columns: repeat(8, 1fr);
+  }
+}

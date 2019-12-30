@@ -1,54 +1,34 @@
+
+
+
+
 <div class="container plus-navbar">
-  <div class="row justify-content-center">
-    <div class="col-xs-8 col-xs-offset-2">
-      <div class="form-post">
-        <h1>🐲 Rogeeeeeeeeeeeeeer ! 🐲</h1>
-        <p>Pour ajouter une nouvelle oeuvre , rentre les informations ci-dessous :</p>
-
-        <%= simple_form_for(@work) do |f| %>
-          <%= f.input :name, label: 'Nom', placeholder: 'Circonvolutions 17' %>
-          <%= f.input :description, label: 'Description', placeholder: 'Musée Pompidou, ou toute autre précision' %>
-          <div class="row d-flex justify-content-around">
-            <div class="col-xs-6">
-              <%= f.input :year, label: 'Année', placeholder:'2040' %>
-            </div>
-            <div class="col-xs-6">
-              <%= f.input :dimensions, label: 'Dimensions', placeholder:'Format : 150 x 150 x 18 cm' %>
-            </div>
-          </div>
-          <%= f.input :category, as: :radio_buttons, collection: Work::CATEGORIES, label: 'Categorie', wrapper: :horizontal_collection_inline %>
-          <%= f.input :collection, as: :radio_buttons, collection: Work::COLLECTIONS, label: 'Collection', wrapper: :vertical_collection_inline %>
-
-          <!-- laaaaaaaaaaa -->
-          <%= f.input :photo, as: :file %>
-          <!-- llaaaaaaa -->
-
-
-
-          <div class="button">
-            <%= f.submit "Envoyer", class: "btn btn-roger" %>
-          </div>
+  <div class="my-cards">
+<!--     <%= image_tag "film.gif" %> -->
+    <% @works.each do |work| %>
+      <div class="my-card">
+        <% if work.category == "Kinetics" %>
+        <div class="">
+          <%#= youtube_video work.image "https://www.youtube.com/watch?v=9PhhMhKAF2o" %>
+          <%= link_to "https://www.youtube.com/watch?v=#{work.youtube_link}", target: "_blank" do %>
+            <%= instance_image_tag work.photo, height: 150, width: 150, crop: :fill, class: "my-card-image" %>
+          <% end %>
+          <!-- <p>videoooo</p> -->
+        </div>
+        <% else %>
+          <!-- <div class=""> -->
+          <%= instance_image_tag work.photo, height: 150, width: 150, crop: :fill, class: "my-card-image" %>
+          <!-- </div> -->
         <% end %>
+        <div class="my-card-details">
+          <p>
+            <%= work.name %><% unless work.year == "" || work.year.nil? || work.year == "." %> - <%= work.year %> <% end %>
+            <% unless work.description == "" || work.description.nil? || work.description == "." %><br><%= work.description %><% end %>
+            <br>
+            <%= work.collection %> <% unless work.dimensions == "" || work.dimensions.nil? || work.dimensions == "." %> - <%= work.dimensions %> <% end %>
+          </p>
+        </div>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>
-
-
-
-
-
-
-
-
-
-<h1>bisou bisou bouyah Wouh</h1>
-
-
-
-
-
-
-<%#= cl_image_tag @work.photo.key, height: 300, width: 400, crop: :fill %>
-
-
