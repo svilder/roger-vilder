@@ -1,35 +1,76 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <%= link_to "#", class: "navbar-brand" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+<nav class="navbar navbar-expand-md navbar-light fixed-top navbar-lewagon">
+  <div class="container-fluid">
+    <%= link_to "/", class: "navbar-brand" do %>
+      <%= image_tag "logo.png" %>
+      <% end %>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <% if current_page?('/works')%>
+      <div class="navbar-works collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <%= link_to t('index.kinetic'), 'works?collection=Kinetic', class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to t('index.sculptur'), 'works?collection=Sculptur', class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to t('index.drawing'), 'works?collection=Drawing', class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to t('index.photo'), 'works?collection=Photo', class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to t('index.animation'), 'works?collection=Animation', class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to t('index.video'), 'works?collection=Video', class: "nav-link" %>
+            </li>
+          </ul>
+      </div>
     <% end %>
 
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
+    <% if current_page?('/contact')%>
+      <div class="navbar-contact collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a href="#contact" class="nav-link"><%= t('contact.titles.contact') %></a>
+            </li>
+            <li class="nav-item">
+              <a href="#biography" class="nav-link"><%= t('contact.titles.bio') %></a>
+            </li>
+            <li class="nav-item">
+              <a href="#texts" class="nav-link"><%= t('contact.titles.texts') %></a>
+            </li>
+          </ul>
+      </div>
+    <% end %>
 
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item">
+          <%= link_to t('navbar.work'), 'works?collection=Kinetic', class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
+          <%= link_to t('navbar.contact'), contact_path, class: "nav-link" %>
         </li>
-        <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-      <% end %>
-    </ul>
+       <!--  <li class="nav-item"> -->
+          <%# if I18n.locale == :fr %>
+            <%#= link_to "🇬🇧", { :locale=>'en' }, class: "nav-link" %>
+          <%# else %>
+            <%#= link_to "🇫🇷", { :locale=>'fr' }, class: "nav-link" %>
+          <%# end %>
+        <!-- </li> -->
+        <% if user_signed_in? %>
+          <li class="nav-item">
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
   </div>
-</div>
+</nav>
+

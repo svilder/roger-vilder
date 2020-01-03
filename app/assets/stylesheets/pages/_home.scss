@@ -1,1 +1,69 @@
-// Specific CSS for your home-page
+.links a {
+  text-decoration: none;
+  color: white;
+}
+
+.links a:hover {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  // background: black;
+}
+
+.home-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: black;
+  height: 100vh;
+  margin: 0;
+  text-align: center;
+  h1 {
+    transition: all 1s ease-in-out;
+  }
+  h1:hover {
+    // font-weight: bolder;
+    transform: scale(1.2);
+    // border: 2px #F0F465 solid;
+    // box-shadow: 0 0 17px red;
+    // -webkit-text-stroke: 1px #EB2000;
+    // color: #E4D601;
+    // text-shadow: 0 0 10px white;
+  }
+}
+
+.interface-user {
+  display: flex;
+  justify-content: center;
+  padding: 0 15px;
+}
+
+
+@include media-breakpoint-only(xs) {
+  .home-text img{
+    max-height: 200px;
+  }
+}
+@include media-breakpoint-only(sm) {
+  .home-text img{
+    max-height: 300px;
+  }
+}
+@include media-breakpoint-only(md) {
+  .home-text img{
+    max-height: 300px;
+  }
+}
+@include media-breakpoint-only(lg) {
+  .home-text img{
+    max-height: 400px;
+  }
+}
+@include media-breakpoint-only(xl) {
+  .home-text img{
+    max-height: 400px;
+  }
+}
