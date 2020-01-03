@@ -1,6 +1,6 @@
 .my-cards {
   display: grid;
-  grid-template-columns: repeat(8, 1fr);
+  grid-template-columns: repeat(6, 1fr);
   grid-gap: 10px;
   justify-content: center;
   margin-bottom: 50px;
@@ -14,34 +14,21 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 120px;
+  flex-direction: column;
+  height: 200px;
   transition: all .5s ease-out;
-  &:hover {
-    flex-direction: column;
-    height: 200px;
-    padding: 10px 10px 0 10px;
-    .my-card-image {
-      max-width: 150px;
-      max-height: 150px;
-      margin-bottom: 5px;
-    }
-    .my-card-details {
-      display: block;
-      text-align: center;
-      font-size: 8px;
-    }
-    transform: scale(2.1);
-  }
-
+  padding: 10px 10px 0 10px;
 }
 
 .my-card-image {
   max-width: 100px;
   max-height: 100px;
+  margin: 8px 0;
 }
 
 .my-card-details {
-  display: none;
+  text-align: center;
+  font-size: 10px;
 }
 
 
@@ -105,34 +92,34 @@
 // Smallest device
 @media (min-width: 100px) and (max-width: 575px) {
   .my-cards {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px) {
   .my-cards {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px) {
   .my-cards {
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .my-cards {
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
 // Extra large devices (large desktops, 1200px and up)
 @media (min-width: 1200px) {
   .my-cards {
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: repeat(6, 1fr);
   }
 }
