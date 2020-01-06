@@ -1,4 +1,14 @@
 en:
+  navbar:
+    all: "All pieces"
+    animation: "Animations"
+    drawing: "Drawings"
+    kinetic: "Kinetics"
+    photo: "Photos"
+    sculptur: "Sculpturs"
+    video: "Videos"
+    contact: "Contact"
+    work: "Work"
   contact:
     bib-details_html: 'Claude Guibert «Chronicles of the black hat», 2016 The art
       in sharing<br> Stephane Cerri, MidiLibre 5/01/2016<br> Catalogue ROGER VILDER,
@@ -436,18 +446,6 @@ en:
   home:
     catchphrase: "«Since potentially everything exists, creating is discovering and
       making visible or manifest what is latent»"
-  index:
-    all: All pieces
-    animation: Animations
-    drawing: Drawings
-    kinetic: Kinetics
-    photo: Photos
-    sculptur: Sculpturs
-    video: Videos
-  navbar:
-    contact: Contact
-    work: Work
-# en rails i18n
   activerecord:
     errors:
       messages:

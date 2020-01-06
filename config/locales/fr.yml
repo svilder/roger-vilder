@@ -1,5 +1,15 @@
 ---
 fr:
+  navbar:
+    all: "Toutes les pièces"
+    animation: "Animations"
+    drawing: "Dessins"
+    kinetic: "Cinétiques"
+    photo: "Photos"
+    sculptur: "Sculptures"
+    video: "Vidéos"
+    contact: "Contact"
+    work: "Oeuvres"
   contact:
     bib-details_html: 'Claude Guibert «Chronicles of the black hat», 2016 The art
       in sharing<br> Stephane Cerri, MidiLibre 5/01/2016<br> Catalogue ROGER VILDER,
@@ -405,18 +415,6 @@ fr:
   home:
     catchphrase: "«Dans la mesure où jamais le changement n'arrête son perpetuel devenir,
       tout existe perpétuellement, immuable dans le cycle du temps...»"
-  index:
-    all: Toutes les pièces
-    animation: Animations
-    drawing: Dessins
-    kinetic: Cinétiques
-    photo: Photos
-    sculptur: Sculptures
-    video: Vidéos
-  navbar:
-    contact: Contact
-    work: Oeuvres
-# fr rails i18n
   activerecord:
     errors:
       messages:

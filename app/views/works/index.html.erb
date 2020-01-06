@@ -1,3 +1,4 @@
+
 <div class="container plus-navbar">
   <div class="my-cards">
 <!--     <%= image_tag "film.gif" %> -->
@@ -5,6 +6,7 @@
       <div class="my-card">
         <% if work.category == "Kinetics" %>
         <div class="">
+
           <%#= youtube_video work.image "https://www.youtube.com/watch?v=9PhhMhKAF2o" %>
           <%= link_to "https://www.youtube.com/watch?v=#{work.youtube_link}", target: "_blank" do %>
             <%= instance_image_tag work.photo, height: 150, width: 150, crop: :fill, class: "my-card-image" %>
