@@ -1,76 +1,59 @@
-<nav class="navbar navbar-expand-md navbar-light fixed-top navbar-lewagon">
-  <div class="container-fluid">
-    <%= link_to "/", class: "navbar-brand" do %>
-      <%= image_tag "logo.png" %>
+<div class="container-fluid">
+  <div class="navbar-rv">
+    <div class="navbar-logo">
+      <%= link_to "/", class: "navbar-brand" do %>
+        <%= image_tag "logo.png", width: 50 %>
       <% end %>
-
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <% if current_page?('/works')%>
-      <div class="navbar-works collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <%= link_to t('index.kinetic'), 'works?collection=Kinetic', class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to t('index.sculptur'), 'works?collection=Sculptur', class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to t('index.drawing'), 'works?collection=Drawing', class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to t('index.photo'), 'works?collection=Photo', class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to t('index.animation'), 'works?collection=Animation', class: "nav-link" %>
-            </li>
-            <li class="nav-item">
-              <%= link_to t('index.video'), 'works?collection=Video', class: "nav-link" %>
-            </li>
-          </ul>
+    </div>
+    <% if  current_page?(controller: 'works')%>
+      <div class="navbar-categories">
+        <div class="navbar-item">
+          <%= link_to t("navbar.kinetic"), 'works?collection=Kinetic'%>
+        </div>
+        <div class="navbar-item">
+          <%= link_to t('navbar.sculptur'), 'works?collection=Sculptur'%>
+        </div>
+        <div class="navbar-item">
+          <%= link_to t('navbar.drawing'), 'works?collection=Drawing'%>
+        </div>
+        <div class="navbar-item">
+          <%= link_to t('navbar.photo'), 'works?collection=Photo'%>
+        </div>
+        <div class="navbar-item">
+          <%= link_to t('navbar.animation'), 'works?collection=Animation'%>
+        </div>
+        <div class="navbar-item">
+          <%= link_to t('navbar.video'), 'works?collection=Video'%>
+        </div>
+      </div>
+    <% else %>
+      <div class="navbar-categories">
+        <div class="navbar-item">
+          <%= link_to t('contact.titles.contact') , contact_path  %>
+        </div>
+        <div class="navbar-item">
+          <%= link_to t('contact.titles.bio') , contact_path  %>
+        </div>
+        <div class="navbar-item">
+          <%= link_to t('contact.titles.texts'), contact_path %>
+        </div>
       </div>
     <% end %>
-
-    <% if current_page?('/contact')%>
-      <div class="navbar-contact collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a href="#contact" class="nav-link"><%= t('contact.titles.contact') %></a>
-            </li>
-            <li class="nav-item">
-              <a href="#biography" class="nav-link"><%= t('contact.titles.bio') %></a>
-            </li>
-            <li class="nav-item">
-              <a href="#texts" class="nav-link"><%= t('contact.titles.texts') %></a>
-            </li>
-          </ul>
+    <div class="navbar-about">
+      <div class="navbar-item">
+        <%= link_to t('navbar.work'), 'works?collection=Kinetic'%>
       </div>
-    <% end %>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item">
-          <%= link_to t('navbar.work'), 'works?collection=Kinetic', class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to t('navbar.contact'), contact_path, class: "nav-link" %>
-        </li>
-       <!--  <li class="nav-item"> -->
-          <%# if I18n.locale == :fr %>
-            <%#= link_to "🇬🇧", { :locale=>'en' }, class: "nav-link" %>
-          <%# else %>
-            <%#= link_to "🇫🇷", { :locale=>'fr' }, class: "nav-link" %>
-          <%# end %>
-        <!-- </li> -->
-        <% if user_signed_in? %>
-          <li class="nav-item">
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "nav-link" %>
-          </li>
+      <div class="navbar-item">
+        <%= link_to t('navbar.contact'), contact_path %>
+      </div>
+      <div class="navbar-item">
+        <% if I18n.locale == :fr %>
+          <%= link_to "🇬🇧", { :locale=>'en' } %>
+        <% else %>
+          <%= link_to "🇫🇷", { :locale=>'fr' }%>
         <% end %>
-      </ul>
+      </div>
     </div>
   </div>
-</nav>
+</div>
 
