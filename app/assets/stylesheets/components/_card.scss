@@ -6,7 +6,6 @@
   margin-bottom: 50px;
 }
 
-
 .my-card {
   background-color: white;
   border-radius: 3px;
@@ -16,8 +15,9 @@
   align-items: center;
   flex-direction: column;
   height: 200px;
+  width: 180px;
   transition: all .5s ease-out;
-  padding: 10px 10px 0 10px;
+  padding: 16px;
 }
 
 .my-card-image {
@@ -28,7 +28,11 @@
 
 .my-card-details {
   text-align: center;
-  font-size: 10px;
+  font-size: small;
+  overflow: scroll;
+  p {
+    margin: 0;
+  }
 }
 
 

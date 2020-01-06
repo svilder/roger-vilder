@@ -18,7 +18,7 @@
         <% end %>
         <div class="my-card-details">
           <p>
-            <%= work.name %><% unless work.year == "" || work.year.nil? || work.year == "." %> - <%= work.year %> <% end %>
+            <%= work.name %><% unless work.year == "" || work.year.nil? || work.year == "."  %> - <%= work.year %> <% end %>
             <% unless work.description == "" || work.description.nil? || work.description == "." %><br><%= work.description %><% end %>
             <br>
             <%= work.collection %> <% unless work.dimensions == "" || work.dimensions.nil? || work.dimensions == "." %> - <%= work.dimensions %> <% end %>

@@ -1,5 +1,5 @@
 ActiveAdmin.register Work do
-  config.per_page = 15
+  config.per_page = 8
   menu label: "Toutes les pièces"
   menu priority: 1
   # config.filters = false
