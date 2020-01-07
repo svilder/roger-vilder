@@ -5,7 +5,7 @@
         <%= image_tag "logo.png", width: 50 %>
       <% end %>
     </div>
-    <% if  current_page?(controller: 'works')%>
+    <% if request.path.match(/works/) %>
       <div class="navbar-categories">
         <div class="navbar-item">
           <%= link_to t("navbar.kinetic"), 'works?collection=Kinetic'%>
