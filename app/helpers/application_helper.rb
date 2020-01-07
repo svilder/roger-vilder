@@ -5,5 +5,10 @@ module ApplicationHelper
     else
       image_tag "no-picture.png", options
     end
+    # if cloud_image
+      # cl_image_tag cloud_image, options
+    # else
+      # cl_image_tag photo.key, options
+    # end
   end
 end

@@ -1,6 +1,6 @@
+
 <div class="container plus-navbar">
   <div class="my-cards">
-<!--     <%= image_tag "film.gif" %> -->
     <% @works.each do |work| %>
       <div class="my-card">
         <% if work.category == "Kinetics" %>
@@ -9,12 +9,9 @@
           <%= link_to "https://www.youtube.com/watch?v=#{work.youtube_link}", target: "_blank" do %>
             <%= instance_image_tag work.photo, height: 150, width: 150, crop: :fill, class: "my-card-image" %>
           <% end %>
-          <!-- <p>videoooo</p> -->
         </div>
         <% else %>
-          <!-- <div class=""> -->
           <%= instance_image_tag work.photo, height: 150, width: 150, crop: :fill, class: "my-card-image" %>
-          <!-- </div> -->
         <% end %>
         <div class="my-card-details">
           <p>
