@@ -30,7 +30,7 @@ csv.each do |row|
 end
 puts "Now, there are #{Work.count} saved via seed in tha Database"
 
-if Rails.env.production?
+if Rails.env.development?
   works = Work.all
   works.each do |work|
     picture = Cloudinary::Uploader.upload("#{work.image}")
