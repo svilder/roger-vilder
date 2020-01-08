@@ -8,10 +8,6 @@
   color: white;
 }
 
-body {
-  // background: black;
-}
-
 .home-text {
   display: flex;
   flex-direction: column;
@@ -21,17 +17,13 @@ body {
   height: 100vh;
   margin: 0;
   text-align: center;
+
   h1 {
     transition: all 1s ease-in-out;
   }
+
   h1:hover {
-    // font-weight: bolder;
     transform: scale(1.2);
-    // border: 2px #F0F465 solid;
-    // box-shadow: 0 0 17px red;
-    // -webkit-text-stroke: 1px #EB2000;
-    // color: #E4D601;
-    // text-shadow: 0 0 10px white;
   }
 }
 
