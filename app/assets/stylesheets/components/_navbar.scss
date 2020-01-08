@@ -54,9 +54,14 @@
 }
 
 // -- Mobile version
+
 @media (max-width: 768px) {
   .navbar-about, .navbar-categories, .navbar-rv{
     display: none;
+  }
+
+  .mobile-menu-rv {
+    font-size: 32px;
   }
 
   .burger {
@@ -75,8 +80,14 @@
     }
   }
 
-.mobile-about {
-  position : fixed;
-  z-index: 5;
+  .mobile-about {
+    position : fixed;
+    z-index: 5;
+  }
 }
+
+  @media (min-width: 768px) {
+.mobile-menu-rv {
+    display: none;
+  }
 }
