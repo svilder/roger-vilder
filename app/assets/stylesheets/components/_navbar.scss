@@ -41,10 +41,11 @@
 }
 
 .navbar-item , .mobile-item{
-  padding: 0px 8px;
+  padding: 3px 8px;
 }
 
 .navbar-item:hover {
+  padding-bottom: 0px;
   border-bottom: solid 3px #e9815b;
 }
 
