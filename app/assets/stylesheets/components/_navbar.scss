@@ -11,29 +11,44 @@
 .navbar-rv {
   display: flex;
   justify-content: space-between;
-  background-color: darkgrey;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: all .50s ease;
+
+  img {
+    margin-left: 8px;
+  }
 }
+
+
 .navbar-logo {
   padding: 0;
 }
 
 .navbar-categories {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  padding-bottom: 16px;
 }
 
 
 .navbar-about {
   display: flex;
-  align-items: center;
-  margin: 8px;
+  align-items: flex-end;
+  padding-bottom: 16px;
+  margin-right: 8px;
 }
 
 .navbar-item {
-  padding: 5px 8px;
+  padding: 0px 8px;
 }
 
-.navbar-categorie:hover {
-  border-bottom: solid 1px black;
+.navbar-item:hover {
+  border-bottom: solid 3px #e9815b;
 }
 
+.navbar-hover {
+  background-color: white;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+}
