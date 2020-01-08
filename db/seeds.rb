@@ -1,13 +1,12 @@
 require 'csv'
 require 'open-uri'
 
-return if Rails.env.production?
 
 puts "start spreading the news"
 
-AdminUser.destroy_all
+AdminUser.destroy_all if Rails.env.development?
 AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
-Work.destroy_all
+Work.destroy_all if Rails.env.development?
 # for console -->
 # Work.create(name:"pulsation", description:"Musée d'art de Tokyo", dimensions:"50 x 50 x 50 cm", year:1975, image:"san_francisco.jpg", category:"Kinetics")
 
@@ -31,7 +30,7 @@ csv.each do |row|
 end
 puts "Now, there are #{Work.count} saved via seed in tha Database"
 
-if Rails.env.development?
+if Rails.env.production?
   works = Work.all
   works.each do |work|
     picture = Cloudinary::Uploader.upload("#{work.image}")
