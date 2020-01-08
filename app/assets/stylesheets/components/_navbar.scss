@@ -60,15 +60,25 @@
     display: none;
   }
 
-  .mobile-menu-rv {
-    font-size: 32px;
+  .background-mobile {
+    z-index: 4;
+    position: fixed;
+    top: 0;
+    background-color: grey;
+    height: 66vh;
+    width: 200px;
   }
 
-  .burger {
+  .mobile-menu-rv {
     position: fixed;
     left: 16px;
     top: 12px;
     z-index: 5;
+    font-size: 32px;
+  }
+
+  .burger {
+
     cursor: pointer;
 
     div {
@@ -92,3 +102,6 @@
   }
 }
 
+.inactive {
+  display: none;
+}
