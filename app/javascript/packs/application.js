@@ -1,4 +1,5 @@
 import "bootstrap";
-import { switchColorNavbar } from '../components/navbar';
+import { switchColorNavbar, hideOnClikMenu } from '../components/navbar';
 
 switchColorNavbar();
+hideOnClikMenu();
