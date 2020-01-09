@@ -21,7 +21,7 @@ const hideOnClikMenu = () => {
     background.classList.toggle("menu-active");
     about.classList.toggle("menu-active");
     burger.classList.toggle("menu-active");
-    menuItems.forEach((item) =>{
+    menuItems.forEach((item) => {
       item.classList.toggle("menu-active");
     });
   });
