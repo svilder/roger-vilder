@@ -45,4 +45,4 @@ puts "Now, there are #{Work.count} saved via seed in tha Database"
 # end
 
 
-puts "New york, neeeeew yooooooork"
+puts " Seed done"

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_30_110748) do
+ActiveRecord::Schema.define(version: 2020_01_09_124158) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -60,6 +60,37 @@ ActiveRecord::Schema.define(version: 2019_12_30_110748) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_admin_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
+  end
+
+  create_table "bibliographies", force: :cascade do |t|
+    t.string "author"
+    t.string "title"
+    t.integer "year"
+    t.string "month"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "exhibitions", force: :cascade do |t|
+    t.string "title"
+    t.string "place"
+    t.string "city"
+    t.string "category"
+    t.integer "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "associates"
+  end
+
+  create_table "texts", force: :cascade do |t|
+    t.string "title_fr"
+    t.string "title_en"
+    t.string "author"
+    t.text "content_fr"
+    t.text "content_en"
+    t.integer "year"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
