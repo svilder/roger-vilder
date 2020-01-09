@@ -2,19 +2,20 @@
   <div class="wrapper">
     <div class="my-cards">
       <% @works.each do |work| %>
-        <div class="my-card">
-          <%= instance_image_tag work.photo, height: 150, width: 150, crop: :fill, class: "my-card-image" %>
-          <div class="my-card-details">
-            <p><%= work.name %></p>
-            <p><%= work.year %></p>
+        <%#= simple_form_for work do |f| %>
+          <div class="my-card" data-work-id="<%= work.id %>">
+            <%= instance_image_tag work.photo, height: 150, width: 150, crop: :fill, class: "my-card-image" %>
+            <div class="my-card-details">
+              <p><%= work.name %></p>
+              <p><%= work.year %></p>
+            </div>
           </div>
-        </div>
+          <%#= f.submit "" %>
+        <%# end %>
       <% end %>
     </div>
 
     <div class="one-work-card">
-
-      <!-- by default show last work TO REMOVE -->
       <div class="work-card">
         <% if @work.category == "Kinetics" %>
           <div class="video">
@@ -23,21 +24,13 @@
         <% else %>
           <%= instance_image_tag @work.photo, height: 350, width: 350, crop: :fill, class: "work-card-image" %>
         <% end %>
-
         <div class="work-description">
-          <p>
-            <%= t("index.name") %> :
-            <%= @work.name %>
-          </p>
+          <p><%= t("index.name") %> : <%= @work.name %></p>
           <p><%= @work.year %></p>
           <p><%= @work.dimensions %></p>
           <p><%= @work.description %></p>
         </div>
       </div>
-
-      <!-- if click show the work details -->
-
-
     </div>
   </div>
 </div>
