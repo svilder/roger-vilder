@@ -56,4 +56,28 @@
     </div>
   </div>
 </div>
-
+<!-- -----------------Mobile version----------------- -->
+<div class="background-mobile">
+</div>
+<div class="mobile-menu-rv">
+  <div class="burger">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="mobile-about">
+    <div class="mobile-item">
+      <%= link_to t('navbar.work'), 'works?collection=Kinetic'%>
+    </div>
+    <div class="mobile-item">
+      <%= link_to t('navbar.contact'), contact_path %>
+    </div>
+    <div class="mobile-item">
+      <% if I18n.locale == :fr %>
+        <%= link_to "🇬🇧", { :locale=>'en' } %>
+      <% else %>
+        <%= link_to "🇫🇷", { :locale=>'fr' }%>
+      <% end %>
+    </div>
+  </div>
+</div>

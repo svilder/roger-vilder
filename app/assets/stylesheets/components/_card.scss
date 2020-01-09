@@ -1,15 +1,15 @@
 .my-cards {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-gap: 10px;
+  grid-gap: 16px;
   justify-content: center;
-  margin-bottom: 50px;
+  margin-bottom: 80px;
 }
 
 .my-card {
   background-color: white;
   border-radius: 3px;
-  box-shadow: 3px 3px 10px rgba(0,0,0,0.2);
+  box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
   display: flex;
   justify-content: center;
   align-items: center;
