@@ -45,4 +45,4 @@ if Rails.env.production?
 end
 
 
-puts "New york, neeeeew yooooooork"
+puts " Seed done"

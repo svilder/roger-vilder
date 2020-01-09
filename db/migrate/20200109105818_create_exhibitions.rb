@@ -1,8 +1,8 @@
-class CreateExpositions < ActiveRecord::Migration[5.2]
+class CreateExhibitions < ActiveRecord::Migration[5.2]
   def change
-    create_table :expositions do |t|
+    create_table :exhibitions do |t|
       t.string :title
-      t.string :exhibition
+      t.string :place
       t.string :city
       t.string :category
       t.integer :year

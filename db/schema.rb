@@ -71,9 +71,9 @@ ActiveRecord::Schema.define(version: 2020_01_09_124158) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "expositions", force: :cascade do |t|
+  create_table "exhibitions", force: :cascade do |t|
     t.string "title"
-    t.string "exhibition"
+    t.string "place"
     t.string "city"
     t.string "category"
     t.integer "year"
