@@ -9,4 +9,16 @@ class Work < ApplicationRecord
   # validates :name, presence: true
   # validates :year, presence: true
   # validates :dimensions, presence: true
+
+  def self.year
+    return work.year unless work.year == "" || work.year.nil? || work.year == "."
+  end
+
+  def self.description
+    return work.description unless work.description == "" || work.description.nil? || work.description == "."
+  end
+
+  def self.dimensions
+    return work.dimensions unless work.dimensions == "" || work.dimensions.nil? || work.dimensions == "."
+  end
 end

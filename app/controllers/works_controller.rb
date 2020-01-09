@@ -1,6 +1,6 @@
 class WorksController < ApplicationController
   def index
-    @work = Work.new
+    @work = Work.last
     if params[:collection].nil?
       @works = Work.all
     else

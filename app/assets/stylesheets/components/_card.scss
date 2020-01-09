@@ -43,11 +43,22 @@
   box-shadow: $box-shadow;
 }
 
-.logo {
-  max-height: 60px;
+.show-card {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 32px;
+}
+
+.show-card-image {
+  max-height: 250px;
+  max-width: 250px;
+  margin: 8px 0;
+}
+
+.work-description p {
+  margin: 0;
 }
 
 #all {
