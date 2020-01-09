@@ -30,19 +30,19 @@ csv.each do |row|
 end
 puts "Now, there are #{Work.count} saved via seed in tha Database"
 
-if Rails.env.development?
-  works = Work.all
-  works.each do |work|
-    picture = Cloudinary::Uploader.upload("#{work.image}")
-    puts "image put on Cloudinary"
-    url = URI.open(picture["secure_url"])
-    p url.class
-    work.photo.attach(io: url, filename: work.name, content_type: 'image/jpg')
-    p work.photo.attached?
-    work.save
-    puts "Now, #{work.name} should have a picture"
-  end
-end
+# if Rails.env.development?
+#   works = Work.all
+#   works.each do |work|
+#     picture = Cloudinary::Uploader.upload("#{work.image}")
+#     puts "image put on Cloudinary"
+#     url = URI.open(picture["secure_url"])
+#     p url.class
+#     work.photo.attach(io: url, filename: work.name, content_type: 'image/jpg')
+#     p work.photo.attached?
+#     work.save
+#     puts "Now, #{work.name} should have a picture"
+#   end
+# end
 
 
 puts "New york, neeeeew yooooooork"

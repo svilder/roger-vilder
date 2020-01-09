@@ -411,6 +411,11 @@ fr:
       bio: Biographie
       contact: Contact
       texts: Textes
+  index:
+    name: Nom
+    description: Précision
+    year: Année
+    dimensions: Dimensions
   hello: Hello world
   home:
     catchphrase: "«Dans la mesure où jamais le changement n'arrête son perpetuel devenir,

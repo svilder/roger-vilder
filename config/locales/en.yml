@@ -442,6 +442,11 @@ en:
       bio: Biography
       contact: Contact
       texts: Texts
+  index:
+    name: Name
+    description: Precisions
+    year: Year
+    dimensions: Dimensions
   hello: Hello world
   home:
     catchphrase: "«Since potentially everything exists, creating is discovering and

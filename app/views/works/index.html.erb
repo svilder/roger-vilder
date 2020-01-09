@@ -1,26 +1,43 @@
 <div class="container-with-navbar">
-  <div class="my-cards">
-    <% @works.each do |work| %>
-      <div class="my-card">
-        <% if work.category == "Kinetics" %>
-        <div class="">
-          <%#= youtube_video work.image "https://www.youtube.com/watch?v=9PhhMhKAF2o" %>
-          <%= link_to "https://www.youtube.com/watch?v=#{work.youtube_link}", target: "_blank" do %>
-            <%= instance_image_tag work.photo, height: 150, width: 150, crop: :fill, class: "my-card-image" %>
-          <% end %>
-        </div>
-        <% else %>
+  <div class="wrapper">
+    <div class="my-cards">
+      <% @works.each do |work| %>
+        <div class="my-card">
           <%= instance_image_tag work.photo, height: 150, width: 150, crop: :fill, class: "my-card-image" %>
+          <div class="my-card-details">
+            <p><%= work.name %></p>
+            <p><%= work.year %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
+    <div class="one-work-card">
+
+      <!-- by default show last work TO REMOVE -->
+      <div class="work-card">
+        <% if @work.category == "Kinetics" %>
+          <div class="video">
+            <%= youtube_video @work.youtube_link %>
+          </div>
+        <% else %>
+          <%= instance_image_tag @work.photo, height: 350, width: 350, crop: :fill, class: "work-card-image" %>
         <% end %>
-        <div class="my-card-details">
+
+        <div class="work-description">
           <p>
-            <%= work.name %><% unless work.year == "" || work.year.nil? || work.year == "."  %> - <%= work.year %> <% end %>
-            <% unless work.description == "" || work.description.nil? || work.description == "." %><br><%= work.description %><% end %>
-            <br>
-            <%= work.collection %> <% unless work.dimensions == "" || work.dimensions.nil? || work.dimensions == "." %> - <%= work.dimensions %> <% end %>
+            <%= t("index.name") %> :
+            <%= @work.name %>
           </p>
+          <p><%= @work.year %></p>
+          <p><%= @work.dimensions %></p>
+          <p><%= @work.description %></p>
         </div>
       </div>
-    <% end %>
+
+      <!-- if click show the work details -->
+
+
+    </div>
   </div>
 </div>
