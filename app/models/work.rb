@@ -10,6 +10,8 @@ class Work < ApplicationRecord
   # validates :year, presence: true
   # validates :dimensions, presence: true
 
+  private
+
   def self.year
     return work.year unless work.year == "" || work.year.nil? || work.year == "."
   end

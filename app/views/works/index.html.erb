@@ -1,5 +1,5 @@
 <div class="container-with-navbar">
-  <div class="container-one-third">
+  <div class="wrapper">
     <div class="my-cards">
       <% @works.each do |work| %>
         <div class="my-card">
@@ -12,16 +12,16 @@
       <% end %>
     </div>
 
-    <div class="show">
+    <div class="one-work-card">
 
-      <!-- by default show last work -->
-      <div class="show-card">
+      <!-- by default show last work TO REMOVE -->
+      <div class="work-card">
         <% if @work.category == "Kinetics" %>
-        <div class="video">
-          <%= youtube_video @work.youtube_link %>
-        </div>
+          <div class="video">
+            <%= youtube_video @work.youtube_link %>
+          </div>
         <% else %>
-          <%= instance_image_tag @work.photo, height: 350, width: 350, crop: :fill, class: "show-card-image" %>
+          <%= instance_image_tag @work.photo, height: 350, width: 350, crop: :fill, class: "work-card-image" %>
         <% end %>
 
         <div class="work-description">
@@ -29,10 +29,7 @@
             <%= t("index.name") %> :
             <%= @work.name %>
           </p>
-          <p>
-            <%= @work.year %>
-          </p>
-
+          <p><%= @work.year %></p>
           <p><%= @work.dimensions %></p>
           <p><%= @work.description %></p>
         </div>

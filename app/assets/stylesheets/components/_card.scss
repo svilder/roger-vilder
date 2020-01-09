@@ -1,3 +1,10 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: auto 500px;
+  grid-gap: 16px;
+  justify-content: center;
+}
+
 .my-cards {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -34,16 +41,16 @@
   }
 }
 
-.show {
+.one-work-card {
   background-color: white;
   height: 480px;
   position: sticky;
-  top: 70px;
+  top: 72px;
   border-radius: $border-radius;
   box-shadow: $box-shadow;
 }
 
-.show-card {
+.work-card {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -51,7 +58,7 @@
   padding: 32px;
 }
 
-.show-card-image {
+.work-card-image {
   max-height: 250px;
   max-width: 250px;
   margin: 8px 0;
