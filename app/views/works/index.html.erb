@@ -3,17 +3,7 @@
     <div class="my-cards">
       <% @works.each do |work| %>
         <div class="my-card">
-          <% if work.category == "Kinetics" %>
-          <div class="">
-            <%#= youtube_video work.image "https://www.youtube.com/watch?v=9PhhMhKAF2o" %>
-            <%= link_to "https://www.youtube.com/watch?v=#{work.youtube_link}", target: "_blank" do %>
-              <%= instance_image_tag work.photo, height: 150, width: 150, crop: :fill, class: "my-card-image" %>
-            <% end %>
-          </div>
-          <% else %>
-            <%= instance_image_tag work.photo, height: 150, width: 150, crop: :fill, class: "my-card-image" %>
-          <% end %>
-
+          <%= instance_image_tag work.photo, height: 150, width: 150, crop: :fill, class: "my-card-image" %>
           <div class="my-card-details">
             <p><%= work.name %></p>
             <p><%= work.year %></p>
@@ -27,11 +17,8 @@
       <!-- by default show last work -->
       <div class="show-card">
         <% if @work.category == "Kinetics" %>
-        <div class="work-image">
-          <%= youtube_video @work.image "https://www.youtube.com/watch?v=#{@work.youtube_link}" %>
-          <%#= link_to "https://www.youtube.com/watch?v=#{@work.youtube_link}", target: "_blank" do %>
-            <%#= instance_image_tag @work.photo, height: 350, width: 350, crop: :fill, class: "show-card-image" %>
-          <%# end %>
+        <div class="video">
+          <%= youtube_video @work.youtube_link %>
         </div>
         <% else %>
           <%= instance_image_tag @work.photo, height: 350, width: 350, crop: :fill, class: "show-card-image" %>

@@ -35,7 +35,7 @@
 }
 
 .show {
-  background-color: grey;
+  background-color: white;
   height: 480px;
   position: sticky;
   top: 70px;
@@ -54,6 +54,10 @@
 .show-card-image {
   max-height: 250px;
   max-width: 250px;
+  margin: 8px 0;
+}
+
+.video {
   margin: 8px 0;
 }
 
