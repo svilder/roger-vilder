@@ -1,4 +1,5 @@
 ActiveAdmin.register Exposition do
+
   permit_params :title, :exhibition, :city, :category, :year
 
   form title: "Exposition" do |f|

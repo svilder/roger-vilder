@@ -5,7 +5,7 @@ ActiveAdmin.register_page "Dashboard" do
 
     columns do
       column do
-        panel link_to("Toutes les pièces", admin_works_path) do
+        panel link_to("Les 5 dernières pièces", admin_works_path) do
           ul do
             Work.last(5).map do |work|
               li link_to(work.name, admin_work_path(work))
