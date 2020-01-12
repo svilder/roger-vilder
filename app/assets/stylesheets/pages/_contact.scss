@@ -1,46 +1,4 @@
-.profile-img img {
-  width: 350px;
-  height: 350px;
-  object-fit: cover;
-  object-position: right;
-}
-
-.contact-wrapper {
-  display: flex;
-}
-
-.contact-infos {
-  flex-grow: 1;
-}
-
-.mail {
-  background : grey;
-}
-
-.addresses {
-  display: flex;
-  background : grey;
-  justify-content: space-around;
-}
-
-.contact-infos {
-  background : lightgrey;
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  p {
-    margin-bottom: 8px;
-  }
-}
-
-.awards {
-
-  p {
-  font-size: 16px;
-  font-style: oblique;
-  }
+.biographie {
+  margin : 40px;
+  margin-left: 0px;
 }

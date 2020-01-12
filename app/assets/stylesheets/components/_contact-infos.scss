@@ -1,0 +1,67 @@
+.contact-wrapper {
+  display: flex;
+}
+
+.profile-img img {
+  width: 320px;
+  height: 320px;
+  border-radius: $border-radius;
+  object-fit: cover;
+  object-position: right;
+}
+
+.mail h6 {
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+.contact-infos {
+  flex-grow: 1;
+  margin-left: -40px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  p {
+    margin-bottom: 0px;
+    font-style: oblique;
+  }
+
+  span {
+    font-style: initial;
+  }
+}
+
+.addresses {
+  display: flex;
+  justify-content: center;
+
+  .address {
+    border-right: solid 1px darkslategrey;
+    padding: 0px 16px;
+  }
+
+  #canadian-address {
+    border-right: none;
+  }
+
+  #french-address {
+    text-align: end;
+  }
+}
+
+.awards {
+
+  h6 {
+    text-align: center;
+    margin: 16px 0px;
+  }
+
+  ul {
+    text-align: center;
+  }
+}
