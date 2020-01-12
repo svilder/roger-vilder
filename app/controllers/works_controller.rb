@@ -13,10 +13,10 @@ class WorksController < ApplicationController
     end
 
     if browser.device.mobile?
-      @width = 300
+      @width = 296
       @height = 200
     else
-      @width = 380
+      @width = 376
       @height = 280
     end
   end
