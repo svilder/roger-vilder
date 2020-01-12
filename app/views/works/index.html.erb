@@ -19,7 +19,7 @@
       <div class="work-card">
         <% if @work.category == "Kinetics" %>
           <div class="video">
-            <%= youtube_video @work.youtube_link, @work.year, @work.year %>
+            <%= youtube_video @work.youtube_link, @height, @width %>
           </div>
         <% else %>
           <%= instance_image_tag @work.photo, height: 350, width: 350, crop: :fill, class: "work-card-image" %>
