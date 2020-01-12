@@ -19,14 +19,16 @@
       <div class="work-card">
         <% if @work.category == "Kinetics" %>
           <div class="video">
-            <%= youtube_video @work.youtube_link, @work.year, @work.year %>
+            <%= youtube_video @work.youtube_link, @height, @width %>
           </div>
         <% else %>
           <%= instance_image_tag @work.photo, height: 350, width: 350, crop: :fill, class: "work-card-image" %>
         <% end %>
         <div class="work-description">
-          <p><%= t("index.name") %> : <%= @work.name %></p>
-          <p><%= @work.year %></p>
+          <div class="name-year">
+            <p><%= t("index.name") %> : <%= @work.name %></p>
+            <p><%= @work.year %></p>
+          </div>
           <p><%= @work.dimensions %></p>
           <p><%= @work.description %></p>
         </div>

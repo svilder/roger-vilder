@@ -11,5 +11,13 @@ class WorksController < ApplicationController
     else
       @works = Work.where(collection: params[:collection])
     end
+
+    if browser.device.mobile?
+      @width = 296
+      @height = 200
+    else
+      @width = 376
+      @height = 280
+    end
   end
 end
