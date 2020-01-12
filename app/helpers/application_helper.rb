@@ -7,7 +7,7 @@ module ApplicationHelper
     end
   end
 
-  def youtube_video(url)
-    render :partial => 'shared/video', :locals => { :url => url }
+  def youtube_video(url, height, width)
+    render :partial => 'shared/video', :locals => { :url => url, :height => height, :width => width }
   end
 end

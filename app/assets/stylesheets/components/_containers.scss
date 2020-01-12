@@ -1,3 +1,9 @@
 .container-with-navbar {
   margin: 80px 20px;
 }
+
+@media (max-width: 768px) {
+  .container-with-navbar {
+    margin: 20px 20px;
+  }
+}
