@@ -8,22 +8,22 @@
     <% if request.path.match(/works/) %>
       <div class="navbar-categories">
         <div class="navbar-item">
-          <%= link_to t("navbar.kinetic"), 'works?collection=Kinetic'%>
+          <%= link_to t("navbar.kinetic"), works_path(locale:"fr", collection: "Kinetic") %>
         </div>
         <div class="navbar-item">
-          <%= link_to t('navbar.sculptur'), 'works?collection=Sculptur'%>
+          <%= link_to t('navbar.sculptur'), works_path(locale:"fr", collection: "Sculptur") %>
         </div>
         <div class="navbar-item">
-          <%= link_to t('navbar.drawing'), 'works?collection=Drawing'%>
+          <%= link_to t('navbar.drawing'), works_path( locale:"fr", collection: "Drawing") %>
         </div>
         <div class="navbar-item">
-          <%= link_to t('navbar.photo'), 'works?collection=Photo'%>
+          <%= link_to t('navbar.photo'), works_path( locale:"fr", collection: "Photo") %>
         </div>
         <div class="navbar-item">
-          <%= link_to t('navbar.animation'), 'works?collection=Animation'%>
+          <%= link_to t('navbar.animation'), works_path( locale:"fr", collection: "Animation") %>
         </div>
         <div class="navbar-item">
-          <%= link_to t('navbar.video'), 'works?collection=Video'%>
+          <%= link_to t('navbar.video'), works_path( locale:"fr", collection: "Video") %>
         </div>
       </div>
     <% else %>

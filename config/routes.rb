@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   scope '(:locale)', locale: /fr|en/ do
     root to: 'pages#home'
     get 'contact', to: 'pages#contact', as: :contact
-    resources :works
+    resources :works, only: [:index, :show]
   end
 end
