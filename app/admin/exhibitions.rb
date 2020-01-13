@@ -1,4 +1,40 @@
 ActiveAdmin.register Exhibition do
+  menu priority: 2
+  config.filters = true
+
+  filter :category, as: :check_boxes, collection: proc { Exhibition::EXHIBITIONS_CATEGORIES }
+
+  action_item :view_site do
+    link_to "Voir le site", "/contact", target: "_blank"
+  end
+
+  action_item :view do
+    link_to "Retour sur l'index des expositions", "/admin/exhibitions"
+  end
+
+
+  index do
+    selectable_column
+    column "Titre", sortable: :title do |exhibition|
+      link_to exhibition.title, admin_exhibition_path(exhibition)
+    end
+    column "Année", sortable: :year do |exhibition|
+      link_to exhibition.year, admin_exhibition_path(exhibition)
+    end
+    column "Ville", sortable: :city do |exhibition|
+      link_to exhibition.city, admin_exhibition_path(exhibition)
+    end
+    column "Lieu d'exposition", sortable: :place do |exhibition|
+      link_to exhibition.place, admin_exhibition_path(exhibition)
+    end
+    column "Type d'exposition" do |exhibition|
+      link_to exhibition.category, admin_exhibition_path(exhibition)
+    end
+    column "id", sortable: :id do |exhibition|
+      link_to exhibition.id, admin_exhibition_path(exhibition)
+    end
+    actions
+  end
 
   permit_params :title, :place, :city, :category, :year
 
