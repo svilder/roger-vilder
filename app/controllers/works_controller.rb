@@ -12,5 +12,12 @@ class WorksController < ApplicationController
   def show
     @work = Work.find(params[:id])
     @works = Work.where(collection: @work.collection)
+    if browser.device.mobile?
+      @width = 296
+      @height = 200
+    else
+      @width = 376
+      @height = 280
+    end
   end
 end
