@@ -17,6 +17,10 @@
   height: 100vh;
   margin: 0;
   text-align: center;
+  p {
+    margin-top: 24px;
+  }
+}
 
 .all-rounding {
   display: flex;
@@ -24,16 +28,17 @@
   justify-content: center;
 }
 
- .rounding {
-    transition: transform 6s ease-in-out;
-    padding: 0;
-    margin: 0;
-  }
-
- .rounding:hover {
-    transform: rotate(1080deg);
-  }
+.rounding {
+  transition: transform 3s;
+  padding: 0;
+  margin: 0 6px;
 }
+
+.rounding:hover {
+  transform: rotate(360deg);
+}
+
+
 
 @include media-breakpoint-only(xs) {
   .home-text img{
