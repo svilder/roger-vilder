@@ -18,21 +18,22 @@
   margin: 0;
   text-align: center;
 
-  h1 {
-    transition: all 1s ease-in-out;
-  }
-
-  h1:hover {
-    transform: scale(1.2);
-  }
-}
-
-.interface-user {
+.all-rounding {
   display: flex;
+  align-items: center;
   justify-content: center;
-  padding: 0 15px;
 }
 
+ .rounding {
+    transition: transform 6s ease-in-out;
+    padding: 0;
+    margin: 0;
+  }
+
+ .rounding:hover {
+    transform: rotate(1080deg);
+  }
+}
 
 @include media-breakpoint-only(xs) {
   .home-text img{
