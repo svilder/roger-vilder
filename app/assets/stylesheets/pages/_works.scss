@@ -10,7 +10,16 @@
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 16px;
   justify-content: center;
-  cursor: grab;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  a:hover {
+    text-decoration: none;
+    color: black;
+  }
 }
 
 .my-card {
@@ -21,7 +30,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  height: 200px;
+  height: 216px;
   width: 184px;
   transition: all .5s ease-out;
   padding: 16px;
@@ -37,6 +46,8 @@
   text-align: center;
   font-size: small;
   overflow: scroll;
+  max-width: 184px;
+
   p {
     margin: 0;
   }
@@ -44,7 +55,7 @@
 
 .one-work-card {
   background-color: white;
-  height: 416px;
+  height: 448px;
   width: 424px;
   position: sticky;
   top: 72px;
@@ -82,8 +93,12 @@
   justify-content: space-between;
 }
 
-// -- Mobile version
+.text-soft {
+  color: rgb(80, 80, 80);
+  font-size: smaller;
+}
 
+// -- Mobile version
 @media (max-width: 768px) {
   .wrapper {
     display: flex;
@@ -91,41 +106,22 @@
     align-items: center;
     justify-content: center;
   }
+
   .my-cards {
     display: none;
   }
-  // .my-cards {
-  //   display: flex;
-  //   position: relative;
-  //   margin: 8px;
-  //   overflow: scroll;
-  // }
-  // .my-card {
-  //   height: 96px;
-  //   width: 80px;
-  //   margin: 64px 8px;
-  // }
-  // .my-card-image {
-  //   max-width: 72px;
-  //   max-height: 64px;
-  //   margin: 0;
-  // }
-  // .my-card-details {
-  //   display: none;
-  // }
+
   .one-work-card {
     position: relative;
     margin: 30px;
     height: 336px;
     width: 312px;
   }
+
   .work-description {
     width: 280px;
   }
 }
-
-
-
 
 // Medium devices (desktops, 768px and up)
 @media (min-width: 768px) {
@@ -140,17 +136,4 @@
     grid-template-columns: repeat(3, 1fr);
   }
 }
-
-
-#all {
-  background-color: black;
-  width: 250px;
-  height: 60px;
-}
-
-#margin-bottom {
-  margin-bottom: 50px;
-}
-
-
 

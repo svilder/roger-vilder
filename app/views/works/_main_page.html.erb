@@ -2,15 +2,15 @@
   <div class="wrapper">
     <div class="my-cards">
       <% @works.each do |work| %>
-          <div class="my-card" data-work-id="<%= work.id %>">
-            <%= link_to work_path( locale: I18n.locale, id: work.id) do %>
-              <%= instance_image_tag work.photo, height: 150, width: 150, crop: :fill, class: "my-card-image" %>
-              <div class="my-card-details">
-                <p><%= work.name %></p>
-                <p><%= work.year %></p>
-              </div>
-            <% end %>
+        <%= link_to work_path( locale: I18n.locale, id: work.id) do %>
+          <div class="my-card">
+            <%= instance_image_tag work.photo, height: 150, width: 150, crop: :fill, class: "my-card-image" %>
+            <div class="my-card-details">
+              <p><%= work.name %></p>
+              <p><%= work.year %></p>
+            </div>
           </div>
+        <% end %>
       <% end %>
     </div>
     <div class="one-work-card">
@@ -23,8 +23,10 @@
           <%= instance_image_tag @work.photo, height: 350, width: 350, crop: :fill, class: "work-card-image" %>
         <% end %>
         <div class="work-description">
-          <p><%= t("index.name") %> : <%= @work.name %></p>
-          <p><%= @work.year %></p>
+          <div class="name-year">
+            <p><%= @work.name %></p>
+            <p><%= @work.year %></p>
+          </div>
           <p><%= @work.dimensions %></p>
           <p><%= @work.description %></p>
         </div>
