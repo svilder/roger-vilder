@@ -1,4 +1,6 @@
 class WorksController < ApplicationController
+  before_action :set_video_size
+
   def index
     if params[:collection].nil?
       @works = Work.where(collection: "Kinetic")
@@ -12,6 +14,11 @@ class WorksController < ApplicationController
   def show
     @work = Work.find(params[:id])
     @works = Work.where(collection: @work.collection)
+  end
+
+  private
+
+  def set_video_size
     if browser.device.mobile?
       @width = 296
       @height = 200
