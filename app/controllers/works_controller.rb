@@ -6,14 +6,8 @@ class WorksController < ApplicationController
     else
       @works = Work.where(collection: params[:collection])
     end
-
-    @work = Work.first if params[:work_id].nil?
-
-    # suite navigation entre les show et contacs
-    # if request.referer.match(/[0-9]+$/) # <- Check if Url from request end with a number, witch means : from a show page
-    #   show_id = request.referer.scan(/[0-9]+$/).join # <- Extract the id from the request referer
-    #   @work = Work.find(show_id)
-    # end
+    @work = Work.first
+    @work = Work.find(params[:showed_work].to_i) if params[:showed_work].present?
   end
 
   def show
