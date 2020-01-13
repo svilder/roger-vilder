@@ -13,17 +13,17 @@ ActiveAdmin.register Work do
     link_to "Retour sur l'index des pièces", admin_works_path
   end
 
-  controller do
-    def delete_photo
-      work.photo.purge
-    end
-  end
+  # controller do
+  #   def delete_photo
+  #     work.photo.purge
+  #   end
+  # end
 
-  member_action :delete_photo, method: :delete do
-   @photo = ActiveStorage::Attachment.find(params[:id])
-   @photo.purge_later
-   redirect_back(fallback_location: admin_works_path)
-  end
+  # member_action :delete_photo, method: :delete do
+  #  @photo = ActiveStorage::Attachment.find(params[:id])
+  #  @photo.purge_later
+  #  redirect_back(fallback_location: admin_works_path)
+  # end
 
   index do
     selectable_column
