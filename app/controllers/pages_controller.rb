@@ -2,7 +2,7 @@ class PagesController < ApplicationController
   # skip_before_action :authenticate_user!, only: [:home]
 
   def home
-    phrase = "Roger Vilder"
+    phrase = "Roger Vilder".upcase
     @letters = phrase.split(//)
   end
 
