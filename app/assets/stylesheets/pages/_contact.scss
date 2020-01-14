@@ -1,8 +1,8 @@
 // .collapsing for custom transition with bootstrap
 .collapsing {
-  -webkit-transition-duration: 2.35s;
-  transition-duration: 2.35s;
-  min-height: 164px;
+  -webkit-transition-duration: 3.35s;
+  transition-duration: 3.35s;
+  min-height: 120px;
 }
 
 .biographie {
@@ -19,11 +19,18 @@
 
 .exhibitions-box {
  width: 500px;
+ box-shadow: $box-shadow;
 
- p {
-   padding: 0px 4px;
-   margin: 8px 0px;
- }
+  h2 {
+    text-align: center;
+    font-weight: bold;
+  }
+
+  p {
+   // padding: 0px 4px;
+   padding-bottom: 0px 4px;
+   margin: 0px 8px;
+  }
 }
 
 .exhibitions-showed {
@@ -54,4 +61,15 @@
 .exhibition-place {
   font-style: oblique;
   margin: 0 4px;
+}
+
+#button-show-personnal {
+    cursor: grabbing;
+    text-align: center;
+    background: linear-gradient(185deg, rgba(250,250,250,0.9094012605042017) 36%, rgba(244,244,244,0.8645833333333334) 58%);
+
+
+    p {
+      margin: 0px;
+    }
 }
