@@ -1,5 +1,4 @@
 class PagesController < ApplicationController
-  # skip_before_action :authenticate_user!, only: [:home]
 
   def home
     phrase = "Roger Vilder".upcase
@@ -8,5 +7,11 @@ class PagesController < ApplicationController
   end
 
   def contact
+    # developpement exhibitions
+    @temp_exhibitions = Exhibition.all
+    # Production exhibitions
+    @personal_exhibitions = Exhibition.where(category: "Expositions personelles").order(year: :desc)
+    @collective_exhibitions = Exhibition.where(category: "Expositions collectives").order(year: :desc)
+    # @permanent_exhibitions = Exhibition.where(category: "Collection publiques et privées").order(year: :desc)
   end
 end
