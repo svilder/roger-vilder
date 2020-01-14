@@ -32,7 +32,6 @@
   }
 
   p {
-   // padding: 0px 4px;
    padding-bottom: 0px 4px;
    margin: 0px 8px;
   }
@@ -51,8 +50,17 @@
 }
 
 .exhibitions-hidden {
-  max-height: 750px;
+  max-height: 500px;
   overflow: scroll;
+}
+
+.show-more {
+  cursor: clicker;
+  text-align: center;
+
+  p {
+    margin: 0px;
+  }
 }
 
 // EXHIBITIONS TEXT
@@ -66,15 +74,4 @@
 .exhibition-place {
   font-style: oblique;
   margin: 0 4px;
-}
-
-.show-more {
-    cursor: clicker;
-    text-align: center;
-    background: linear-gradient(185deg, rgba(250,250,250,0.9094012605042017) 36%, rgba(244,244,244,0.8645833333333334) 58%);
-
-
-    p {
-      margin: 0px;
-    }
 }
