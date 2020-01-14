@@ -2,7 +2,7 @@
 .collapsing {
   -webkit-transition-duration: 2.35s;
   transition-duration: 2.35s;
-  min-height: 184px;
+  min-height: 164px;
 }
 
 .biographie {
@@ -19,6 +19,11 @@
 
 .exhibitions-box {
  width: 500px;
+
+ p {
+   padding: 0px 4px;
+   margin: 8px 0px;
+ }
 }
 
 .exhibitions-showed {
@@ -34,13 +39,14 @@
 }
 
 .exhibitions-hidden {
-  overflow: scroll;
   max-height: 750px;
+  overflow: scroll;
 }
 
 // EXHIBITIONS TEXT
 
 .exhibition-year {
+  margin: 0 4px;
   font-weight: bolder;
 }
 

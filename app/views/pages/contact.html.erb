@@ -20,11 +20,13 @@
     <div class="exhibitions-box" id="personnal-box">
       <h2>Expositions Personelles</h2>
       <div class="exhibitions-showed">
-        <% @personal_exhibitions[0..4].each do |exhibition| %> <!-- TODO: modify when production -->
+        <% @personal_exhibitions[0..4].each do |exhibition| %>
           <div class="exhibition">
             <p>
               <span class="exhibition-year"><%= exhibition.year %></span>
-              <span class="exhibition-title"><%= exhibition.title %></span>
+              <% unless exhibition.title.nil? %>
+                <span class="exhibition-title"><%= exhibition.title %></span>
+              <% end %>
               <span class="exhibition-place"><%= exhibition.place %></span>
               <span class="exhibition-city"><%= exhibition.city %></span>
             </p>
@@ -36,7 +38,9 @@
           <div class="exhibition">
             <p>
               <span class="exhibition-year"><%= exhibition.year %></span>
-              <span class="exhibition-title"><%= exhibition.title %></span>
+              <% unless exhibition.title.nil? %>
+                <span class="exhibition-title"><%= exhibition.title %></span>
+              <% end %>
               <span class="exhibition-place"><%= exhibition.place %></span>
               <span class="exhibition-city"><%= exhibition.city %></span>
             </p>
