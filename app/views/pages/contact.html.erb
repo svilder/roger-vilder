@@ -16,10 +16,10 @@
   </div>
 
   <div class="contact-wrapper">
-
+ <!-- ------------ Personnal Collection ------------ -->
     <div class="exhibitions-box" id="personnal-box">
-      <h2>Expositions Personelles</h2>
-      <div class="exhibitions-showed">
+      <h2>Expositions Personnelles</h2>
+      <div class="exhibitions-showed" id="showed-personnal-exhibitions">
         <% @personal_exhibitions[0..4].each do |exhibition| %>
           <div class="exhibition">
             <p>
@@ -48,6 +48,42 @@
         <% end %>
       </div>
       <div id="button-show-personnal" data-toggle="collapse" data-target="#hidden-personnal-exhibitions" aria-expanded="false" aria-controls="hidden-personnal-exhibitions">
+        <p>See more exhibitions</p>
+        <i class="fas fa-angle-down"></i>
+      </div>
+    </div>
+    <!-- ------------ Collective Collection ------------ -->
+    <div class="exhibitions-box" id="collective-box">
+      <h2>Expositions Collectives</h2>
+      <div class="exhibitions-showed" id="showed-collective-exhibitions">
+        <% @collective_exhibitions[0..4].each do |exhibition| %>
+          <div class="exhibition">
+            <p>
+              <span class="exhibition-year"><%= exhibition.year %></span>
+              <% unless exhibition.title.nil? %>
+                <span class="exhibition-title"><%= exhibition.title %></span>
+              <% end %>
+              <span class="exhibition-place"><%= exhibition.place %></span>
+              <span class="exhibition-city"><%= exhibition.city %></span>
+            </p>
+          </div>
+        <% end %>
+      </div>
+      <div class="exhibitions-hidden collapse" id="hidden-collective-exhibitions">
+        <% @collective_exhibitions.each do |exhibition| %>
+          <div class="exhibition">
+            <p>
+              <span class="exhibition-year"><%= exhibition.year %></span>
+              <% unless exhibition.title.nil? %>
+                <span class="exhibition-title"><%= exhibition.title %></span>
+              <% end %>
+              <span class="exhibition-place"><%= exhibition.place %></span>
+              <span class="exhibition-city"><%= exhibition.city %></span>
+            </p>
+          </div>
+        <% end %>
+      </div>
+      <div id="button-show-collective" data-toggle="collapse" data-target="#hidden-collective-exhibitions" aria-expanded="false" aria-controls="hidden-collective-exhibitions">
         <p>See more exhibitions</p>
         <i class="fas fa-angle-down"></i>
       </div>

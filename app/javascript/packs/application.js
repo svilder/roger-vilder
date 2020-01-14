@@ -1,8 +1,9 @@
 import "bootstrap";
 import { switchColorNavbar, hideOnClikMenu } from '../components/navbar';
-import {showMorePersonnalCollection} from '../components/contact';
+import {showMorePersonnalCollection, showMoreCollectiveCollection} from '../components/contact';
 
 switchColorNavbar();
 hideOnClikMenu();
 
 showMorePersonnalCollection();
+showMoreCollectiveCollection();
