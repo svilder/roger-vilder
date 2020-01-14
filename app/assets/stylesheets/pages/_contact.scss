@@ -1,14 +1,13 @@
+// .collapsing for custom transition with bootstrap
+.collapsing {
+  -webkit-transition-duration: 2.35s;
+  transition-duration: 2.35s;
+  min-height: 184px;
+}
+
 .biographie {
   margin : 40px;
   margin-left: 0px;
-}
-
-.exhibitions-showed {
-  display: block;
-
-  &.swap {
-    display: none;
-  }
 }
 
 .contact-wrapper {
@@ -16,3 +15,37 @@
   justify-content: space-between;
 }
 
+// EXHIBITIONS BOXES
+
+.exhibitions-box {
+ width: 500px;
+}
+
+.exhibitions-showed {
+
+  &.swap {
+    display: none;
+  }
+}
+
+.exhibitions-showed,
+.exhibitions-hidden {
+  background: white;
+}
+
+.exhibitions-hidden {
+  overflow: scroll;
+  max-height: 750px;
+}
+
+// EXHIBITIONS TEXT
+
+.exhibition-year {
+  font-weight: bolder;
+}
+
+.exhibition-title,
+.exhibition-place {
+  font-style: oblique;
+  margin: 0 4px;
+}
