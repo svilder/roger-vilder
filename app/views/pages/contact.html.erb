@@ -18,25 +18,27 @@
   <div class="contact-wrapper">
     <div class="exhibitions-box" id="personnal-box">
       <h2>Expositions Personelles</h2>
-      <% @temp_exhibitions[1..5].each do |exhibition| %> <!-- TODO: modify when production -->
-        <div class="exhibition">
-          <span><%= exhibition.year %></span>
-          <span><%=exhibition.title %></span>
-          <span><%= exhibition.place %></span>
-          <span><%= exhibition.city.upcase %></span>
-        </div>
-      <% end %>
-      <div class="exhibitions-hidden" id="hidden-personnal-exhibitions">
-        <% @temp_exhibitions[6..-1].each do |exhibition| %>
+      <div class="exhibitions-showed">
+        <% @personal_exhibitions[1..5].each do |exhibition| %> <!-- TODO: modify when production -->
           <div class="exhibition">
             <span><%= exhibition.year %></span>
             <span><%= exhibition.title %></span>
             <span><%= exhibition.place %></span>
-            <span><%= exhibition.city.upcase %></span>
+            <span><%= exhibition.city %></span>
           </div>
         <% end %>
       </div>
-      <div class="btn btn-warning" id="button-show-personnal"> click me honey!</div>
+      <div class="exhibitions-hidden collapse" id="hidden-personnal-exhibitions" style="background-color: blue; overflow: scroll; max-height: 60vh;">
+        <% @personal_exhibitions.each do |exhibition| %>
+          <div class="exhibition">
+            <span><%= exhibition.year %></span>
+            <span><%= exhibition.title %></span>
+            <span><%= exhibition.place %></span>
+            <span><%= exhibition.city %></span>
+          </div>
+        <% end %>
+      </div>
+      <div class="btn btn-warning" id="button-show-personnal" data-toggle="collapse" data-target="#hidden-personnal-exhibitions" aria-expanded="false" aria-controls="hidden-personnal-exhibitions"> click me honey!</div>
     </div>
 
     <div class="exhibitions-box">
@@ -57,50 +59,6 @@
       </div>
       <div class="btn btn-warning"> click on meeeee</div>
     </div>
-  </div>
-
-  <br>
-  <br>
-
-  <div class="contact-wrapper">
-    <div class="exhibitions-box">
-      <h2>Collections Permanentes</h2>
-      <div class="exhibitions-shown">
-       <!--  ---------- PLACEHOLDER ------------- -->
-       <% @temp_exhibitions[1..5].each do |exhibition| %> <!-- TODO: modify when production -->
-         <div class="exhibition">
-           <span><%= exhibition.year %></span>
-           <span><%=exhibition.title %></span>
-           <span><%= exhibition.place %></span>
-           <span><%= exhibition.city.upcase %></span>
-         </div>
-       <% end %>
-       <!--  ---------- ------------------------- -->
-      </div>
-      <div class="exhibitions-hidden">
-      </div>
-      <div class="btn btn-warning"> click on meeeee</div>
-    </div>
-
-      <div class="exhibitions-box">
-        <h2>Bibliographie</h2>
-        <div class="exhibitions-shown">
-          <!--  ---------- PLACEHOLDER ------------- -->
-          <% @temp_exhibitions[1..5].each do |exhibition| %> <!-- TODO: modify when production -->
-            <div class="exhibition">
-              <span><%= exhibition.year %></span>
-              <span><%=exhibition.title %></span>
-              <span><%= exhibition.place %></span>
-              <span><%= exhibition.city.upcase %></span>
-            </div>
-          <% end %>
-          <!--  ---------- ------------------------- -->
-        </div>
-        <div class="exhibitions-hidden">
-        </div>
-        <div class="btn btn-warning"> click on meeeee</div>
-      </div>
-
   </div>
   <br>
   <br>

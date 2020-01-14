@@ -3,8 +3,12 @@
   margin-left: 0px;
 }
 
-.exhibitions-hidden {
-  display: none;
+.exhibitions-showed {
+  display: block;
+
+  &.swap {
+    display: none;
+  }
 }
 
 .contact-wrapper {

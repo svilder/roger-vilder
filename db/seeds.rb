@@ -8,7 +8,7 @@ categorie = ["Collection publiques et privées", "Expositions personelles", "Exp
 puts "Seed Start"
 
 
-  puts "Parsing exhibition"
+  puts "Parsing exhibitions"
   csv_text = File.read(Rails.root.join('lib', 'seeds', 'Exhibitions.csv'))
   csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
   csv.each do |row|
@@ -25,7 +25,7 @@ puts "Seed Start"
       puts "#{t.errors.messages}t."
     end
   end
-
+ puts " #{Exhibition.count} exhibitions parsed!"
 
 
 # puts " Destroying EVERYTHING ( in developpement :) )"

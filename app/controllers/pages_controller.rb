@@ -9,10 +9,9 @@ class PagesController < ApplicationController
   def contact
     # developpement exhibitions
     @temp_exhibitions = Exhibition.all
-
     # Production exhibitions
-    # @personal_exhibitions = Exhibition.where(collection: "Expositions personelles")
-    # @collective_exhibitions = Exhibition.where(collection: "Expositions collectives")
-    # @permanent_exhibitions = Exhibition.where(collection: "Collection publiques et privées")
+    @personal_exhibitions = Exhibition.where(category: "Expositions personelles")
+    # @collective_exhibitions = Exhibition.where(category: "Expositions collectives")
+    # @permanent_exhibitions = Exhibition.where(category: "Collection publiques et privées")
   end
 end

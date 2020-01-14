@@ -1,9 +1,9 @@
 
 const showMorePersonnalCollection = () => {
   const showMore = document.getElementById("button-show-personnal");
-  const hiddenExhibition =  document.querySelector("#hidden-personnal-exhibitions");
+  const hiddenExhibition =  document.querySelector(".exhibitions-showed");
   showMore.addEventListener('click',(e) => {
-    hiddenExhibition.classList.toggle('exhibitions-hidden');
+    hiddenExhibition.classList.toggle('swap');
   });
 };
 
