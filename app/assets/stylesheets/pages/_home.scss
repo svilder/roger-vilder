@@ -19,6 +19,8 @@
   text-align: center;
   p {
     margin-top: 24px;
+    width: 400px;
+    font-weight: lighter;
   }
 }
 
@@ -26,6 +28,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .rounding {
@@ -41,27 +44,35 @@
 
 
 @include media-breakpoint-only(xs) {
-  .home-text img{
-    max-height: 200px;
+  .home-text {
+    img {
+      max-height: 200px;
+    }
+    p {
+      width: 200px;
+    }
+    .all-rounding {
+      width: 220px;
+    }
   }
 }
 @include media-breakpoint-only(sm) {
-  .home-text img{
+  .home-text img {
     max-height: 300px;
   }
 }
 @include media-breakpoint-only(md) {
-  .home-text img{
-    max-height: 300px;
+  .home-text img {
+    max-height: 400px;
   }
 }
 @include media-breakpoint-only(lg) {
-  .home-text img{
+  .home-text img {
     max-height: 400px;
   }
 }
 @include media-breakpoint-only(xl) {
-  .home-text img{
+  .home-text img {
     max-height: 400px;
   }
 }
