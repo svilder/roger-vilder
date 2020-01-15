@@ -1,5 +1,4 @@
 class PagesController < ApplicationController
-
   def home
     phrase = "Roger Vilder".upcase
     phrase = "RogerVilder".upcase if browser.device.mobile?
@@ -13,5 +12,4 @@ class PagesController < ApplicationController
     @bibliographies = Bibliography.all.order(year: :desc)
     @texts = Text.all
   end
-
 end
