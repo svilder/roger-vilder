@@ -23,9 +23,9 @@
 }
 
 .my-card {
-  background-color: white;
-  border-radius: $border-radius;
-  box-shadow: $box-shadow;
+  // background-color: white;
+  // border-radius: $border-radius;
+  // box-shadow: $box-shadow;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -37,8 +37,8 @@
 }
 
 .my-card-image {
-  max-width: 104px;
-  max-height: 104px;
+  max-width: 128px;
+  max-height: 128px;
   margin: 8px 0;
 }
 
@@ -54,13 +54,13 @@
 }
 
 .one-work-card {
-  background-color: white;
+  // background-color: white;
   height: 448px;
   width: 424px;
   position: sticky;
   top: 72px;
-  border-radius: $border-radius;
-  box-shadow: $box-shadow;
+  // border-radius: $border-radius;
+  // box-shadow: $box-shadow;
 }
 
 .work-card {
