@@ -273,6 +273,7 @@ DEPENDENCIES
   dotenv-rails
   font-awesome-sass (~> 5.6.1)
   jbuilder (~> 2.0)
+  kaminari
   listen (~> 3.0.5)
   pg (~> 0.21)
   pry-byebug

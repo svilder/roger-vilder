@@ -16,5 +16,38 @@
     </div>
   <%= render "contact_first_wrapper" %>
   <%= render "contact_second_wrapper" %>
-  </div>
 </div>
+<div class="container-contact-page">
+  <% if locale == :fr %>
+    <div class="texts-container">
+      <% @texts.each do |text| %>
+        <div class="text-container">
+          <div class="text-content">
+            <%= simple_format(text.content_fr) %>
+          </div>
+          <div class="text-source d-flex m-3">
+            <p><%= text.author %></p>
+            <p><%= text.title_fr %></p>
+            <p><%= text.year %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% else %>
+  <div class="texts-container">
+    <% @texts.each do |text| %>
+      <div class="text-container">
+        <div class="text-content">
+          <%= simple_format(text.content_en) %>
+        </div>
+        <div class="text-source d-flex m-3">
+          <p><%= text.author %></p>
+          <p><%= text.title_en %></p>
+          <p><%= text.year %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <% end %>
+</div>
+
