@@ -28,7 +28,7 @@
       </div>
     <% else %>
       <div class="navbar-categories">
-      <h2>ROGER VILDER</h2>
+        <h2>ROGER VILDER</h2>
       </div>
     <% end %>
     <div class="navbar-about">
@@ -57,6 +57,26 @@
     <div></div>
     <div></div>
   </div>
+  <div class="mobile-categories">
+    <div class="mobile-item">
+      <%= link_to t("navbar.kinetic").upcase, works_path(locale: I18n.locale, collection: "Kinetic") %>
+    </div>
+    <div class="mobile-item">
+      <%= link_to t('navbar.sculptur').upcase, works_path(locale: I18n.locale, collection: "Sculptur") %>
+    </div>
+    <div class="mobile-item">
+      <%= link_to t('navbar.drawing').upcase, works_path( locale: I18n.locale, collection: "Drawing") %>
+    </div>
+    <div class="mobile-item">
+      <%= link_to t('navbar.photo').upcase, works_path( locale: I18n.locale, collection: "Photo") %>
+    </div>
+    <div class="mobile-item">
+      <%= link_to t('navbar.animation').upcase, works_path( locale: I18n.locale, collection: "Animation") %>
+    </div>
+    <div class="mobile-item">
+      <%= link_to t('navbar.video').upcase, works_path( locale: I18n.locale, collection: "Video") %>
+    </div>
+  </div>
   <div class="mobile-about">
     <div class="mobile-item">
       <%= link_to t('navbar.work'), 'works?collection=Kinetic'%>
@@ -71,5 +91,4 @@
         <%= link_to "🇫🇷", { :locale=>'fr' } %>
       <% end %>
     </div>
-  </div>
 </div>
