@@ -1,15 +1,14 @@
 require 'csv'
 require 'open-uri'
 
-categorie = ["Collection publiques et privées", "Expositions personelles", "Expositions collectives"]
-
-
-
 puts "Seed Start"
 
-Bibliography.destroy_all
 
 puts "Parsing exhibitions"
+
+categorie = ["Collection publiques et privées", "Expositions personelles", "Expositions collectives"]
+Exhibition.destroy_all
+
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'Exhibitions.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
@@ -21,7 +20,7 @@ csv.each do |row|
   t.year = row['year']
   t.associates = row['associates']
   t.save
-  puts " #{t.id} (#{t.valid?}), has been seeded "
+  puts " #{t.id}, has been seeded "
   unless t.valid?
     puts "#{t.errors.messages}t."
   end
@@ -29,15 +28,15 @@ end
 puts " #{Exhibition.count} exhibitions parsed!"
 
 
-puts " Destroying EVERYTHING ( in developpement :) )"
+
+# ---------------------------- DONT REMOVE WHATS BELOW----------------------------
 
 if Rails.env.development?
+  puts " Destroying EVERYTHING ( in developpement :) )"
   AdminUser.destroy_all
   Work.destroy_all
   Bibliography.destroy_all
   Text.destroy_all
-
-  puts "Cleaning done"
 
   AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
 
@@ -61,9 +60,11 @@ if Rails.env.development?
 
   puts "Now, there are #{Work.count} saved via seed in tha Database"
 
+  # ----------BEGIN of fake elements ( developpement working seed) ----------
+
   puts "Creating 5 fake Bibliographies"
 
-  5.times do
+  10.times do
     biblio = Bibliography.create!({
       author: "Restany Pierre",
       title:  "Le Plastique dans l’Art",
@@ -71,21 +72,6 @@ if Rails.env.development?
       month: "Janvier",
     })
   end
-
-  puts "Bibliographies done"
-
-  # puts "Creating 15 fake Exhibitions"
-
-  # 15.times do
-  #   exhib = Exhibition.create!({
-  #     title: "Exposition Roger-Vilder",
-  #     year: 1996,
-  #     place: "Fine Art Museum Kingston",
-  #     city: "Ontario",
-  #     category: categorie.sample,
-  #   })
-  # end
-  # puts "Exhibitions done"
 
   puts "Creating 5 fakes texts (EN/FR)"
   5.times do
@@ -99,24 +85,8 @@ if Rails.env.development?
     })
   end
   puts "Texts done"
+  # ----------END of fake elements----------
 end
-
-
-
-
-  # if Rails.env.development?
-  #   works = Work.all
-  #   works.each do |work|
-  #     picture = Cloudinary::Uploader.upload("#{work.image}")
-  #     puts "image put on Cloudinary"
-  #     url = URI.open(picture["secure_url"])
-  #     p url.class
-  #     work.photo.attach(io: url, filename: work.name, content_type: 'image/jpg')
-  #     p work.photo.attached?
-  #     work.save
-  #     puts "Now, #{work.name} should have a picture"
-  #   end
-  # end
 
   # for console -->
   # Work.create(name:"pulsation", description:"Musée d'art de Tokyo", dimensions:"50 x 50 x 50 cm", year:1975, image:"san_francisco.jpg", category:"Kinetics")

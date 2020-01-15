@@ -16,4 +16,19 @@ const showMoreCollectiveCollection = () => {
   });
 };
 
-export { showMorePersonnalCollection, showMoreCollectiveCollection }
+const showMorePermanentCollection = () => {
+  const showMore = document.getElementById("button-show-permanent");
+  const hiddenExhibition =  document.querySelector("#showed-permanent-exhibitions");
+  showMore.addEventListener('click',(e) => {
+    hiddenExhibition.classList.toggle('swap');
+  });
+};
+
+const showMoreBibliographiesCollection = () => {
+  const showMore = document.getElementById("button-show-bibliographies");
+  const hiddenExhibition =  document.querySelector("#showed-bibliographies-exhibitions");
+  showMore.addEventListener('click',(e) => {
+    hiddenExhibition.classList.toggle('swap');
+  });
+};
+// export { showMorePersonnalCollection, showMoreCollectiveCollection, showMorePermanentCollection, showMoreBibliographiesCollection}

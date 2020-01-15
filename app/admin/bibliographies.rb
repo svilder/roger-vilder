@@ -36,6 +36,6 @@ ActiveAdmin.register Bibliography do
       f.input :year, label: "Année de publication", placeholder: "2019"
       f.input :month, label: "Mois de publication (en lettres)", placeholder: "Janvier"
     end
+    actions
   end
-
 end

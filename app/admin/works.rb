@@ -47,20 +47,19 @@ ActiveAdmin.register Work do
 
   permit_params :name, :description, :dimensions, :year, :image, :youtube_link, :category, :collection, :photo
 
-    form title: 'Nouvelle piece' do |f|
-      inputs "Infos" do
-        input :name, placeholder: 'Circonvolutions 17'
-        input :description, label: 'Description', placeholder: 'Musée Pompidou, ou toute autre précision'
-        input :dimensions, label: 'Dimensions', placeholder:'Format : 150 x 150 x 18 cm'
-        input :year, label: 'Année', placeholder:'2040'
-        input :collection, collection: Work::COLLECTIONS, label: 'Collection', include_blank: false
-        input :category, collection: Work::CATEGORIES, label: 'Categorie', include_blank: false
-      end
-      inputs "Images" do
-        input :youtube_link, label: 'Lien Youtube', placeholder:'Format : chiffres et lettres après : [https://www.youtube.com/watch?v=] ex: 9PhhMhKAF2o '
-        input :photo, as: :file, label: "Photo"
-      end
-      actions
+  form title: 'Nouvelle piece' do |f|
+    inputs "Infos" do
+      input :name, placeholder: 'Circonvolutions 17'
+      input :description, label: 'Description', placeholder: 'Musée Pompidou, ou toute autre précision'
+      input :dimensions, label: 'Dimensions', placeholder:'Format : 150 x 150 x 18 cm'
+      input :year, label: 'Année', placeholder:'2040'
+      input :collection, collection: Work::COLLECTIONS, label: 'Collection', include_blank: false
+      input :category, collection: Work::CATEGORIES, label: 'Categorie', include_blank: false
     end
-
+    inputs "Images" do
+      input :youtube_link, label: 'Lien Youtube', placeholder:'Format : chiffres et lettres après : [https://www.youtube.com/watch?v=] ex: 9PhhMhKAF2o '
+      input :photo, as: :file, label: "Photo"
+    end
+    actions
+  end
 end
