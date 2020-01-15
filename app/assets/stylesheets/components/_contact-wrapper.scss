@@ -6,6 +6,7 @@
 }
 
 .contact-wrapper {
+  margin-top: 36px;
   display: flex;
   justify-content: space-between;
 }
@@ -18,7 +19,7 @@
  border-radius: $border-radius;
  height: fit-content;
 
-  h2 {
+  h4 {
     text-align: center;
     font-weight: bold;
     margin: 16px 0px;
@@ -68,4 +69,10 @@
 .exhibition-place {
   font-style: oblique;
   margin: 0 4px;
+}
+
+@media(min-width: 1300px ) {
+  .contact-wrapper {
+    justify-content: space-between;
+  }
 }
