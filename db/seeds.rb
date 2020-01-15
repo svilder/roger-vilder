@@ -73,18 +73,6 @@ if Rails.env.development?
     })
   end
 
-   10.times do
-    biblio = Exhibition.create!({
-      title: "Cinétisme",
-      place: "lorem ipsum gallery",
-      city: " Nawak Groland",
-      year: 2020,
-      category: "Collection publiques et privées",
-    })
-  end
-  puts "Bibliographies done"
-
-
   puts "Creating 5 fakes texts (EN/FR)"
   5.times do
     text = Text.create!({
