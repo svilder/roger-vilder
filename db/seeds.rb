@@ -1,15 +1,14 @@
 require 'csv'
 require 'open-uri'
 
-categorie = ["Collection publiques et privées", "Expositions personelles", "Expositions collectives"]
-
-
-
 puts "Seed Start"
 
-Bibliography.destroy_all
 
 puts "Parsing exhibitions"
+
+categorie = ["Collection publiques et privées", "Expositions personelles", "Expositions collectives"]
+Exhibition.destroy_all
+
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'Exhibitions.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
@@ -21,7 +20,7 @@ csv.each do |row|
   t.year = row['year']
   t.associates = row['associates']
   t.save
-  puts " #{t.id} (#{t.valid?}), has been seeded "
+  puts " #{t.id}, has been seeded "
   unless t.valid?
     puts "#{t.errors.messages}t."
   end
@@ -29,9 +28,11 @@ end
 puts " #{Exhibition.count} exhibitions parsed!"
 
 
-puts " Destroying EVERYTHING ( in developpement :) )"
+
+# ---------------------------- DONT REMOVE WHATS BELOW----------------------------
 
 if Rails.env.development?
+  puts " Destroying EVERYTHING ( in developpement :) )"
   AdminUser.destroy_all
   Work.destroy_all
   Bibliography.destroy_all
@@ -74,18 +75,6 @@ if Rails.env.development?
 
   puts "Bibliographies done"
 
-  # puts "Creating 15 fake Exhibitions"
-
-  # 15.times do
-  #   exhib = Exhibition.create!({
-  #     title: "Exposition Roger-Vilder",
-  #     year: 1996,
-  #     place: "Fine Art Museum Kingston",
-  #     city: "Ontario",
-  #     category: categorie.sample,
-  #   })
-  # end
-  # puts "Exhibitions done"
 
   puts "Creating 5 fakes texts (EN/FR)"
   5.times do
