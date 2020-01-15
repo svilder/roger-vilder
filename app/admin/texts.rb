@@ -47,6 +47,6 @@ ActiveAdmin.register Text do
         f.input :year, label: "Année de Parution", placeholder: ""
       end
     end
+    actions
   end
-
 end

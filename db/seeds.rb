@@ -38,8 +38,6 @@ if Rails.env.development?
   Bibliography.destroy_all
   Text.destroy_all
 
-  puts "Cleaning done"
-
   AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
 
   puts "starting to parse CSV for works"
@@ -61,6 +59,8 @@ if Rails.env.development?
   end
 
   puts "Now, there are #{Work.count} saved via seed in tha Database"
+
+  # ----------BEGIN of fake elements ( developpement working seed) ----------
 
   puts "Creating 5 fake Bibliographies"
 
@@ -88,24 +88,8 @@ if Rails.env.development?
     })
   end
   puts "Texts done"
+  # ----------END of fake elements----------
 end
-
-
-
-
-  # if Rails.env.development?
-  #   works = Work.all
-  #   works.each do |work|
-  #     picture = Cloudinary::Uploader.upload("#{work.image}")
-  #     puts "image put on Cloudinary"
-  #     url = URI.open(picture["secure_url"])
-  #     p url.class
-  #     work.photo.attach(io: url, filename: work.name, content_type: 'image/jpg')
-  #     p work.photo.attached?
-  #     work.save
-  #     puts "Now, #{work.name} should have a picture"
-  #   end
-  # end
 
   # for console -->
   # Work.create(name:"pulsation", description:"Musée d'art de Tokyo", dimensions:"50 x 50 x 50 cm", year:1975, image:"san_francisco.jpg", category:"Kinetics")

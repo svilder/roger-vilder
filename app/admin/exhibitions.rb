@@ -12,7 +12,6 @@ ActiveAdmin.register Exhibition do
     link_to "Retour sur l'index des expositions", "/admin/exhibitions"
   end
 
-
   index do
     selectable_column
     column "Titre", sortable: :title do |exhibition|
@@ -47,5 +46,6 @@ ActiveAdmin.register Exhibition do
       f.input :place, label: "Lieu d'exposition", placeholder: "Centre Pompidou"
       f.input :associates, label: " Facultatif: Artistes ayant participés", placeholder: " Salvator Dali et Rembrandt"
     end
+    actions
   end
 end
