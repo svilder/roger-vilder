@@ -8,22 +8,22 @@
     <% if request.path.match(/works/) %>
       <div class="navbar-categories">
         <div class="navbar-item">
-          <%= link_to t("navbar.kinetic"), works_path(locale: I18n.locale, collection: "Kinetic", showed_work: @work.id) %>
+          <%= link_to t("navbar.kinetic").upcase, works_path(locale: I18n.locale, collection: "Kinetic", showed_work: @work.id) %>
         </div>
         <div class="navbar-item">
-          <%= link_to t('navbar.sculptur'), works_path(locale: I18n.locale, collection: "Sculptur", showed_work: @work.id) %>
+          <%= link_to t('navbar.sculptur').upcase, works_path(locale: I18n.locale, collection: "Sculptur", showed_work: @work.id) %>
         </div>
         <div class="navbar-item">
-          <%= link_to t('navbar.drawing'), works_path( locale: I18n.locale, collection: "Drawing", showed_work: @work.id) %>
+          <%= link_to t('navbar.drawing').upcase, works_path( locale: I18n.locale, collection: "Drawing", showed_work: @work.id) %>
         </div>
         <div class="navbar-item">
-          <%= link_to t('navbar.photo'), works_path( locale: I18n.locale, collection: "Photo", showed_work: @work.id) %>
+          <%= link_to t('navbar.photo').upcase, works_path( locale: I18n.locale, collection: "Photo", showed_work: @work.id) %>
         </div>
         <div class="navbar-item">
-          <%= link_to t('navbar.animation'), works_path( locale: I18n.locale, collection: "Animation", showed_work: @work.id) %>
+          <%= link_to t('navbar.animation').upcase, works_path( locale: I18n.locale, collection: "Animation", showed_work: @work.id) %>
         </div>
         <div class="navbar-item">
-          <%= link_to t('navbar.video'), works_path( locale: I18n.locale, collection: "Video", showed_work: @work.id) %>
+          <%= link_to t('navbar.video').upcase, works_path( locale: I18n.locale, collection: "Video", showed_work: @work.id) %>
         </div>
       </div>
     <% else %>
@@ -33,10 +33,10 @@
     <% end %>
     <div class="navbar-about">
       <div class="navbar-item">
-        <%= link_to t('navbar.work'), 'works?collection=Kinetic'%>
+        <%= link_to t('navbar.work').upcase, 'works?collection=Kinetic'%>
       </div>
       <div class="navbar-item">
-        <%= link_to t('navbar.contact'), contact_path %>
+        <%= link_to t('navbar.contact').upcase, contact_path %>
       </div>
       <div class="navbar-item">
         <% if I18n.locale == :fr %>
