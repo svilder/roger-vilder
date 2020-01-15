@@ -31,4 +31,4 @@ const showMoreBibliographiesCollection = () => {
     hiddenExhibition.classList.toggle('swap');
   });
 };
-export { showMorePersonnalCollection, showMoreCollectiveCollection, showMorePermanentCollection, showMoreBibliographiesCollection}
+// export { showMorePersonnalCollection, showMoreCollectiveCollection, showMorePermanentCollection, showMoreBibliographiesCollection}

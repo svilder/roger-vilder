@@ -64,7 +64,7 @@ if Rails.env.development?
 
   puts "Creating 5 fake Bibliographies"
 
-  5.times do
+  10.times do
     biblio = Bibliography.create!({
       author: "Restany Pierre",
       title:  "Le Plastique dans l’Art",

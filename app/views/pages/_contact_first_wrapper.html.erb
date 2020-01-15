@@ -17,7 +17,7 @@
       <% end %>
     </div>
     <div class="exhibitions-hidden collapse" id="hidden-personnal-exhibitions">
-      <% @personal_exhibitions.each do |exhibition| %>
+      <% @personal_exhibitions[5..-1].each do |exhibition| %>
         <div class="exhibition">
           <p>
             <span class="exhibition-year"><%= exhibition.year %></span>
@@ -54,7 +54,7 @@
       <% end %>
     </div>
     <div class="exhibitions-hidden collapse" id="hidden-collective-exhibitions">
-      <% @collective_exhibitions.each do |exhibition| %>
+      <% @collective_exhibitions[5..-1].each do |exhibition| %>
         <div class="exhibition">
           <p>
             <span class="exhibition-year"><%= exhibition.year %></span>
