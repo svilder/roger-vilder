@@ -7,8 +7,7 @@ class WorksController < ApplicationController
     else
       @works = Work.where(collection: params[:collection])
     end
-    @work = Work.last
-    @work = Work.find(params[:showed_work].to_i) if params[:showed_work].present?
+    params[:showed_work] ? @work = Work.find(params[:showed_work].to_i) : @work = Work.last
   end
 
   def show
