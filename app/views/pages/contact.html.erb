@@ -14,14 +14,21 @@
     <div class="texts-container">
       <% @texts.each do |text| %>
         <div class="text-container">
-          <div class="text-content">
-            <%= simple_format(text.content_fr) %>
-            <%= simple_format(text.content_en) if text.content_fr.nil? %>
-          </div>
+         <div class="text-content">
+           <%= simple_format(text.content_fr) %>
+           <% if text.content_fr.nil? %>
+             <%= simple_format(text.content_en) %>
+           <% end %>
+         </div>
           <div class="text-source d-flex">
             <p>
               <span class="text-author"><%= text.author %></span>
-              <span class="text-title"><%= "'#{text.title_fr}'" %></span>
+              <span class="text-title">
+                <%= text.title_fr %>
+                <% if text.title_fr.nil? %>
+                  <%= text.title_en %>
+                <% end %>
+              </span>
               <span class="text-year"><%= text.year %></span>
             </p>
           </div>
@@ -34,12 +41,19 @@
         <div class="text-container">
           <div class="text-content">
             <%= simple_format(text.content_en) %>
-            <%= simple_format(text.content_fr) if text.content_en.nil? %>
+            <% if text.content_en.nil? %>
+              <%= simple_format(text.content_fr) %>
+            <% end %>
           </div>
           <div class="text-source d-flex">
             <p>
               <span class="text-author"><%= text.author %>-</span>
-              <span class="text-title"><%= text.title_en %></span>
+              <span class="text-title">
+                <%= text.title_en %>
+                <% if text.title_en.nil? %>
+                  <%= text.title_fr %>
+                <% end %>
+              </span>
               <span class="text-year"><%= text.year %></span>
             </p>
           </div>
