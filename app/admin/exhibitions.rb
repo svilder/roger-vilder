@@ -15,7 +15,7 @@ ActiveAdmin.register Exhibition do
   controller do
     def create
       super do |format|
-        redirect_to admin_exhibition_path and return
+        redirect_to admin_exhibitions_path and return
       end
     end
     def update
