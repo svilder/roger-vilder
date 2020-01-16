@@ -11,7 +11,16 @@ ActiveAdmin.register Bibliography do
   end
 
   controller do
+    def create
+      fix_bug_path
+    end
     def update
+      fix_bug_path
+    end
+    def destroy
+      fix_bug_path
+    end
+    def fix_bug_path
       super do |format|
         redirect_to admin_bibliographie_path and return
       end
