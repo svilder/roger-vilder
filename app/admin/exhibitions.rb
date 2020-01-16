@@ -25,7 +25,7 @@ ActiveAdmin.register Exhibition do
     end
     def destroy
       super do |format|
-        redirect_to admin_exhibition_path and return
+        redirect_to admin_exhibitions_path and return
       end
     end
   end

@@ -23,7 +23,7 @@ ActiveAdmin.register Bibliography do
     end
     def destroy
       super do |format|
-        redirect_to admin_bibliographie_path and return
+        redirect_to admin_bibliographies_path and return
       end
     end
   end

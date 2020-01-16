@@ -28,17 +28,17 @@ ActiveAdmin.register Work do
   controller do
     def create
       super do |format|
-        redirect_to admin_work_path and return
+        redirect_to admin_works_path and return
       end
     end
     def update
       super do |format|
-        redirect_to admin_work_path and return
+        redirect_to admin_works_path and return
       end
     end
     def destroy
       super do |format|
-        redirect_to admin_work_path and return
+        redirect_to admin_works_path and return
       end
     end
   end

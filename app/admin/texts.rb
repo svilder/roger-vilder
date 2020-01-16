@@ -23,7 +23,7 @@ ActiveAdmin.register Text do
     end
     def destroy
       super do |format|
-        redirect_to admin_text_path and return
+        redirect_to admin_texts_path and return
       end
     end
   end
