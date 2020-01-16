@@ -10,6 +10,23 @@ ActiveAdmin.register Text do
     link_to "Retour sur l'index des textes", "/admin/texts"
   end
 
+  controller do
+    def create
+      fix_bug_path
+    end
+    def update
+      fix_bug_path
+    end
+    def destroy
+      fix_bug_path
+    end
+    def fix_bug_path
+      super do |format|
+        redirect_to admin_text_path and return
+      end
+    end
+  end
+
   index do
     selectable_column
     column "Titre fr", sortable: :title_fr do |text|

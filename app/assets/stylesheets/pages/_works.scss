@@ -1,6 +1,6 @@
 .wrapper {
   display: grid;
-  grid-template-columns: auto 420px;
+  grid-template-columns: auto 452px;
   grid-gap: 16px;
   justify-content: center;
 }
@@ -23,57 +23,68 @@
 }
 
 .my-card {
-  // background-color: white;
-  // border-radius: $border-radius;
-  // box-shadow: $box-shadow;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 216px;
+  height: 184px;
   width: 184px;
-  transition: all .5s ease-out;
   padding: 16px;
+
+  img {
+    border-radius: $border-radius;
+  }
+
+  &:hover {
+
+    img {
+      filter: brightness(50%) hue-rotate(90deg);
+    }
+
+    .my-card-details {
+      display: block;
+      text-align: center;
+      font-size: small;
+      max-width: 128px;
+      color: white;
+      position: relative;
+      bottom: 98px;
+      left: 16px;
+
+      p {
+        margin: 0;
+      }
+    }
+  }
 }
 
 .my-card-image {
-  max-width: 128px;
-  max-height: 128px;
+  width: 160px;
+  height: 160px;
   margin: 8px 0;
 }
 
 .my-card-details {
-  text-align: center;
-  font-size: small;
-  overflow: scroll;
-  max-width: 184px;
-
-  p {
-    margin: 0;
-  }
+  display: none;
 }
 
 .one-work-card {
-  // background-color: white;
-  height: 448px;
-  width: 424px;
+  background-color: white;
+  max-height: 484px;
+  max-width: 424px;
   position: sticky;
   top: 72px;
-  // border-radius: $border-radius;
-  // box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  // border: solid 0.5px black;
+  box-shadow: $box-shadow;
+  padding: 8px 32px;
 }
 
 .work-card {
   display: flex;
-  align-items: center;
-  justify-content: center;
   flex-direction: column;
-  padding: 32px;
 }
 
 .work-card-image {
-  max-height: 280px;
-  max-width: 280px;
+  max-height: 368px;
+  max-width: 400px;
+  object-fit: contain;
 }
 
 .video,
@@ -83,6 +94,7 @@
 
 .work-description {
   width: 360px;
+
   p {
   margin: 0;
   }
@@ -93,10 +105,6 @@
   justify-content: space-between;
 }
 
-.text-soft {
-  color: rgb(80, 80, 80);
-  font-size: smaller;
-}
 
 // -- Mobile version
 @media (max-width: 768px) {

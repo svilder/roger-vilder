@@ -6,8 +6,8 @@
           <div class="my-card">
             <%= instance_image_tag work.photo, height: 150, width: 150, crop: :fill, class: "my-card-image" %>
             <div class="my-card-details">
-              <!-- <p><%= work.name %></p>
-              <p><%= work.year %></p> -->
+              <p><%= work.name %></p>
+              <p><%= work.year %></p>
             </div>
           </div>
         <% end %>
@@ -20,7 +20,7 @@
             <%= youtube_video @work.youtube_link, @height, @width %>
           </div>
         <% else %>
-          <%= instance_image_tag @work.photo, height: 350, width: 350, crop: :fill, class: "work-card-image" %>
+          <%= instance_image_tag @work.photo, crop: :fill, class: "work-card-image" %>
         <% end %>
         <div class="work-description">
           <div class="name-year">
