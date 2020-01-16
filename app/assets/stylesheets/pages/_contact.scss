@@ -7,3 +7,43 @@
     margin: 0px;
    }
 }
+
+.texts-title{
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.text-content {
+  background: white;
+  padding: 24px;
+  font-size: 14px;
+  font-style: oblique;
+  max-height: 320px;
+  overflow-x: scroll;
+}
+
+.text-container{
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
+  margin: 24px 0px;
+}
+
+.text-source {
+  margin-left: 24px;
+  align-item: center;
+
+  p {
+    margin: 8px 0px;
+  }
+
+  .text-title {
+    font-style: oblique;
+    padding-left: 8px;
+  }
+
+  .text-year {
+    font-weight: bold;
+    padding-left: 16px;
+  }
+}
