@@ -102,6 +102,7 @@
     padding: 20px;
     padding-bottom: 14px;
     box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.2);
+    width: fit-content;
 
     &.menu-active {
       box-shadow: none;
@@ -149,11 +150,16 @@
   // .my-card-details {
   //   display: none;
   // }
-
+  .mobile-categories,
   .mobile-about {
     position: fixed;
     z-index: 5;
     display: block;
+  }
+
+    .mobile-about {
+    position: fixed;
+    bottom: 8px;
   }
 
   .mobile-item {
