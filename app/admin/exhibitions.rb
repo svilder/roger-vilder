@@ -14,15 +14,16 @@ ActiveAdmin.register Exhibition do
 
   controller do
     def create
-      fix_bug_path
+      super do |format|
+        redirect_to admin_exhibition_path and return
+      end
     end
     def update
-      fix_bug_path
+      super do |format|
+        redirect_to admin_exhibition_path and return
+      end
     end
     def destroy
-      fix_bug_path
-    end
-    def fix_bug_path
       super do |format|
         redirect_to admin_exhibition_path and return
       end
