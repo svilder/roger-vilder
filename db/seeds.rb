@@ -6,7 +6,7 @@ require 'open-uri'
 if Rails.env.development?
   puts " Destroying EVERYTHING ( in developpement :) )"
   AdminUser.destroy_all
-  Work.destroy_alls
+  Work.destroy_all
   Text.destroy_all
   Exhibition.destroy_all
   Bibliography.destroy_all
