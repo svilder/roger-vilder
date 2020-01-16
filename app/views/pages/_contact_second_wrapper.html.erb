@@ -1,7 +1,7 @@
 <div class="contact-wrapper">
   <!-- ------------ Permanent Collection ------------ -->
   <div class="exhibitions-box" id="permanent-box">
-    <h4>COLLECTIONS PUBLIQUES ET PRIVEES</h4>
+    <h4><%= t("contact.collections").upcase %></h4>
     <div class="exhibitions-showed" id="showed-permanent-exhibitions">
       <% @permanent_exhibitions[0..4].each do |exhibition| %>
         <div class="exhibition">
@@ -31,13 +31,13 @@
       <% end %>
     </div>
     <div class="show-more" id="button-show-permanent" data-toggle="collapse" data-target="#hidden-permanent-exhibitions" aria-expanded="false" aria-controls="hidden-permanent-exhibitions">
-      <p>See more exhibitions</p>
+      <p><%= t("contact.show-more") %></p>
       <i class="fas fa-angle-down"></i>
     </div>
   </div>
   <!-- ------------ Bibliography ------------ -->
   <div class="exhibitions-box" id="bibliographies-box">
-    <h4>Bibliographie</h4>
+    <h4><%= t("contact.bibliography").upcase %></h4>
     <div class="exhibitions-showed" id="showed-bibliographies-exhibitions">
       <% @bibliographies[0..4].each do |bibliography| %>
         <div class="exhibition">
@@ -65,7 +65,7 @@
       <% end %>
     </div>
     <div class="show-more" id="button-show-bibliographies" data-toggle="collapse" data-target="#hidden-bibliographies-exhibitions" aria-expanded="false" aria-controls="hidden-bibliographies-exhibitions">
-      <p>See more bibliographies</p>
+      <p><%= t("contact.show-more") %></p>
       <i class="fas fa-angle-down"></i>
     </div>
   </div>

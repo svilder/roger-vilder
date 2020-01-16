@@ -26,8 +26,11 @@ fr:
       sensualité toute organique."
     collections: Collections publiques et privées
     group-exhibitions: Expositions Collectives
+    solo-exhibitions: Expositions personnelles
+    bibliography: "bibliographies"
     rewards: Prix
-    solo-shows: Expositions personnelles
+    show-more: "Voir plus"
+    texts: "textes"
   index:
     name: Nom
     description: Précision

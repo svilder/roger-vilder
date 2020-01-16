@@ -9,7 +9,7 @@
   <%= render "contact_second_wrapper" %>
 </div>
 <div class="container-contact-page">
-  <h2 class='texts-title'> Textes et inspirations</h2>
+  <h2 class='texts-title'><%= t('contact.texts').upcase %></h2>
   <% if locale == :fr %>
     <div class="texts-container">
       <% @texts.each do |text| %>
