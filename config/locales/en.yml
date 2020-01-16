@@ -10,9 +10,12 @@ en:
     contact: "Contact"
     work: "Work"
   contact:
-    biography-p1: "Born in 1938, in the Lebanon, he studies fine arts at the University Concordia, Montreal, Canada."
-    biography_p2: "Il travaille entre Paris, Nîmes et Montréal (Canada).Il a enseigné les Arts Plastiques pendant 30 ans dans diverses institutions et universités en Amérique du Nord. Membre de l'Académie Royale des Arts du Canada et de l'association Kepes de Budapest, Hongrie. Depuis le milieu des années 60, il explore le mouvement par la mécanique motorisée, les recherches numériques, des animations algorithmiques et le néon."
-    biography-p3: "Il exprime par le biais d'une géométrie simple, ses observations du monde, des formes auxquelles il donne un mouvement lent, continu de croissance et décroissance. Se faisant,formes, espaces et couleurs sont mis en relation les uns avec les autres privilégiant ainsi, l'harmonie de la composition dans un continuum spatio-temporel, d'une sensualité toute organique."
+    biography_p1: "Born in 1938, in the Lebanon, he studies fine arts at the University Concordia, Montreal, Canada."
+    biography_p2: "He works between Paris, Nîmes and Montreal (Canada).
+                  He taught the plastic arts during 30 years in diverse institutions and universities in North America.
+                  Member of the Royal Academy of the Arts of Canada and association Kepes de Budapest, Hungary. Since the environment of the 60s, he explores the movement by the motorized mechanics, the digital searches, the animations algorithmics and the neon."
+    biography_p3: "He expresses by means of a simple geometry, his observations of the world, forms to the which he gives a continuous slow movement of growth and decrease.
+                  Being made, form spaces and colors are put in relation some with the others so favoring, the harmony of the composition in a spatiotemporal continuum, the quite organic sensualism."
     collections: Public and private collections
     group-exhibitions: Group exhibitions
     rewards: Rewards
