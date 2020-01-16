@@ -2,13 +2,8 @@ require 'csv'
 require 'open-uri'
 
 puts "Seed Start"
-
-
 puts "Parsing exhibitions"
-
-categorie = ["Collection publiques et privées", "Expositions personelles", "Expositions collectives"]
 Exhibition.destroy_all
-
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'Exhibitions.csv'))
 csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
 csv.each do |row|
@@ -20,13 +15,27 @@ csv.each do |row|
   t.year = row['year']
   t.associates = row['associates']
   t.save
-  puts " #{t.id}, has been seeded "
+  unless t.valid?
+    puts " #{t.id} #{t.errors.messages}t."
+  end
+  puts " #{t.id}, #{t.place} has been seeded "
+end
+puts "Parsing bibliographies"
+Bibliography.destroy_all
+csv_text = File.read(Rails.root.join('lib', 'seeds', 'bibliographies.csv'))
+csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+csv.each do |row|
+  t = Bibliography.new
+  t.author = row['author']
+  t.title = row['title']
+  t.year = row['year']
+  t.month = row['month']
+  t.save
   unless t.valid?
     puts "#{t.errors.messages}t."
   end
+  puts " #{t.id}, #{t.author} has been seeded "
 end
-puts " #{Exhibition.count} exhibitions parsed!"
-
 
 
 # ---------------------------- DONT REMOVE WHATS BELOW----------------------------
@@ -34,8 +43,7 @@ puts " #{Exhibition.count} exhibitions parsed!"
 if Rails.env.development?
   puts " Destroying EVERYTHING ( in developpement :) )"
   AdminUser.destroy_all
-  Work.destroy_all
-  Bibliography.destroy_all
+  Work.destroy_alls
   Text.destroy_all
 
   AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
