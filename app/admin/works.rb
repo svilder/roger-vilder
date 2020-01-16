@@ -25,6 +25,14 @@ ActiveAdmin.register Work do
   #  redirect_back(fallback_location: admin_works_path)
   # end
 
+  controller do
+    def update
+      super do |format|
+        redirect_to admin_work_path and return
+      end
+    end
+  end
+
   index do
     selectable_column
     column "Photo" do |work|

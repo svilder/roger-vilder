@@ -12,6 +12,14 @@ ActiveAdmin.register Exhibition do
     link_to "Retour sur l'index des expositions", "/admin/exhibitions"
   end
 
+  controller do
+    def update
+      super do |format|
+        redirect_to admin_exhibition_path and return
+      end
+    end
+  end
+
   index do
     selectable_column
     column "Titre", sortable: :title do |exhibition|

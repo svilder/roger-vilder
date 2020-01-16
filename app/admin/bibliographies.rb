@@ -10,6 +10,14 @@ ActiveAdmin.register Bibliography do
     link_to "Retour sur l'index des bibliographies", "/admin/bibliographies"
   end
 
+  controller do
+    def update
+      super do |format|
+        redirect_to admin_bibliographie_path and return
+      end
+    end
+  end
+
   index do
     selectable_column
     column "Titre", sortable: :title do |bibliography|
