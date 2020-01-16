@@ -45,13 +45,13 @@
             <%= simple_format(text.content_en) %>
             <%= simple_format(text.content_fr) if text.content_en.nil? %>
           </div>
-        <div class="text-source d-flex">
-          <p>
-            <span class="text-author"><%= text.author %>-</span>
-            <span class="text-title"><%= text.title_en %></span>
-            <span class="text-year"><%= text.year %></span>
-          </p>
-        </div>
+          <div class="text-source d-flex">
+            <p>
+              <span class="text-author"><%= text.author %>-</span>
+              <span class="text-title"><%= text.title_en %></span>
+              <span class="text-year"><%= text.year %></span>
+            </p>
+          </div>
         </div>
       <% end %>
     </div>
