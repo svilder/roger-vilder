@@ -43,8 +43,7 @@ end
 if Rails.env.development?
   puts " Destroying EVERYTHING ( in developpement :) )"
   AdminUser.destroy_all
-  Work.destroy_all
-  Bibliography.destroy_all
+  Work.destroy_alls
   Text.destroy_all
 
   AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password')
