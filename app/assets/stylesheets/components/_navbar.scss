@@ -12,6 +12,7 @@
 .navbar-rv {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   position: fixed;
   top: 0;
   width: 100%;
@@ -30,7 +31,6 @@
 .navbar-categories {
   display: flex;
   align-items: flex-end;
-  padding-bottom: 16px;
 
   h2 {
     margin: 0px;
@@ -42,8 +42,9 @@
 .navbar-about {
   display: flex;
   align-items: flex-end;
-  padding-bottom: 16px;
   margin-right: 8px;
+  padding: 16px 0;
+  font-weight: bolder;
 }
 
 .navbar-item,
