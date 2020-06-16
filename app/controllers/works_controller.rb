@@ -22,7 +22,8 @@ class WorksController < ApplicationController
       @width = 296
       @height = 200
     else
-      @width = 376
+      # @width = 376
+      @width = 358
       @height = 280
     end
   end

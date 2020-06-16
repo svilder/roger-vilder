@@ -1,7 +1,7 @@
 .wrapper {
   display: grid;
   grid-template-columns: auto 452px;
-  grid-gap: 16px;
+  grid-gap: 32px;
   justify-content: center;
 }
 
@@ -25,7 +25,7 @@
 .my-card {
   height: 184px;
   width: 184px;
-  padding: 16px;
+  // padding: 16px;
 
   img {
     border-radius: $border-radius;
@@ -57,7 +57,7 @@
 .my-card-image {
   width: 160px;
   height: 160px;
-  margin: 8px 0;
+  // margin: 8px 0;
 }
 
 .my-card-details {
@@ -65,14 +65,14 @@
 }
 
 .one-work-card {
-  background-color: white;
+  // background-color: white;
   max-height: 484px;
   max-width: 424px;
   position: sticky;
   top: 72px;
   border-radius: $border-radius;
-  // border: solid 0.5px black;
-  box-shadow: $box-shadow;
+  border: 1px solid #dee2e6;
+  // box-shadow: $box-shadow;
   padding: 8px 32px;
 }
 
