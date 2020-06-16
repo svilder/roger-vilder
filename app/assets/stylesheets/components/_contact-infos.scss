@@ -2,12 +2,15 @@
   display: flex;
 }
 
-.profile-img img {
-  width: 320px;
-  height: 320px;
-  border-radius: $border-radius;
-  object-fit: cover;
-  object-position: right;
+.profile-img {
+  flex-grow: 1;
+}
+
+.profile-img a {
+  color: black;
+  &:hover{
+    color: #495057;
+  }
 }
 
 .mail h6 {
@@ -17,9 +20,7 @@
 }
 
 .contact-infos {
-  flex-grow: 1;
-  margin-left: -40px;
-
+  margin: 8px 72px;
   ul {
     list-style: none;
     padding: 0;
@@ -55,7 +56,6 @@
 }
 
 .awards {
-
   h6 {
     text-align: center;
     margin: 16px 0px;
