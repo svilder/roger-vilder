@@ -52,6 +52,11 @@
   padding: 3px 8px;
 }
 
+.navbar-item.active {
+  padding-bottom: 2px;
+  border-bottom: solid 1px rgba(248, 33, 23, 0.60);
+}
+
 .navbar-item:hover {
   padding-bottom: 2px;
   border-bottom: solid 1px rgba(248, 33, 23, 0.60);
