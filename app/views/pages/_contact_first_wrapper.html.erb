@@ -1,76 +1,74 @@
-<div class="contact-wrapper">
-<!-- ------------ Personnal Collection ------------ -->
-  <div class="exhibitions-box" id="personnal-box">
-    <h4><%= t("contact.solo-exhibitions").upcase %></h4>
-    <div class="exhibitions-showed" id="showed-personnal-exhibitions">
-      <% @personal_exhibitions[0..4].each do |exhibition| %>
-        <div class="exhibition">
-          <p>
-            <span class="exhibition-year"><%= exhibition.year %></span>
-            <% unless exhibition.title.nil? %>
-              <span class="exhibition-title"><%= exhibition.title %></span>
-            <% end %>
-            <span class="exhibition-place"><%= exhibition.place %></span>
-            <span class="exhibition-city"><%= exhibition.city %></span>
-          </p>
-        </div>
+<div class="">
+
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item">
+      <a class="nav-link active" id="home-tab" data-toggle="tab" href="#personnal-box" role="tab" aria-controls="home" aria-selected="true">
+        <%= t("contact.solo-exhibitions").upcase %>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="profile-tab" data-toggle="tab" href="#collective-box" role="tab" aria-controls="profile" aria-selected="false"><%= t("contact.group-exhibitions").upcase %></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#permanent-box" role="tab" aria-controls="contact" aria-selected="false"><%= t("contact.collections").upcase %></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="contact-tab" data-toggle="tab" href="#bibliographies-box" role="tab" aria-controls="contact" aria-selected="false"><%= t("contact.bibliography").upcase %></a>
+    </li>
+  </ul>
+
+  <div class="tab-content" id="myTabContent">
+    <!-- ------------ Personnal Collection ------------ -->
+    <div class="tab-pane fade show active exhibitions-box"  role="tabpanel" aria-labelledby="home-tab" id="personnal-box">
+      <% @personal_exhibitions.each do |exhibition| %>
+        <p>
+          <span class="exhibition-year"><%= exhibition.year %></span>
+          <% unless exhibition.title.nil? %>
+            <span class="exhibition-title"><%= exhibition.title %></span>
+          <% end %>
+          <span class="exhibition-place"><%= exhibition.place %></span>
+          <span class="exhibition-city"><%= exhibition.city %></span>
+        </p>
       <% end %>
     </div>
-    <div class="exhibitions-hidden collapse" id="hidden-personnal-exhibitions">
-      <% @personal_exhibitions[5..-1].each do |exhibition| %>
-        <div class="exhibition">
-          <p>
-            <span class="exhibition-year"><%= exhibition.year %></span>
-            <% unless exhibition.title.nil? %>
-              <span class="exhibition-title"><%= exhibition.title %></span>
-            <% end %>
-            <span class="exhibition-place"><%= exhibition.place %></span>
-            <span class="exhibition-city"><%= exhibition.city %></span>
-          </p>
-        </div>
+    <!-- ------------ Collective Collection ------------ -->
+    <div class="tab-pane fade exhibitions-box" id="collective-box" role="tabpanel" aria-labelledby="profile-tab" role="tabpanel" aria-labelledby="profile-tab">
+      <% @collective_exhibitions.each do |exhibition| %>
+        <p>
+          <span class="exhibition-year"><%= exhibition.year %></span>
+          <% unless exhibition.title.nil? %>
+            <span class="exhibition-title"><%= exhibition.title %></span>
+          <% end %>
+          <span class="exhibition-place"><%= exhibition.place %></span>
+          <span class="exhibition-associates"><%= exhibition.associates %></span>
+          <span class="exhibition-city"><%= exhibition.city %></span>
+        </p>
       <% end %>
     </div>
-    <div class="show-more" id="button-show-personnal" data-toggle="collapse" data-target="#hidden-personnal-exhibitions" aria-expanded="false" aria-controls="hidden-personnal-exhibitions">
-      <p><%= t("contact.show-more") %></p>
-      <i class="fas fa-angle-down"></i>
-    </div>
-  </div>
-  <!-- ------------ Collective Collection ------------ -->
-  <div class="exhibitions-box" id="collective-box">
-    <h4><%= t("contact.group-exhibitions").upcase %></h4>
-    <div class="exhibitions-showed" id="showed-collective-exhibitions">
-      <% @collective_exhibitions[0..4].each do |exhibition| %>
-        <div class="exhibition">
-          <p>
-            <span class="exhibition-year"><%= exhibition.year %></span>
-            <% unless exhibition.title.nil? %>
-              <span class="exhibition-title"><%= exhibition.title %></span>
-            <% end %>
-            <span class="exhibition-place"><%= exhibition.place %></span>
-            <span class="exhibition-associates"><%= exhibition.associates %></span>
-            <span class="exhibition-city"><%= exhibition.city %></span>
-          </p>
-        </div>
+    <!-- ------------ Permanent Collection ------------ -->
+    <div class="tab-pane fade exhibitions-box" id="permanent-box" role="tabpanel" aria-labelledby="contact-tab">
+      <% @permanent_exhibitions.each do |exhibition| %>
+        <p>
+          <span class="exhibition-year"><%= exhibition.year %></span>
+          <% unless exhibition.title.nil? %>
+            <span class="exhibition-title"><%= exhibition.title %></span>
+          <% end %>
+          <span class="exhibition-place"><%= exhibition.place %></span>
+          <span class="exhibition-city"><%= exhibition.city %></span>
+        </p>
       <% end %>
     </div>
-    <div class="exhibitions-hidden collapse" id="hidden-collective-exhibitions">
-      <% @collective_exhibitions[5..-1].each do |exhibition| %>
-        <div class="exhibition">
-          <p>
-            <span class="exhibition-year"><%= exhibition.year %></span>
-            <% unless exhibition.title.nil? %>
-              <span class="exhibition-title"><%= exhibition.title %></span>
-            <% end %>
-            <span class="exhibition-place"><%= exhibition.place %></span>
-            <span class="exhibition-associates"><%= exhibition.associates %></span>
-            <span class="exhibition-city"><%= exhibition.city %></span>
-          </p>
-        </div>
+    <!-- ------------ Bibliography ------------ -->
+    <div class="tab-pane fade exhibitions-box" id="bibliographies-box" role="tabpanel" aria-labelledby="contact-tab">
+      <% @bibliographies.each do |bibliography| %>
+        <p>
+          <span class="exhibition-year"><%= bibliography.year %></span>
+          <% unless bibliography.title.nil? %>
+            <span class="exhibition-title"><%= bibliography.title %></span>
+          <% end %>
+          <span class="exhibition-author"><%= bibliography.author %></span>
+        </p>
       <% end %>
-    </div>
-    <div  class="show-more"id="button-show-collective" data-toggle="collapse" data-target="#hidden-collective-exhibitions" aria-expanded="false" aria-controls="hidden-collective-exhibitions">
-      <p><%= t("contact.show-more") %></p>
-      <i class="fas fa-angle-down"></i>
     </div>
   </div>
 </div>

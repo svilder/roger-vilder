@@ -1,63 +1,19 @@
-// .collapsing for custom transition with bootstrap
-.collapsing {
-  -webkit-transition-duration: 3.35s;
-  transition-duration: 3.35s;
-  // min-height: 120px;
-}
-
-.contact-wrapper {
-  margin-top: 36px;
-  display: flex;
-  justify-content: space-between;
-}
-
 // EXHIBITIONS BOXES
 
 .exhibitions-box {
- width: 500px;
- box-shadow: $box-shadow;
- border-radius: $border-radius;
- height: fit-content;
- margin: 0px 24px;
-
-  h4 {
-    text-align: center;
-    font-weight: bold;
-    margin: 16px 0px;
-  }
-
-  p {
-   padding-bottom: 0px 4px;
-   margin: 0px 8px;
-  }
-}
-
-.exhibitions-showed {
-
-  &.swap {
-    display: none;
-  }
-}
-
-.exhibitions-showed,
-.exhibitions-hidden {
-  background: white;
-}
-
-.exhibitions-hidden {
-  max-height: 500px;
+  border-radius: $border-radius;
+  height: fit-content;
+  max-height: 420px;
   overflow: scroll;
-}
-
-.show-more {
-  cursor: clicker;
-  text-align: center;
-
+  padding: 24px;
+  border: 1px solid #dee2e6;
+  border-top: 1px solid transparent;
   p {
-    padding: 4px;
-    margin: 0px;
+    padding-bottom: 0px 4px;
+    margin: 0 8px;
   }
 }
+
 
 // EXHIBITIONS TEXT
 
@@ -72,8 +28,4 @@
   margin: 0 4px;
 }
 
-@media(min-width: 1300px ) {
-  .contact-wrapper {
-    justify-content: space-between;
-  }
-}
+

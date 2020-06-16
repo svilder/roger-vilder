@@ -1,11 +1,10 @@
-
 .biographie {
   margin : 40px;
   margin-left: 0px;
 
-   p {
+  p {
     margin: 0px;
-   }
+  }
 }
 
 .texts-title {
@@ -45,5 +44,12 @@
   .text-year {
     font-weight: bold;
     padding-left: 16px;
+  }
+}
+
+.nav-link {
+  color: black;
+  &:hover{
+    color: #495057;
   }
 }
