@@ -1,1 +1,33 @@
-<%= render "main_page" %>
+<div class="container-with-navbar">
+  <div class="wrapper d-flex align-items-center">
+
+      <%= link_to work_path(locale: I18n.locale, id: @previous_work.id), class: "m-3 link" do %>
+        <h3><i class="fas fa-long-arrow-alt-left"></i></h3>
+      <% end %>
+
+    <div class="one-work-card">
+      <div class="work-card">
+        <% if @work.category == "Kinetics" %>
+          <div class="video">
+            <%= youtube_video @work.youtube_link, @height, @width %>
+          </div>
+        <% else %>
+          <%= instance_image_tag @work.photo, crop: :fill, class: "work-card-image" %>
+        <% end %>
+        <div class="work-description">
+          <div class="name-year">
+            <p><%= @work.name %></p>
+            <p><%= @work.year %></p>
+          </div>
+          <p><%= @work.dimensions %></p>
+          <p><%= @work.description %></p>
+        </div>
+      </div>
+    </div>
+
+      <%= link_to work_path(locale: I18n.locale, id: @next_work.id), class: "m-3 link" do %>
+        <h3><i class="fas fa-long-arrow-alt-right"></i></h3>
+      <% end %>
+
+  </div>
+</div>

@@ -1,1 +1,17 @@
-<%= render "main_page" %>
+<div class="container-with-navbar">
+  <div class="wrapper">
+    <div class="my-cards">
+      <% @works.each do |work| %>
+        <%= link_to work_path( locale: I18n.locale, id: work.id) do %>
+          <div class="my-card">
+            <%= instance_image_tag work.photo, height: 150, width: 150, crop: :fill, class: "my-card-image" %>
+            <div class="my-card-details">
+              <p><%= work.name %></p>
+              <p><%= work.year %></p>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>

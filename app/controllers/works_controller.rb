@@ -7,12 +7,30 @@ class WorksController < ApplicationController
     else
       @works = Work.where(collection: params[:collection]).order(year: :desc)
     end
-    params[:showed_work] ? @work = Work.find(params[:showed_work].to_i) : @work = Work.last
+    # params[:showed_work] ? @work = Work.find(params[:showed_work].to_i) : @work = Work.last
   end
 
   def show
-    @work = Work.find(params[:id])
-    @works = Work.where(collection: @work.collection)
+    if params[:id].nil?
+      @work = Work.last
+    else
+      @work = Work.find(params[:id])
+    end
+
+    @previous_work = @work.previous
+    @next_work = @work.next
+
+    # if @previous_work.nil?
+    #   @previous_work = Work.find(params[:id])
+    # else
+    #   @previous_work = @work.previous
+    # end
+
+    # if @next_work.nil?
+    #   @next_work = Work.find(params[:id])
+    # else
+    #   @next_work = @work.next
+    # end
   end
 
   private
@@ -22,9 +40,8 @@ class WorksController < ApplicationController
       @width = 296
       @height = 200
     else
-      # @width = 376
-      @width = 358
-      @height = 280
+      @width = 680
+      @height = 472
     end
   end
 end

@@ -27,4 +27,4 @@ const hideOnClikMenu = () => {
   });
 };
 
-export {switchColorNavbar, hideOnClikMenu};
+export { hideOnClikMenu };
