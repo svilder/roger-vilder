@@ -38,7 +38,6 @@
   }
 }
 
-
 .navbar-about {
   display: flex;
   align-items: flex-end;
@@ -54,12 +53,12 @@
 
 .navbar-item.active {
   padding-bottom: 2px;
-  border-bottom: solid 1px rgba(248, 33, 23, 0.60);
+  border-bottom: solid 1px $red;
 }
 
 .navbar-item:hover {
   padding-bottom: 2px;
-  border-bottom: solid 1px rgba(248, 33, 23, 0.60);
+  border-bottom: solid 1px $red;
 }
 
 .navbar-hover {
@@ -131,7 +130,7 @@
     div {
       width: 48px;
       height: 8px;
-      background: #e9815b;
+      background: $red;
       margin-bottom: 8px;
       transition: all 1s ease;
     }

@@ -9,7 +9,8 @@
 .profile-img a {
   color: black;
   &:hover{
-    color: #495057;
+    color: $red;
+    text-decoration: none;
   }
 }
 
@@ -42,7 +43,7 @@
   justify-content: center;
 
   .address {
-    border-right: solid 1px darkslategrey;
+    border-right: solid 1px $red;
     padding: 0px 16px;
   }
 

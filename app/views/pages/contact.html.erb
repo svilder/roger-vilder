@@ -5,12 +5,11 @@
       <p><%= t('contact.biography_p2') %></p>
       <p><%= t('contact.biography_p3') %></p>
     </div>
-  <%= render "contact_first_wrapper" %>
-</div>
-<div class="container-contact-page">
-  <h2 class='texts-title'><%= t('contact.texts').upcase %></h2>
+  <%= render "contact_expo_wrapper" %>
+
+  <h2 class='mt-5'><%= t('contact.texts').upcase %></h2>
   <% if locale == :fr %>
-    <div class="texts-container">
+    <div class="">
       <% @texts.each do |text| %>
         <div class="text-container">
          <div class="text-content">
@@ -61,17 +60,29 @@
     </div>
   <% end %>
 
-  <p>Gilles Thomat nous invite dans les ateliers d'artistes, il les filme au travail, concentrés, maniant le fusain, le pinceau, les ciseaux, les outils…
-  Nous découvrons une chose rare, l’artiste dans son atelier, dans le silence de la création.
-  Dans ces films, il n’y a pas de dialogue, pas de commentaire, pas d’échange avec l’artiste.
-  Et pourtant, par la relation profonde et intime qu’il a réussi à mettre en place avec chacun d’entre eux, Gilles Thomat a trouvé la bonne place, la place juste, comme un révélateur.
-  Par la sensibilité et la précision de son regard, il est allé à l’essentiel, par bouts, par fragments. Il a su capter la lumière, le noir, la couleur, il s’arrête sur une main, une épaule.
-  Au son, c’est la même chose, fragments, sensations, souffle...
-  Ces films sont comme des révélations, pourtant le mystère reste entier.
-  D.Rousselet
+  <br>
+  <br>
+  <br>
 
-  Contact:
-  gillesthomat.com
-  0664168149</p>
+  <div class="text-right">
+    <h6 id="g-thomat-info">Gilles Thomat, réalisateur</h6>
+    <p class="small">
+      Gilles Thomat nous invite dans les ateliers d'artistes, il les filme au travail, concentrés, maniant le fusain, le pinceau, les ciseaux, les outils… <br>
+      Nous découvrons une chose rare, l’artiste dans son atelier, dans le silence de la création.<br>
+      Dans ces films, il n’y a pas de dialogue, pas de commentaire, pas d’échange avec l’artiste.<br>
+      Et pourtant, par la relation profonde et intime qu’il a réussi à mettre en place avec chacun d’entre eux, Gilles Thomat a trouvé la bonne place, la place juste, comme un révélateur.<br>
+      Par la sensibilité et la précision de son regard, il est allé à l’essentiel, par bouts, par fragments. Il a su capter la lumière, le noir, la couleur, il s’arrête sur une main, une épaule.<br>
+      Au son, c’est la même chose, fragments, sensations, souffle...
+      Ces films sont comme des révélations, pourtant le mystère reste entier.<br>
+      <em>D.Rousselet</em>
+
+      <p class="small">
+        Contact:<br>
+        <a class="link" href="http://gillesthomat.com/">gillesthomat.com</a><br>
+        0664168149
+      </p>
+    </p>
+
+  </div>
 </div>
 
