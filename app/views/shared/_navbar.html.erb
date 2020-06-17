@@ -7,12 +7,12 @@
     </div>
     <% if request.path.match(/works/) %>
       <div class="navbar-categories">
-        <%= link_to t("navbar.kinetic").upcase, works_path(locale: I18n.locale, collection: "Kinetic", showed_work: @work.id), class: "navbar-item #{'active' if params[:collection] == 'Kinetic'}" %>
-        <%= link_to t('navbar.sculptur').upcase, works_path(locale: I18n.locale, collection: "Sculptur", showed_work: @work.id), class: "navbar-item #{'active' if params[:collection] == 'Sculptur'}" %>
-        <%= link_to t('navbar.drawing').upcase, works_path(locale: I18n.locale, collection: "Drawing", showed_work: @work.id), class: "navbar-item #{'active' if params[:collection] == 'Drawing'}" %>
-        <%= link_to t('navbar.photo').upcase, works_path(locale: I18n.locale, collection: "Photo", showed_work: @work.id), class: "navbar-item #{'active' if params[:collection] == 'Photo'}" %>
-        <%= link_to t('navbar.animation').upcase, works_path(locale: I18n.locale, collection: "Animation", showed_work: @work.id), class: "navbar-item #{'active' if params[:collection] == 'Animation'}" %>
-        <%= link_to t('navbar.video').upcase, works_path(locale: I18n.locale, collection: "Video", showed_work: @work.id), class: "navbar-item #{'active' if params[:collection] == 'Video'}" %>
+        <%= link_to t("navbar.kinetic").upcase, works_path(locale: I18n.locale, collection: "Kinetic"), class: "navbar-item #{'active' if params[:collection] == 'Kinetic'}" %>
+        <%= link_to t('navbar.sculptur').upcase, works_path(locale: I18n.locale, collection: "Sculptur"), class: "navbar-item #{'active' if params[:collection] == 'Sculptur'}" %>
+        <%= link_to t('navbar.drawing').upcase, works_path(locale: I18n.locale, collection: "Drawing"), class: "navbar-item #{'active' if params[:collection] == 'Drawing'}" %>
+        <%= link_to t('navbar.photo').upcase, works_path(locale: I18n.locale, collection: "Photo"), class: "navbar-item #{'active' if params[:collection] == 'Photo'}" %>
+        <%= link_to t('navbar.animation').upcase, works_path(locale: I18n.locale, collection: "Animation"), class: "navbar-item #{'active' if params[:collection] == 'Animation'}" %>
+        <%= link_to t('navbar.video').upcase, works_path(locale: I18n.locale, collection: "Video"), class: "navbar-item #{'active' if params[:collection] == 'Video'}" %>
       </div>
     <% else %>
       <div class="navbar-categories">
