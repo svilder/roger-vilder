@@ -1,14 +1,12 @@
 .wrapper {
-  display: grid;
-  grid-template-columns: auto 452px;
-  grid-gap: 32px;
+  display: flex;
   justify-content: center;
 }
 
 .my-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 16px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 24px;
   justify-content: center;
 
   a {
@@ -23,9 +21,8 @@
 }
 
 .my-card {
-  height: 184px;
-  width: 184px;
-  // padding: 16px;
+  height: 160px;
+  width: 160px;
 
   img {
     border-radius: $border-radius;
@@ -57,7 +54,6 @@
 .my-card-image {
   width: 160px;
   height: 160px;
-  // margin: 8px 0;
 }
 
 .my-card-details {
@@ -65,15 +61,9 @@
 }
 
 .one-work-card {
-  // background-color: white;
-  max-height: 484px;
-  max-width: 424px;
-  position: sticky;
-  top: 72px;
   border-radius: $border-radius;
   border: 1px solid $red;
-  // box-shadow: $box-shadow;
-  padding: 8px 32px;
+  padding: 32px;
 }
 
 .work-card {
@@ -82,8 +72,6 @@
 }
 
 .work-card-image {
-  max-height: 368px;
-  max-width: 400px;
   object-fit: contain;
 }
 
@@ -93,7 +81,7 @@
 }
 
 .work-description {
-  width: 360px;
+  // width: 360px;
 
   p {
   margin: 0;
@@ -116,7 +104,7 @@
   }
 
   .my-cards {
-    display: none;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .one-work-card {
@@ -134,14 +122,14 @@
 // Medium devices (desktops, 768px and up)
 @media (min-width: 768px) {
   .my-cards {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .my-cards {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 

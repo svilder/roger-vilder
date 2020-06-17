@@ -12,7 +12,7 @@ class WorksController < ApplicationController
 
   def show
     @work = Work.find(params[:id])
-    @works = Work.where(collection: @work.collection)
+    @works = Work.where(collection: @work.collection).order(year: :desc)
   end
 
   private
@@ -23,8 +23,8 @@ class WorksController < ApplicationController
       @height = 200
     else
       # @width = 376
-      @width = 358
-      @height = 280
+      @width = 658
+      @height = 480
     end
   end
 end
