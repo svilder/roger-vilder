@@ -1,15 +1,15 @@
-<div class="home-text container-fluid links">
-  <%= link_to "works?collection=Kinetic" do %>
+<%= link_to "works?collection=Kinetic", class: "links" do %>
+  <div class="home-text container-fluid links">
     <h1 class="text-centered mt-3">
       <div class="all-rounding">
-      <% @letters.each do |letter| %>
-        <div class="rounding">
-          <%= letter %>
-        </div>
-      <% end %>
+        <% @letters.each do |letter| %>
+          <div class="rounding">
+            <%= letter %>
+          </div>
+        <% end %>
       </div>
     </h1>
     <%= image_tag "film.gif" %>
     <p><%= t('home.catchphrase') %></p>
-  <% end %>
-</div>
+  </div>
+<% end %>

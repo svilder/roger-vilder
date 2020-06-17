@@ -1,9 +1,9 @@
-.links a {
+.links {
   text-decoration: none;
   color: black;
 }
 
-.links a:hover {
+.links:hover {
   text-decoration: none;
   color: black;
 }
@@ -13,16 +13,17 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  // background: black;
   height: 100vh;
   margin: 0;
   text-align: center;
   p {
     margin-top: 24px;
-    width: 400px;
+    max-width: 900px;
     font-weight: lighter;
   }
 }
+
+
 
 .all-rounding {
   display: flex;
@@ -32,14 +33,16 @@
 }
 
 .rounding {
-  transition: transform 3s;
   padding: 0;
   margin: 0 6px;
+  color: transparent;
+  font-weight: bold;
+  font-size: 4.5rem;
+  -webkit-text-stroke: 2px black;
 }
 
 .rounding:hover {
-  // transform: rotate(360deg);
-  color: $red
+  color: black;
 }
 
 
@@ -69,11 +72,11 @@
 }
 @include media-breakpoint-only(lg) {
   .home-text img {
-    max-height: 400px;
+    max-height: 600px;
   }
 }
 @include media-breakpoint-only(xl) {
   .home-text img {
-    max-height: 400px;
+    max-height: 800px;
   }
 }
