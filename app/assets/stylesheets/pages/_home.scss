@@ -1,11 +1,11 @@
 .links a {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .links a:hover {
   text-decoration: none;
-  color: white;
+  color: black;
 }
 
 .home-text {
@@ -13,7 +13,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: black;
+  // background: black;
   height: 100vh;
   margin: 0;
   text-align: center;
@@ -38,7 +38,8 @@
 }
 
 .rounding:hover {
-  transform: rotate(360deg);
+  // transform: rotate(360deg);
+  color: $red
 }
 
 
