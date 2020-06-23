@@ -7,7 +7,6 @@ class WorksController < ApplicationController
     else
       @works = Work.where(collection: params[:collection]).order(year: :desc)
     end
-    # params[:showed_work] ? @work = Work.find(params[:showed_work].to_i) : @work = Work.last
   end
 
   def show
@@ -20,14 +19,16 @@ class WorksController < ApplicationController
     @previous_work = @work.previous
     @next_work = @work.next
 
-    # if @previous_work.nil?
-    #   @previous_work = Work.find(params[:id])
+    # if @work.previous.nil?
+    #   id = (@work.id - 2).to_i
+    #   @previous_work = Work.find_by(id: id)
     # else
     #   @previous_work = @work.previous
     # end
 
-    # if @next_work.nil?
-    #   @next_work = Work.find(params[:id])
+    # if @work.next.nil?
+    #   id = (@work.id + 2).to_i
+    #   @next_work = Work.find_by(id: id)
     # else
     #   @next_work = @work.next
     # end
@@ -40,8 +41,8 @@ class WorksController < ApplicationController
       @width = 296
       @height = 200
     else
-      @width = 680
-      @height = 472
+      @width = 780
+      @height = 572
     end
   end
 end
