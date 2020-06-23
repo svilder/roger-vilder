@@ -14,8 +14,6 @@
 }
 
 .text-content {
-  // background: white;
-
   padding: 24px;
   font-size: 14px;
   font-style: oblique;
@@ -25,8 +23,7 @@
 }
 
 .text-container {
-  // box-shadow: $box-shadow;
-  border: 1px solid $red;
+  border: 1px solid white;
   border-radius: $border-radius;
   margin: 24px 0px;
 }
@@ -34,7 +31,7 @@
 .text-source {
   margin: 0 24px;
   align-item: center;
-  border-top: 1px solid $red;
+  border-top: 1px solid white;
   p {
     margin: 8px 0px;
   }
@@ -58,23 +55,22 @@
 }
 
 .nav-tabs .nav-link.active {
-  border-color: $red $red transparent;
+  border-color: white white transparent;
+  color: white;
 }
 
 .nav-tabs {
-  border-bottom: 1px solid $red;
+  border-bottom: 1px solid white;
 }
 
 .nav-tabs .nav-link:hover {
-  border-color: $red $red transparent;
+  border-color: white white transparent;
 }
 
 .link {
   color: black;
   &:hover{
-    color: $red;
+    color: white;
     text-decoration: none;
   }
 }
-
-// .nav-tabs .nav-link:focus

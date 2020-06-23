@@ -1,0 +1,33 @@
+.nav-menu-rv {
+  position: fixed;
+  top: 0;
+  width: 204px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-right: 16px;
+  margin: 16px;
+  background-color: $body-bg;
+  // border-right: solid .5px white;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: black;
+  font-size: x-large;
+  font-family: 'Open Sans Condensed', sans-serif;
+  border-bottom: solid 1px transparent;
+  &:hover {
+    border-bottom: solid 1px white;
+    color: black;
+  }
+}
+
+.nav-item.active {
+  border-bottom: solid 1px white;
+}
+
+.nav-categories {
+  display: flex;
+  flex-direction: column;
+}

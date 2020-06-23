@@ -1,0 +1,28 @@
+<div class="nav-menu-rv">
+  <div class="nav-top">
+    <h1 class="text-centered letters-wrapper letters">
+      ROGER VILDER
+    </h1>
+    <div class="nav-about">
+      <div class="d-flex justify-content-between align-items-center mt-5">
+        <%= link_to t('navbar.work').upcase, 'works?collection=Kinetic', class: "nav-item #{'active' if params[:controller] == 'works'}" %>
+        <div class="">
+          <% if I18n.locale == :fr %>
+            <%= link_to "🇬🇧", { :locale=>'en' } %>
+          <% else %>
+            <%= link_to "🇫🇷", { :locale=>'fr' } %>
+          <% end %>
+        </div>
+        <%= link_to t('navbar.contact').upcase, contact_path, class: "nav-item #{'active' if params[:controller] == 'pages'}" %>
+      </div>
+    </div>
+  </div>
+  <div class="nav-categories mt-5">
+    <%= link_to t("navbar.kinetic").upcase, works_path(locale: I18n.locale, collection: "Kinetic"), class: "nav-item #{'active' if params[:collection] == 'Kinetic'}" %>
+    <%= link_to t('navbar.sculptur').upcase, works_path(locale: I18n.locale, collection: "Sculptur"), class: "nav-item #{'active' if params[:collection] == 'Sculptur'}" %>
+    <%= link_to t('navbar.drawing').upcase, works_path(locale: I18n.locale, collection: "Drawing"), class: "nav-item #{'active' if params[:collection] == 'Drawing'}" %>
+    <%= link_to t('navbar.photo').upcase, works_path(locale: I18n.locale, collection: "Photo"), class: "nav-item #{'active' if params[:collection] == 'Photo'}" %>
+    <%= link_to t('navbar.animation').upcase, works_path(locale: I18n.locale, collection: "Animation"), class: "nav-item #{'active' if params[:collection] == 'Animation'}" %>
+    <%= link_to t('navbar.video').upcase, works_path(locale: I18n.locale, collection: "Video"), class: "nav-item #{'active' if params[:collection] == 'Video'}" %>
+  </div>
+</div>
