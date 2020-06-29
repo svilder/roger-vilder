@@ -7,10 +7,10 @@ en:
     photo: "Photos"
     sculptur: "Sculpturs"
     video: "Videos"
-    contact: "Contact"
+    contact: "About"
     work: "Work"
   contact:
-    biography_p1: "Born in 1938, in the Lebanon, he studies fine arts at the University Concordia, Montreal, Canada."
+    biography_p1: "Born in 1938, he studies fine arts at the University Concordia, Montreal, Canada."
     biography_p2: "He works between Paris, Nîmes and Montreal (Canada).
                   He taught the plastic arts during 30 years in diverse institutions and universities in North America.
                   Member of the Royal Academy of the Arts of Canada and association Kepes de Budapest, Hungary. Since the environment of the 60s, he explores the movement by the motorized mechanics, the digital searches, the animations algorithmics and the neon."
@@ -37,8 +37,10 @@ en:
     year: Year
     dimensions: Dimensions
   home:
+    subtext: "Mouvement researcher"
     catchphrase: "«Since potentially everything exists, creating is discovering and
       making visible or manifest what is latent»"
+    phraseby: "Empedocles of Agrigento, 437 BC AD"
   activerecord:
     errors:
       messages:

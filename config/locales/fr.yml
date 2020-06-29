@@ -8,10 +8,10 @@ fr:
     photo: "Photos"
     sculptur: "Sculptures"
     video: "Vidéos"
-    contact: "Contact"
+    contact: "À propos"
     work: "Oeuvres"
   contact:
-    biography_p1: "Né en 1938, au Liban, il fait ses études de beaux arts à l'Université Concordia, Montréal, Canada."
+    biography_p1: "Né en 1938, il fait ses études de beaux arts à l'Université Concordia, Montréal, Canada."
     biography_p2: "Il travaille entre Paris, Nîmes et Montréal (Canada).
       Il a enseigné les Arts Plastiques pendant 30 ans dans diverses institutions
       et universités en Amérique du Nord. Membre de l'Académie Royale des Arts du
@@ -45,8 +45,10 @@ fr:
     year: Année
     dimensions: Dimensions
   home:
+    subtext: "Chercheur en mouvement"
     catchphrase: "«Dans la mesure où jamais le changement n'arrête son perpetuel devenir,
       tout existe perpétuellement, immuable dans le cycle du temps...»"
+    phraseby: "Empédocle d'Agrigente, 437 av. J.-C."
   activerecord:
     errors:
       messages:

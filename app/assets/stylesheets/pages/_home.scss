@@ -8,7 +8,7 @@
   color: black;
 }
 
-.home-text {
+.home-wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -18,33 +18,37 @@
   text-align: center;
   p {
     margin-top: 24px;
-    max-width: 900px;
-    font-weight: lighter;
   }
 }
 
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 40px;
-  padding: 0;
-  color: transparent;
-  font-weight: bold;
-  &:hover {
-    color: transparent;
-  }
+.subtext {
+  margin: 0;
 }
+
+.text-right {
+  text-right: right;
+  width: 100%;
+}
+
+.home-content {
+  position: absolute;
+  top: 1px;
+}
+
 
 .big {
-  font-size: 9.5rem;
-  -webkit-text-stroke: 5px black;
+  color: transparent;
+  font-weight: bold;
+  font-size: 10rem;
+  -webkit-text-stroke: 6px white;
+  letter-spacing: .5rem;
+  line-height: 1;
 }
 
 .medium {
   font-size: 4.5rem;
-  -webkit-text-stroke: 3px black;
+  -webkit-text-stroke: 3px white;
+  max-width: 204px;
 }
 
 

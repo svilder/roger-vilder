@@ -1,63 +1,40 @@
-<div class="contact-wrapper">
-  <div class="profile-img">
-    <%#= image_tag "rogervilder.jpg", height: 320, width: 320, alt: "photo de profile" %>
-    <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://player.vimeo.com/video/383557366?autoplay=1&color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<div class="flex-grow">
+  <div class="contact-wrapper">
+    <h1 class="logo medium text-centered">
+      <%= "ROGER VILDER" %>
+    </h1>
+    <div class="contact-infos">
+      <div class="mail">
+        <h6><i class="far fa-envelope"></i> rvilder@gmail.com </h6>
+      </div>
+      <div>
+        <div>
+          <ul>
+            <li>
+              <h6>FRANCE</h6>
+            </li>
+            <li>
+              <p>2 Rue de Provence</p>
+            </li>
+            <li>
+              <p class="mb-2">30000 NIMES</p>
+            </li>
+            <li>
+              <p>+33(0)466210434</p>
+              <p>+33(0)698773660</p>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
-    <script src="https://player.vimeo.com/api/player.js"></script>
-    <p class="small">
-      <a href="https://vimeo.com/383557366">Roger Vilder, film annonce</a>
-      de
-      <a href="https://vimeo.com/gillesthomatvideo">Gilles Thomat</a>.
-      <a href="#g-thomat-info"><%= t("contact.show-more") %>*<i class="fas fa-long-arrow-alt-down"></i> </a>
-    </p>
   </div>
 
-  <div class="contact-infos">
-    <div class="mail">
-      <h6><i class="far fa-envelope"></i> rvilder@gmail.com </h6>
-    </div>
-    <div class="addresses">
-      <div class="address" id ="french-address">
-        <ul>
-          <li>
-            <h6>FRANCE</h6>
-          </li>
-          <li>
-            <p>2 Rue de Provence</p>
-          </li>
-          <li>
-            <p class="mb-2">30000 NIMES</p>
-          </li>
-          <li>
-            <p><span>Tel:</span> +33(0)466210434</p>
-            <p>+33(0)698773660</p>
-          </li>
-        </ul>
-      </div>
-      <div class="address" id ="canadian-address">
-        <ul>
-          <li>
-            <h6>CANADA</h6>
-          </li>
-          <li>
-            <p>32 Elmwood st.</p>
-          </li>
-          <li>
-            <p class="mb-2">Montréal (Qc) H2V2E2</p>
-          </li>
-          <li>
-            <p><span>Tel:</span> 1-514-271-8862</p>
-          </li>
-      </div>
-    </div>
-    <div class="awards">
-      <h6><%= t("contact.rewards") %></h6>
-        <ul>
-          <li><p>1977 - Museum of Modern Art, San Francisco : World Print Competition</p></li>
-          <li><p>1970 - Universal exhibit of Osaka, Japan</p></li>
-          <li><p>1967 - Contemporary Art Museum, Montréal</p></li>
-        </ul>
-    </div>
+  <div class="awards">
+    <h6><%= t("contact.rewards") %></h6>
+      <ul>
+        <li><p>1977 - Museum of Modern Art, San Francisco : World Print Competition</p></li>
+        <li><p>1970 - Universal exhibit of Osaka, Japan</p></li>
+        <li><p>1967 - Contemporary Art Museum, Montréal</p></li>
+      </ul>
   </div>
 </div>

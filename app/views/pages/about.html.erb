@@ -1,10 +1,12 @@
-<div class="container-vertical-navbar">
-  <%= render "contact_infos" %>
+<div class="container-less-navbar">
+  <div class="d-flex m-5">
+    <%= render "contact_infos" %>
     <div class="biographie">
       <p><%= t('contact.biography_p1') %></p>
       <p><%= t('contact.biography_p2') %></p>
       <p><%= t('contact.biography_p3') %></p>
     </div>
+  </div>
   <%= render "contact_expo_wrapper" %>
 
   <h2 class='mt-5'><%= t('contact.texts').upcase %></h2>
@@ -63,6 +65,18 @@
   <br>
   <br>
   <br>
+  <div class="profile-img flex-grow">
+    <div style="padding:56.25% 0 0 0;position:relative;">
+      <iframe src="https://player.vimeo.com/video/383557366?autoplay=0&color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+    </div>
+    <script src="https://player.vimeo.com/api/player.js"></script>
+    <p class="small">
+      <a href="https://vimeo.com/383557366">Roger Vilder, film annonce</a>
+      de
+      <a href="https://vimeo.com/gillesthomatvideo">Gilles Thomat</a>.
+      <a href="#g-thomat-info"><%= t("contact.show-more") %>*<i class="fas fa-long-arrow-alt-down"></i> </a>
+    </p>
+  </div>
 
   <div class="text-right">
     <h6 id="g-thomat-info"><%= t('contact.g-thomat-title') %></h6>
