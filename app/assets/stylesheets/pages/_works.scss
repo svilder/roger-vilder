@@ -6,7 +6,7 @@
 .my-cards {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-gap: 24px;
+  grid-gap: 64px;
   justify-content: center;
 
   a {
@@ -53,7 +53,7 @@
 
 .my-card-image {
   width: 160px;
-  height: 160px;
+  // height: 160px;
 }
 
 .my-card-details {
