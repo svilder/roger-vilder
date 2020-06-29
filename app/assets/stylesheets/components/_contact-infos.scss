@@ -1,5 +1,6 @@
 .contact-wrapper {
   display: flex;
+  justify-content: center;
 }
 
 .profile-img {
@@ -38,24 +39,6 @@
   }
 }
 
-.addresses {
-  display: flex;
-  justify-content: center;
-
-  .address {
-    border-right: solid 1px white;
-    padding: 0px 16px;
-  }
-
-  #canadian-address {
-    border-right: none;
-  }
-
-  #french-address {
-    text-align: end;
-  }
-}
-
 .awards {
   h6 {
     text-align: center;
@@ -64,5 +47,13 @@
 
   ul {
     text-align: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
   }
 }
