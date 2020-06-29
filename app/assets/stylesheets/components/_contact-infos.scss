@@ -3,7 +3,8 @@
   justify-content: center;
 }
 
-.profile-img {
+
+.flex-grow {
   flex-grow: 1;
 }
 
@@ -32,10 +33,6 @@
   p {
     margin-bottom: 0px;
     font-style: oblique;
-  }
-
-  span {
-    font-style: initial;
   }
 }
 
