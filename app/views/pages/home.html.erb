@@ -1,9 +1,10 @@
 <%= link_to "works?collection=Kinetic", class: "links" do %>
   <div class="home-text container-fluid links">
-    <h1 class="text-centered mb-5 logo big">
+    <h1 class="text-centered logo big">
       ROGER VILDER
     </h1>
-    <%= image_tag "film.gif" %>
-    <p><%= t('home.catchphrase') %></p>
+    <%= image_tag "film.gif", class: "m-5" %>
+    <p><%= t('home.catchphrase') %> <br>
+    <em><%= t('home.phraseby') %></em></p>
   </div>
 <% end %>

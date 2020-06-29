@@ -28,7 +28,6 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin-bottom: 40px;
   padding: 0;
   color: transparent;
   font-weight: bold;
@@ -38,8 +37,9 @@
 }
 
 .big {
-  font-size: 9.5rem;
-  -webkit-text-stroke: 5px black;
+  font-size: 10rem;
+  -webkit-text-stroke: 6px black;
+  letter-spacing: .5rem;
 }
 
 .medium {
