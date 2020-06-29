@@ -1,0 +1,24 @@
+.nav-item {
+  text-decoration: none;
+  color: black;
+  font-size: x-large;
+  font-family: 'Open Sans Condensed', sans-serif;
+  border-bottom: solid 1px transparent;
+  &:hover {
+    // border-bottom: solid 1px white;
+    color: #D44A40;
+  }
+}
+
+.nav-categories {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: relative;
+  top: 2px;
+}
+
+.content-center {
+  display: flex;
+}
