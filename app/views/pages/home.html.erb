@@ -19,7 +19,7 @@
         <%= image_tag "film.gif", width: "304px" %>
       </div>
       <div class="content-right">
-        <%= link_to t('navbar.contact').upcase, about_path, class: "nav-item" %>
+        <%= link_to t('navbar.contact').upcase, about_path(locale: I18n.locale), class: "nav-item" %>
       </div>
     </div>
     <p><%= t('home.catchphrase') %> <br>

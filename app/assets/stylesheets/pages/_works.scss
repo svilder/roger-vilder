@@ -6,7 +6,7 @@
 .my-cards {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-gap: 64px;
+  grid-gap: 96px;
   justify-content: center;
 
   a {
@@ -62,8 +62,6 @@
 
 .one-work-card {
   border-radius: $border-radius;
-  // border: 1px solid $red;
-  // padding: 32px;
 }
 
 .work-card {
@@ -127,7 +125,7 @@
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .my-cards {
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 

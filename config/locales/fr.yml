@@ -49,7 +49,7 @@ fr:
     subtext: "Chercheur en mouvement"
     catchphrase: "«Dans la mesure où jamais le changement n'arrête son perpetuel devenir,
       tout existe perpétuellement, immuable dans le cycle du temps...»"
-    phraseby: "Empédocle d'Agrigente, 437 av. J.-C."
+    phraseby: "Empédocle d'Agrigente, 435 av. J.-C."
   activerecord:
     errors:
       messages:
