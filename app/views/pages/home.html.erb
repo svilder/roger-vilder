@@ -1,30 +1,28 @@
-<%#= link_to "works?collection=Kinetic", class: "links" do %>
-  <div class="home-wrapper container-fluid links">
-    <div class="home-content">
-      <h1 class="text-centered big">
-        ROGER VILDER
-      </h1>
-      <div class="content-wrapper">
-        <div class="content-left">
-          <div class="nav-categories">
-            <%= link_to t("navbar.kinetic").upcase, works_path(locale: I18n.locale, collection: "Kinetic"), class: "nav-item" %>
-            <%= link_to t("navbar.neon").upcase, works_path(locale: I18n.locale, collection: "Sculptur"), class: "nav-item" %>
-            <%= link_to t('navbar.sculptur').upcase, works_path(locale: I18n.locale, collection: "Sculptur"), class: "nav-item" %>
-            <%= link_to t('navbar.drawing').upcase, works_path(locale: I18n.locale, collection: "Drawing"), class: "nav-item" %>
-            <%= link_to t('navbar.photo').upcase, works_path(locale: I18n.locale, collection: "Photo"), class: "nav-item" %>
-            <%= link_to t('navbar.animation').upcase, works_path(locale: I18n.locale, collection: "Animation"), class: "nav-item" %>
-            <%= link_to t('navbar.video').upcase, works_path(locale: I18n.locale, collection: "Video"), class: "nav-item" %>
-          </div>
-        </div>
-        <div>
-          <%= image_tag "film.gif", width: "304px" %>
-        </div>
-        <div class="content-right">
-          <%= link_to t('navbar.contact').upcase, about_path, class: "nav-item" %>
+<div class="home-wrapper container-fluid links">
+  <div class="home-content">
+    <h1 class="text-centered big">
+      ROGER VILDER
+    </h1>
+    <div class="content-wrapper">
+      <div class="content-left">
+        <div class="nav-categories">
+          <%= link_to t("navbar.kinetic").upcase, works_path(locale: I18n.locale, collection: "Kinetic"), class: "nav-item" %>
+          <%= link_to t("navbar.neon").upcase, works_path(locale: I18n.locale, collection: "Sculptur"), class: "nav-item" %>
+          <%= link_to t('navbar.sculptur').upcase, works_path(locale: I18n.locale, collection: "Sculptur"), class: "nav-item" %>
+          <%= link_to t('navbar.drawing').upcase, works_path(locale: I18n.locale, collection: "Drawing"), class: "nav-item" %>
+          <%= link_to t('navbar.photo').upcase, works_path(locale: I18n.locale, collection: "Photo"), class: "nav-item" %>
+          <%= link_to t('navbar.animation').upcase, works_path(locale: I18n.locale, collection: "Animation"), class: "nav-item" %>
+          <%= link_to t('navbar.video').upcase, works_path(locale: I18n.locale, collection: "Video"), class: "nav-item" %>
         </div>
       </div>
-      <p><%= t('home.catchphrase') %> <br>
-      <em><%= t('home.phraseby') %></em></p>
+      <div>
+        <%= image_tag "film.gif", width: "304px" %>
+      </div>
+      <div class="content-right">
+        <%= link_to t('navbar.contact').upcase, about_path, class: "nav-item" %>
+      </div>
     </div>
+    <p><%= t('home.catchphrase') %> <br>
+    <em><%= t('home.phraseby') %></em></p>
   </div>
-<%# end %>
+</div>
