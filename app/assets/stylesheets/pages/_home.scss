@@ -21,20 +21,17 @@
   }
 }
 
-.subtext {
-  margin: 0;
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-.text-right {
-  text-right: right;
-  width: 100%;
+.content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
-
-.home-content {
-  position: absolute;
-  top: 1px;
-}
-
 
 .big {
   color: transparent;
@@ -43,6 +40,7 @@
   -webkit-text-stroke: 6px white;
   letter-spacing: .5rem;
   line-height: 1;
+  margin-bottom: 56px;
 }
 
 .medium {
