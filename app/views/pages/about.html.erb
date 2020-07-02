@@ -1,101 +1,39 @@
 <div class="container-less-navbar">
-  <div class="d-flex m-5">
-    <%= render "contact_infos" %>
-    <div class="biographie">
-      <p><%= t('contact.biography_p1') %></p>
-      <p><%= t('contact.biography_p2') %></p>
-      <p><%= t('contact.biography_p3') %></p>
+  <div>
+    <h6 class="title"><%= t('contact.bio').upcase %></h6>
+    <p><%= t('contact.biography_p1') %></p>
+    <p><%= t('contact.biography_p2') %></p>
+    <p><%= t('contact.biography_p3') %></p>
+  </div>
+  <div class="d-flex justify-content-around align-items-baseline m-5">
+    <div class="contact-infos">
+      <h6><%= t('contact.contact').upcase %></h6>
+      <ul>
+        <li>
+          <p class="mb-2"><strong><i class="far fa-envelope"></i> rvilder@gmail.com</strong></p>
+        </li>
+        <li>
+          <p>2 Rue de Provence</p>
+        </li>
+        <li>
+          <p class="mb-2">30000 NIMES</p>
+        </li>
+        <li>
+          <p>+33(0)466210434</p>
+          <p>+33(0)698773660</p>
+        </li>
+      </ul>
+    </div>
+    <div class="awards">
+      <h6><%= t("contact.rewards").upcase %></h6>
+        <ul>
+          <li><p>1977 - Museum of Modern Art, San Francisco : World Print Competition</p></li>
+          <li><p>1970 - Universal exhibit of Osaka, Japan</p></li>
+          <li><p>1967 - Contemporary Art Museum, Montréal</p></li>
+        </ul>
     </div>
   </div>
+
   <%= render "contact_expo_wrapper" %>
-
-  <h2 class='mt-5'><%= t('contact.texts').upcase %></h2>
-  <% if locale == :fr %>
-    <div class="">
-      <% @texts.each do |text| %>
-        <div class="text-container">
-         <div class="text-content">
-           <%= simple_format(text.content_fr) %>
-           <% if text.content_fr.nil? %>
-             <%= simple_format(text.content_en) %>
-           <% end %>
-         </div>
-          <div class="text-source d-flex">
-            <p>
-              <span class="text-author"><%= text.author %></span>
-              <span class="text-title">
-                <%= text.title_fr %>
-                <% if text.title_fr.nil? %>
-                  <%= text.title_en %>
-                <% end %>
-              </span>
-              <span class="text-year"><%= text.year %></span>
-            </p>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  <% else %>
-    <div class="texts-container">
-      <% @texts.each do |text| %>
-        <div class="text-container">
-          <div class="text-content">
-            <%= simple_format(text.content_en) %>
-            <% if text.content_en.nil? %>
-              <%= simple_format(text.content_fr) %>
-            <% end %>
-          </div>
-          <div class="text-source d-flex">
-            <p>
-              <span class="text-author"><%= text.author %>-</span>
-              <span class="text-title">
-                <%= text.title_en %>
-                <% if text.title_en.nil? %>
-                  <%= text.title_fr %>
-                <% end %>
-              </span>
-              <span class="text-year"><%= text.year %></span>
-            </p>
-          </div>
-        </div>
-      <% end %>
-    </div>
-  <% end %>
-
-  <br>
-  <br>
-  <br>
-  <div class="profile-img flex-grow">
-    <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://player.vimeo.com/video/383557366?autoplay=0&color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
-    </div>
-    <script src="https://player.vimeo.com/api/player.js"></script>
-    <p class="small">
-      <a href="https://vimeo.com/383557366">Roger Vilder, film annonce</a>
-      de
-      <a href="https://vimeo.com/gillesthomatvideo">Gilles Thomat</a>.
-      <a href="#g-thomat-info"><%= t("contact.show-more") %>*<i class="fas fa-long-arrow-alt-down"></i> </a>
-    </p>
-  </div>
-
-  <div class="text-right">
-    <h6 id="g-thomat-info"><%= t('contact.g-thomat-title') %></h6>
-    <p class="small">
-      <%= t('contact.g-thomat-text-1') %><br>
-      <%= t('contact.g-thomat-text-2') %><br>
-      <%= t('contact.g-thomat-text-3') %><br>
-      <%= t('contact.g-thomat-text-4') %><br>
-      <%= t('contact.g-thomat-text-5') %><br>
-      <%= t('contact.g-thomat-text-6') %><br>
-      <em>D.Rousselet</em>
-
-      <p class="small">
-        Contact:<br>
-        <a class="link" href="http://gillesthomat.com/">gillesthomat.com</a><br>
-        0664168149
-      </p>
-    </p>
-
-  </div>
 </div>
 

@@ -3,7 +3,6 @@
   justify-content: center;
 }
 
-
 .flex-grow {
   flex-grow: 1;
 }
@@ -23,7 +22,10 @@
 }
 
 .contact-infos {
-  margin: 8px 56px;
+  margin-right: 32px;
+  padding-right: 16px;
+  min-width: 152px;
+
   ul {
     list-style: none;
     padding: 0;
@@ -37,12 +39,12 @@
 
 .awards {
   h6 {
-    text-align: center;
+    // text-align: center;
     margin: 16px 0px;
   }
 
   ul {
-    text-align: center;
+    // text-align: center;
     list-style: none;
     padding: 0;
     margin: 0;
