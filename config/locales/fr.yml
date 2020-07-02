@@ -5,10 +5,12 @@ fr:
     animation: "Animations"
     drawing: "Dessins"
     kinetic: "Cinétiques"
+    neon: "Néons"
     photo: "Photos"
     sculptur: "Sculptures"
     video: "Vidéos"
     contact: "À propos"
+    films: "Films"
     work: "Oeuvres"
   contact:
     biography_p1: "Né en 1938, il fait ses études de beaux arts à l'Université Concordia, Montréal, Canada."
@@ -48,7 +50,7 @@ fr:
     subtext: "Chercheur en mouvement"
     catchphrase: "«Dans la mesure où jamais le changement n'arrête son perpetuel devenir,
       tout existe perpétuellement, immuable dans le cycle du temps...»"
-    phraseby: "Empédocle d'Agrigente, 437 av. J.-C."
+    phraseby: "Empédocle d'Agrigente, 435 av. J.-C."
   activerecord:
     errors:
       messages:

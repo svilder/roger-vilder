@@ -18,37 +18,46 @@
   text-align: center;
   p {
     margin-top: 24px;
+    color: white;
+  }
+  hr {
+    border-top: 3px solid white;
   }
 }
 
-.subtext {
-  margin: 0;
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  img {
+    position: relative;
+    right: 204px;
+  }
 }
 
-.text-right {
-  text-right: right;
-  width: 100%;
+.content-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
-
-.home-content {
-  position: absolute;
-  top: 1px;
-}
-
 
 .big {
   color: transparent;
   font-weight: bold;
   font-size: 10rem;
   -webkit-text-stroke: 6px white;
-  letter-spacing: .5rem;
+  letter-spacing: 1rem;
   line-height: 1;
+  margin-bottom: 56px;
 }
 
 .medium {
+  color: transparent;
+  font-weight: bold;
   font-size: 4.5rem;
   -webkit-text-stroke: 3px white;
   max-width: 204px;
+  letter-spacing: .2rem;
 }
 
 

@@ -1,26 +1,32 @@
-<%= link_to "works?collection=Kinetic", class: "links" do %>
-  <div class="home-wrapper container-fluid links">
-    <div class="home-content">
-      <h1 class="text-centered big">
-        ROGER VILDER
-      </h1>
-      <div class="text-right">
-        <h5 class="subtext"><%= t('home.subtext') %></h5>
-        <%= link_to t('navbar.contact').upcase, about_path, class: "nav-item" %>
-      </div>
-      <div class="content-center mb-5">
-        <%= image_tag "film.gif" %>
-        <div class="ml-3 nav-categories">
-          <%= link_to t("navbar.kinetic").upcase, works_path(locale: I18n.locale, collection: "Kinetic"), class: "nav-item #{'active' if params[:collection] == 'Kinetic'}" %>
-          <%= link_to t('navbar.sculptur').upcase, works_path(locale: I18n.locale, collection: "Sculptur"), class: "nav-item #{'active' if params[:collection] == 'Sculptur'}" %>
-          <%= link_to t('navbar.drawing').upcase, works_path(locale: I18n.locale, collection: "Drawing"), class: "nav-item #{'active' if params[:collection] == 'Drawing'}" %>
-          <%= link_to t('navbar.photo').upcase, works_path(locale: I18n.locale, collection: "Photo"), class: "nav-item #{'active' if params[:collection] == 'Photo'}" %>
-          <%= link_to t('navbar.animation').upcase, works_path(locale: I18n.locale, collection: "Animation"), class: "nav-item #{'active' if params[:collection] == 'Animation'}" %>
-          <%= link_to t('navbar.video').upcase, works_path(locale: I18n.locale, collection: "Video"), class: "nav-item #{'active' if params[:collection] == 'Video'}" %>
+<div class="home-wrapper container-fluid links">
+  <div class="home-content">
+    <h1 class="text-centered big">
+      ROGER VILDER
+    </h1>
+    <div class="content-wrapper">
+      <div class="content-left">
+        <div class="nav-categories">
+          <%= link_to t("navbar.kinetic").upcase, works_path(locale: I18n.locale, collection: "Kinetic"), class: "nav-item" %>
+          <%= link_to t("navbar.neon").upcase, works_path(locale: I18n.locale, collection: "Sculptur"), class: "nav-item" %>
+          <%= link_to t('navbar.sculptur').upcase, works_path(locale: I18n.locale, collection: "Sculptur"), class: "nav-item" %>
+          <%= link_to t('navbar.drawing').upcase, works_path(locale: I18n.locale, collection: "Drawing"), class: "nav-item" %>
+          <%= link_to t('navbar.photo').upcase, works_path(locale: I18n.locale, collection: "Photo"), class: "nav-item" %>
+          <%= link_to t('navbar.animation').upcase, works_path(locale: I18n.locale, collection: "Animation"), class: "nav-item" %>
+          <%= link_to t('navbar.video').upcase, works_path(locale: I18n.locale, collection: "Video"), class: "nav-item" %>
+        </div>
+        <div class="text-left">
+          <hr>
+          <%= link_to t('navbar.films').upcase, about_path(locale: I18n.locale), class: "nav-item" %> <br>
+          <%= link_to t('navbar.contact').upcase, about_path(locale: I18n.locale), class: "nav-item" %>
         </div>
       </div>
-    <p><%= t('home.catchphrase') %> <br>
-    <em><%= t('home.phraseby') %></em></p>
+      <div>
+        <%= image_tag "film.gif", width: "328px" %>
+      </div>
+    </div>
+    <div class="d-flex justify-content-between">
+      <p><%= t('home.catchphrase') %></p>
+      <p><em><%= t('home.phraseby') %></em></p>
     </div>
   </div>
-<% end %>
+</div>

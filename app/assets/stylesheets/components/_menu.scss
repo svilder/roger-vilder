@@ -1,12 +1,11 @@
 .nav-item {
   text-decoration: none;
-  color: black;
-  font-size: x-large;
+  color: white;
+  font-size: large;
   font-family: 'Open Sans Condensed', sans-serif;
   border-bottom: solid 1px transparent;
   &:hover {
-    // border-bottom: solid 1px white;
-    color: #D44A40;
+    color: black;
   }
 }
 

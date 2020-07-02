@@ -4,10 +4,12 @@ en:
     animation: "Animations"
     drawing: "Drawings"
     kinetic: "Kinetics"
+    neon: "Neons"
     photo: "Photos"
     sculptur: "Sculpturs"
     video: "Videos"
     contact: "About"
+    films: "Films"
     work: "Work"
   contact:
     biography_p1: "Born in 1938, he studies fine arts at the University Concordia, Montreal, Canada."
@@ -40,7 +42,7 @@ en:
     subtext: "Mouvement researcher"
     catchphrase: "«Since potentially everything exists, creating is discovering and
       making visible or manifest what is latent»"
-    phraseby: "Empedocles of Agrigento, 437 BC AD"
+    phraseby: "Empedocles of Agrigento, 435 BC AD"
   activerecord:
     errors:
       messages:
