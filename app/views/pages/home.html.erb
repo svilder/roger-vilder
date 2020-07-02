@@ -18,6 +18,13 @@
           <hr>
           <%= link_to t('navbar.films').upcase, about_path(locale: I18n.locale), class: "nav-item" %> <br>
           <%= link_to t('navbar.contact').upcase, about_path(locale: I18n.locale), class: "nav-item" %>
+        <div class="">
+          <% if I18n.locale == :fr %>
+            <h1><%= link_to "🇬🇧", { :locale=>'en' } %></h1>
+          <% else %>
+            <h1><%= link_to "🇫🇷", { :locale=>'fr' } %></h1>
+          <% end %>
+        </div>
         </div>
       </div>
       <div>
