@@ -14,15 +14,18 @@
           <%= link_to t('navbar.animation').upcase, works_path(locale: I18n.locale, collection: "Animation"), class: "nav-item" %>
           <%= link_to t('navbar.video').upcase, works_path(locale: I18n.locale, collection: "Video"), class: "nav-item" %>
         </div>
+        <div class="text-left">
+          <hr>
+          <%= link_to t('navbar.contact').upcase, about_path(locale: I18n.locale), class: "nav-item" %>
+        </div>
       </div>
       <div>
-        <%= image_tag "film.gif", width: "304px" %>
-      </div>
-      <div class="content-right">
-        <%= link_to t('navbar.contact').upcase, about_path(locale: I18n.locale), class: "nav-item" %>
+        <%= image_tag "film.gif", width: "328px" %>
       </div>
     </div>
-    <p><%= t('home.catchphrase') %> <br>
-    <em><%= t('home.phraseby') %></em></p>
+    <div class="d-flex justify-content-between">
+      <p><%= t('home.catchphrase') %></p>
+      <p><em><%= t('home.phraseby') %></em></p>
+    </div>
   </div>
 </div>

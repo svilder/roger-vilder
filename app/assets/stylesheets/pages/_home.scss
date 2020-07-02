@@ -18,6 +18,10 @@
   text-align: center;
   p {
     margin-top: 24px;
+    color: white;
+  }
+  hr {
+    border-top: 3px solid white;
   }
 }
 
@@ -25,6 +29,10 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  img {
+    position: relative;
+    right: 204px;
+  }
 }
 
 .content-right {
@@ -38,7 +46,7 @@
   font-weight: bold;
   font-size: 10rem;
   -webkit-text-stroke: 6px white;
-  letter-spacing: .5rem;
+  letter-spacing: 1rem;
   line-height: 1;
   margin-bottom: 56px;
 }
