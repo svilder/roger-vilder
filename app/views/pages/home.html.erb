@@ -16,6 +16,7 @@
         </div>
         <div class="text-left">
           <hr>
+          <%= link_to t('navbar.films').upcase, about_path(locale: I18n.locale), class: "nav-item" %> <br>
           <%= link_to t('navbar.contact').upcase, about_path(locale: I18n.locale), class: "nav-item" %>
         </div>
       </div>
