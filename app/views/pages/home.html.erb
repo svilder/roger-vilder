@@ -16,8 +16,9 @@
         </div>
         <div class="text-left">
           <hr>
-          <%= link_to t('navbar.films').upcase, about_path(locale: I18n.locale), class: "nav-item" %> <br>
-          <%= link_to t('navbar.contact').upcase, about_path(locale: I18n.locale), class: "nav-item" %>
+          <%= link_to t('navbar.films').upcase, films_path(locale: I18n.locale), class: "nav-item" %> <br>
+          <%= link_to t('navbar.texts').upcase, texts_path(locale: I18n.locale), class: "nav-item" %> <br>
+          <%= link_to t('navbar.about').upcase, about_path(locale: I18n.locale), class: "nav-item" %>
         <div class="">
           <% if I18n.locale == :fr %>
             <h1><%= link_to "🇬🇧", { :locale=>'en' } %></h1>

@@ -9,10 +9,13 @@ fr:
     photo: "Photos"
     sculptur: "Sculptures"
     video: "Vidéos"
-    contact: "À propos"
+    about: "À propos"
     films: "Films"
+    texts: "Textes"
     work: "Oeuvres"
   contact:
+    contact: "Contact"
+    bio: "Biographie"
     biography_p1: "Né en 1938, il fait ses études de beaux arts à l'Université Concordia, Montréal, Canada."
     biography_p2: "Il travaille entre Paris, Nîmes et Montréal (Canada).
       Il a enseigné les Arts Plastiques pendant 30 ans dans diverses institutions
@@ -31,6 +34,7 @@ fr:
     solo-exhibitions: Expositions personnelles
     bibliography: "bibliographies"
     rewards: Prix
+    films: "Films"
     show-more: "Voir plus"
     texts: "textes"
     g-thomat-title: "Gilles Thomat, réalisateur"

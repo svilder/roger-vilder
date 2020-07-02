@@ -3,7 +3,7 @@ ActiveAdmin.register Text do
   menu priority: 4
 
   action_item :view_site do
-    link_to "Voir le site", "/contact", target: "_blank"
+    link_to "Voir le site", "/about", target: "_blank"
   end
 
   action_item :view do

@@ -8,10 +8,13 @@ en:
     photo: "Photos"
     sculptur: "Sculpturs"
     video: "Videos"
-    contact: "About"
+    about: "About"
     films: "Films"
+    texts: "Texts"
     work: "Work"
   contact:
+    contact: "Contact"
+    bio: "Biography"
     biography_p1: "Born in 1938, he studies fine arts at the University Concordia, Montreal, Canada."
     biography_p2: "He works between Paris, Nîmes and Montreal (Canada).
                   He taught the plastic arts during 30 years in diverse institutions and universities in North America.
@@ -23,6 +26,7 @@ en:
     solo-exhibitions: Solo Shows
     bibliography: "bibliographies"
     rewards: Rewards
+    films: "Films"
     show-more: "See more"
     texts: "texts"
     g-thomat-title: "Gilles Thomat, film-maker"
