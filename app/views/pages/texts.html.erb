@@ -1,54 +1,31 @@
 <div class="container-less-navbar">
   <h6><%= t('contact.texts').upcase %></h6>
-  <% if locale == :fr %>
-    <div class="">
+
+  <div class="">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
       <% @texts.each do |text| %>
-        <div class="text-container">
-         <div class="text-content">
-           <%= simple_format(text.content_fr) %>
-           <% if text.content_fr.nil? %>
-             <%= simple_format(text.content_en) %>
-           <% end %>
-         </div>
-          <div class="text-source d-flex">
-            <p>
-              <span class="text-author"><%= text.author %></span>
-              <span class="text-title">
-                <%= text.title_fr %>
-                <% if text.title_fr.nil? %>
-                  <%= text.title_en %>
-                <% end %>
-              </span>
-              <span class="text-year"><%= text.year %></span>
-            </p>
-          </div>
-        </div>
+        <li class="nav-item">
+          <%= link_to texts_path(locale: I18n.locale, id: text.id), class: "nav-link", id:"#{text.id}tab", dataToggle: "tab", href: "#{text.id}", role: "tab", ariaControls:"#{text.id}tab", ariaSelected:"true" do %>
+            <%= text.author.upcase %>
+            <%= text.year %>
+          <% end %>
+        </li>
       <% end %>
-    </div>
-  <% else %>
-    <div class="texts-container">
-      <% @texts.each do |text| %>
-        <div class="text-container">
-          <div class="text-content">
-            <%= simple_format(text.content_en) %>
-            <% if text.content_en.nil? %>
-              <%= simple_format(text.content_fr) %>
-            <% end %>
-          </div>
-          <div class="text-source d-flex">
-            <p>
-              <span class="text-author"><%= text.author %>-</span>
-              <span class="text-title">
-                <%= text.title_en %>
-                <% if text.title_en.nil? %>
-                  <%= text.title_fr %>
-                <% end %>
-              </span>
-              <span class="text-year"><%= text.year %></span>
-            </p>
-          </div>
+    </ul>
+
+
+
+      <!-- <div class="text-container">
+        <div class="text-content">
+
         </div>
-      <% end %>
+      </div> -->
+
+    <div class="tab-content" id="myTabContent">
+      <div class="tab-pane fade show active exhibitions-box" id="#{params[:id]}" role="tabpanel" aria-labelledby="#{params[:id]}tab">
+        <%#= "toto" %>
+        <%= simple_format(@content) %>
+      </div>
     </div>
-  <% end %>
+  </div>
 </div>

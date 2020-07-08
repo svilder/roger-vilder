@@ -10,7 +10,22 @@ class PagesController < ApplicationController
   end
 
   def texts
-    @texts = Text.all.order(year: :desc)
+    if locale == :fr
+      @texts = Text.all.order(year: :desc)
+      if params[:id]
+        raise
+        @text = Text.find(params[:id])
+        @content = @text.content_fr
+        @title = @text.title_fr
+      end
+    else
+      @texts = Text.all.order(year: :desc)
+      if params[:id]
+        @text = Text.find(params[:id])
+        @content = @text.content_en
+        @title = @text.title_en
+      end
+    end
   end
 
   def films
