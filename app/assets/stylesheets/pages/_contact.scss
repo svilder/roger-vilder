@@ -52,13 +52,17 @@
   }
 }
 
-.nav-tabs .nav-link.active {
-  border-color: white white transparent;
-  color: white;
+.nav {
+  margin-bottom: -2px;
 }
 
 .nav-tabs {
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid transparent;
+}
+
+.nav-tabs .nav-link.active {
+  border-color: white white transparent;
+  color: white;
 }
 
 .nav-tabs .nav-link:hover {
