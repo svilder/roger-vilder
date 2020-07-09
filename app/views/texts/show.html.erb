@@ -6,13 +6,13 @@
       <% @texts.each do |text| %>
         <li class="nav-item">
           <%= link_to text_path(locale: I18n.locale, id: text),
-                      class: "nav-link #{'active' if params[:id] == text.id}",
+                      class: "nav-link #{'active' if params[:id].to_i == text.id}",
                       id:"#{text.id}tab",
                       dataToggle: "tab",
                       href: "#{text.id}",
                       role: "tab",
                       ariaControls: "#{text.id}tab",
-                      ariaSelected: "#{'true' if params[:id] == text.id}" do %>
+                      ariaSelected: "#{'true' if params[:id].to_i == text.id}" do %>
             <%= text.author %><br>
             <%= text.year %>
           <% end %>
