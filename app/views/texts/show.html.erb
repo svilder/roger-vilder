@@ -1,0 +1,33 @@
+<div class="container-less-navbar">
+  <h6><%= t('contact.texts').upcase %></h6>
+
+  <div class="">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <% @texts.each do |text| %>
+        <li class="nav-item">
+          <%= link_to text_path(locale: I18n.locale, id: text),
+                      class: "nav-link #{'active' if params[:id] == text.id}",
+                      id:"#{text.id}tab",
+                      dataToggle: "tab",
+                      href: "#{text.id}",
+                      role: "tab",
+                      ariaControls: "#{text.id}tab",
+                      ariaSelected: "#{'true' if params[:id] == text.id}" do %>
+            <%= text.author %><br>
+            <%= text.year %>
+          <% end %>
+        </li>
+      <% end %>
+    </ul>
+
+    <div class="tab-content" id="myTabContent">
+      <div  class="tab-pane fade show active exhibitions-box"
+            id="<%= @text.id %>"
+            role="tabpanel"
+            aria-labelledby="<%= @text.id %>tab">
+        <%= tag.h3 @title %>
+        <p><%= simple_format(@content) %></p>
+      </div>
+    </div>
+  </div>
+</div>
