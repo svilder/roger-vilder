@@ -37,7 +37,7 @@
         <p>
           <span class="exhibition-year"><%= exhibition.year %></span>
           <% unless exhibition.title.nil? %>
-            <span class="exhibition-title"><%= exhibition.title %></span>
+            <span class="exhibition-title"><%= exhibition.title %> - </span>
           <% end %>
           <span class="exhibition-place"><%= exhibition.place %></span>
           <span class="exhibition-associates"><%= exhibition.associates %></span>
@@ -51,7 +51,7 @@
         <p>
           <span class="exhibition-year"><%= exhibition.year %></span>
           <% unless exhibition.title.nil? %>
-            <span class="exhibition-title"><%= exhibition.title %></span>
+            <span class="exhibition-title"><%= exhibition.title %> - </span>
           <% end %>
           <span class="exhibition-place"><%= exhibition.place %></span>
           <span class="exhibition-city"><%= exhibition.city %></span>
@@ -64,7 +64,7 @@
         <p>
           <span class="exhibition-year"><%= bibliography.year %></span>
           <% unless bibliography.title.nil? %>
-            <span class="exhibition-title"><%= bibliography.title %></span>
+            <span class="exhibition-title"><%= bibliography.title %> - </span>
           <% end %>
           <span class="exhibition-author"><%= bibliography.author %></span>
         </p>
