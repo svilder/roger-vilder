@@ -1,7 +1,7 @@
 ActiveAdmin.register_page "Dashboard" do
   menu priority: 1, label: proc { I18n.t("active_admin.dashboard") }
   action_item :view_site do
-    link_to "Voir le site", "/contact", target: "_blank"
+    link_to "Voir le site", root_path, target: "_blank"
   end
   content title: proc { I18n.t("active_admin.dashboard") } do
     columns do

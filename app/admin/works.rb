@@ -6,7 +6,7 @@ ActiveAdmin.register Work do
   filter :collection, as: :check_boxes, collection: proc { Work::COLLECTIONS }
 
   action_item :view_site do
-    link_to "Voir le site", "/works", target: "_blank"
+    link_to "Voir le site", works_path, target: "_blank"
   end
 
   action_item :view do
@@ -33,7 +33,7 @@ ActiveAdmin.register Work do
     end
     def update
       super do |format|
-        redirect_to admin_work_path and return
+        redirect_to admin_works_path and return
       end
     end
     def destroy
