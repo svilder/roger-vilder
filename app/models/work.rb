@@ -1,8 +1,8 @@
 class Work < ApplicationRecord
   has_one_attached :photo
 
-  CATEGORIES = ["Kinetics", "Statics"]
-  COLLECTIONS = ["Kinetic", "Sculptur", "Drawing", "Photo", "Animation", "Video"]
+  CATEGORIES = ["Vimeo", "Image"]
+  COLLECTIONS = ["Kinetic", "Neon", "Sculptur", "Drawing", "Photo", "Animation", "Video"]
 
   # validates :category, presence: true, inclusion: { in: CATEGORIES }
   # validates :collection, presence: true, inclusion: { in: COLLECTIONS }
