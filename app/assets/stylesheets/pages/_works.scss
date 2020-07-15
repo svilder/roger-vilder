@@ -20,6 +20,14 @@
   }
 }
 
+.row2 {
+  grid-row-end: 2;
+}
+
+.column2 {
+  grid-column-end: 2;
+}
+
 .my-card {
   height: 160px;
   width: 160px;
