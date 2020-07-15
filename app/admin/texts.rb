@@ -3,7 +3,7 @@ ActiveAdmin.register Text do
   menu priority: 4
 
   action_item :view_site do
-    link_to "Voir le site", "/about", target: "_blank"
+    link_to "Voir le site", text_path, target: "_blank"
   end
 
   action_item :view do
@@ -13,7 +13,7 @@ ActiveAdmin.register Text do
   controller do
     def create
       super do |format|
-        redirect_to admin_texts_path and return
+        redirect_to admin_text_path and return
       end
     end
     def update
@@ -23,7 +23,7 @@ ActiveAdmin.register Text do
     end
     def destroy
       super do |format|
-        redirect_to admin_texts_path and return
+        redirect_to admin_text_path and return
       end
     end
   end

@@ -3,7 +3,7 @@ ActiveAdmin.register Bibliography do
   menu priority: 3
 
   action_item :view_site do
-    link_to "Voir le site", "/contact", target: "_blank"
+    link_to "Voir le site", about_path, target: "_blank"
   end
 
   action_item :view do

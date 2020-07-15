@@ -5,7 +5,7 @@ ActiveAdmin.register Exhibition do
   filter :category, as: :check_boxes, collection: proc { Exhibition::EXHIBITIONS_CATEGORIES }
 
   action_item :view_site do
-    link_to "Voir le site", "/contact", target: "_blank"
+    link_to "Voir le site", about_path, target: "_blank"
   end
 
   action_item :view do
@@ -20,7 +20,7 @@ ActiveAdmin.register Exhibition do
     end
     def update
       super do |format|
-        redirect_to admin_exhibition_path and return
+        redirect_to admin_exhibitions_path and return
       end
     end
     def destroy
