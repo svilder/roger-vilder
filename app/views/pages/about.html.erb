@@ -1,13 +1,13 @@
 <div class="container-less-navbar">
-  <div>
-    <h6 class="title"><%= t('contact.bio').upcase %></h6>
-    <p><%= t('contact.biography_p1') %></p>
-    <p><%= t('contact.biography_p2') %></p>
-    <p><%= t('contact.biography_p3') %></p>
-  </div>
-  <div class="d-flex justify-content-around align-items-baseline m-5">
+  <div class="d-flex justify-content-around align-items-baseline mt-5 mb-5">
+    <div class="pr-5">
+      <h6 class="title"><%= t('contact.bio').upcase %></h6>
+      <p><%= t('contact.biography_p1') %></p>
+      <p><%= t('contact.biography_p2') %></p>
+      <p><%= t('contact.biography_p3') %></p>
+    </div>
     <div class="contact-infos">
-      <h6><%= t('contact.contact').upcase %></h6>
+      <h6 class="title"><%= t('contact.contact').upcase %></h6>
       <ul>
         <li>
           <p class="mb-2"><strong><i class="far fa-envelope"></i> rvilder@gmail.com</strong></p>
@@ -24,7 +24,6 @@
         </li>
       </ul>
     </div>
-
   </div>
 
   <%= render "about_expo_wrapper" %>

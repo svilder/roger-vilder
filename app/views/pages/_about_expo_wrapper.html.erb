@@ -21,7 +21,7 @@
 
   <div class="tab-content" id="myTabContent">
     <!-- ------------ Personnal Collection ------------ -->
-    <div class="tab-pane fade show active box" id="personnal-box" role="tabpanel" aria-labelledby="personnal-tab">
+    <div class="tab-pane show active box" id="personnal-box" role="tabpanel" aria-labelledby="personnal-tab">
       <% @personal_exhibitions.each do |exhibition| %>
         <p>
           <span class="exhibition-year"><%= exhibition.year %></span>
@@ -34,7 +34,7 @@
       <% end %>
     </div>
     <!-- ------------ Collective Collection ------------ -->
-    <div class="tab-pane fade box" id="collective-box" role="tabpanel" aria-labelledby="collective-tab">
+    <div class="tab-pane box" id="collective-box" role="tabpanel" aria-labelledby="collective-tab">
       <% @collective_exhibitions.each do |exhibition| %>
         <p>
           <span class="exhibition-year"><%= exhibition.year %></span>
@@ -48,7 +48,7 @@
       <% end %>
     </div>
     <!-- ------------ Permanent Collection ------------ -->
-    <div class="tab-pane fade box" id="permanent-box" role="tabpanel" aria-labelledby="permanent-tab">
+    <div class="tab-pane box" id="permanent-box" role="tabpanel" aria-labelledby="permanent-tab">
       <% @permanent_exhibitions.each do |exhibition| %>
         <p>
           <span class="exhibition-year"><%= exhibition.year %></span>
@@ -61,7 +61,7 @@
       <% end %>
     </div>
     <!-- ------------ Bibliography ------------ -->
-    <div class="tab-pane fade box" id="bibliographies-box" role="tabpanel" aria-labelledby="bibliography-tab">
+    <div class="tab-pane box" id="bibliographies-box" role="tabpanel" aria-labelledby="bibliography-tab">
       <% @bibliographies.each do |bibliography| %>
         <p>
           <span class="exhibition-year"><%= bibliography.year %></span>
@@ -72,7 +72,7 @@
         </p>
       <% end %>
     </div>
-    <div class="tab-pane fade box" id="awards-box" role="tabpanel" aria-labelledby="awards-tab">
+    <div class="tab-pane box" id="awards-box" role="tabpanel" aria-labelledby="awards-tab">
       <p><span class="exhibition-year">1977</span> Museum of Modern Art, San Francisco : World Print Competition</p>
       <p><span class="exhibition-year">1970</span> Universal exhibit of Osaka, Japan</p>
       <p><span class="exhibition-year">1967</span> Contemporary Art Museum, Montréal</p>
