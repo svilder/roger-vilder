@@ -1,5 +1,4 @@
 <div class="">
-
   <ul class="nav nav-tabs" id="myTab" role="tablist">
     <li class="nav-item">
       <a class="nav-link active" id="personnal-tab" data-toggle="tab" href="#personnal-box" role="tab" aria-controls="personnal-tab" aria-selected="true">
@@ -15,16 +14,19 @@
     <li class="nav-item">
       <a class="nav-link" id="bibliography-tab" data-toggle="tab" href="#bibliographies-box" role="tab" aria-controls="bibliography-tab" aria-selected="false"><%= t("contact.bibliography").upcase %></a>
     </li>
+    <li class="nav-item">
+      <a class="nav-link" id="awards-tab" data-toggle="tab" href="#awards-box" role="tab" aria-controls="awards-tab" aria-selected="false"><%= t("contact.rewards").upcase %></a>
+    </li>
   </ul>
 
   <div class="tab-content" id="myTabContent">
     <!-- ------------ Personnal Collection ------------ -->
-    <div class="tab-pane fade show active box" id="personnal-box" role="tabpanel" aria-labelledby="personnal-tab">
+    <div class="tab-pane show active box" id="personnal-box" role="tabpanel" aria-labelledby="personnal-tab">
       <% @personal_exhibitions.each do |exhibition| %>
         <p>
           <span class="exhibition-year"><%= exhibition.year %></span>
           <% unless exhibition.title.nil? %>
-            <span class="exhibition-title"><%= exhibition.title %></span>
+            <span class="exhibition-title"><%= exhibition.title %> - </span>
           <% end %>
           <span class="exhibition-place"><%= exhibition.place %></span>
           <span class="exhibition-city"><%= exhibition.city %></span>
@@ -32,12 +34,12 @@
       <% end %>
     </div>
     <!-- ------------ Collective Collection ------------ -->
-    <div class="tab-pane fade box" id="collective-box" role="tabpanel" aria-labelledby="collective-tab">
+    <div class="tab-pane box" id="collective-box" role="tabpanel" aria-labelledby="collective-tab">
       <% @collective_exhibitions.each do |exhibition| %>
         <p>
           <span class="exhibition-year"><%= exhibition.year %></span>
           <% unless exhibition.title.nil? %>
-            <span class="exhibition-title"><%= exhibition.title %></span>
+            <span class="exhibition-title"><%= exhibition.title %> - </span>
           <% end %>
           <span class="exhibition-place"><%= exhibition.place %></span>
           <span class="exhibition-associates"><%= exhibition.associates %></span>
@@ -46,12 +48,12 @@
       <% end %>
     </div>
     <!-- ------------ Permanent Collection ------------ -->
-    <div class="tab-pane fade box" id="permanent-box" role="tabpanel" aria-labelledby="permanent-tab">
+    <div class="tab-pane box" id="permanent-box" role="tabpanel" aria-labelledby="permanent-tab">
       <% @permanent_exhibitions.each do |exhibition| %>
         <p>
           <span class="exhibition-year"><%= exhibition.year %></span>
           <% unless exhibition.title.nil? %>
-            <span class="exhibition-title"><%= exhibition.title %></span>
+            <span class="exhibition-title"><%= exhibition.title %> - </span>
           <% end %>
           <span class="exhibition-place"><%= exhibition.place %></span>
           <span class="exhibition-city"><%= exhibition.city %></span>
@@ -59,16 +61,21 @@
       <% end %>
     </div>
     <!-- ------------ Bibliography ------------ -->
-    <div class="tab-pane fade box" id="bibliographies-box" role="tabpanel" aria-labelledby="bibliography-tab">
+    <div class="tab-pane box" id="bibliographies-box" role="tabpanel" aria-labelledby="bibliography-tab">
       <% @bibliographies.each do |bibliography| %>
         <p>
           <span class="exhibition-year"><%= bibliography.year %></span>
           <% unless bibliography.title.nil? %>
-            <span class="exhibition-title"><%= bibliography.title %></span>
+            <span class="exhibition-title"><%= bibliography.title %> - </span>
           <% end %>
           <span class="exhibition-author"><%= bibliography.author %></span>
         </p>
       <% end %>
+    </div>
+    <div class="tab-pane box" id="awards-box" role="tabpanel" aria-labelledby="awards-tab">
+      <p><span class="exhibition-year">1977</span> Museum of Modern Art, San Francisco : World Print Competition</p>
+      <p><span class="exhibition-year">1970</span> Universal exhibit of Osaka, Japan</p>
+      <p><span class="exhibition-year">1967</span> Contemporary Art Museum, Montréal</p>
     </div>
   </div>
 </div>

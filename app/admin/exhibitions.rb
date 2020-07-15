@@ -32,9 +32,6 @@ ActiveAdmin.register Exhibition do
 
   index do
     selectable_column
-    column "Titre", sortable: :title do |exhibition|
-      link_to exhibition.title, admin_exhibition_path(exhibition)
-    end
     column "Année", sortable: :year do |exhibition|
       link_to exhibition.year, admin_exhibition_path(exhibition)
     end
