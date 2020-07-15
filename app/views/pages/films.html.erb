@@ -1,34 +1,84 @@
 <div class="container-less-navbar">
-  <h6><%= t('contact.films').upcase %></h6>
-  <div class="profile-img flex-grow">
-    <div style="padding:56.25% 0 0 0;position:relative;">
-      <iframe src="https://player.vimeo.com/video/383557366?autoplay=0&color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+  <h6 class="title mb-5"><%= t('contact.films').upcase %></h6>
+
+  <nav>
+    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+      <a class="nav-item nav-link active" id="nav-g-thomat-tab" data-toggle="tab" href="#nav-g-thomat" role="tab" aria-controls="nav-g-thomat" aria-selected="true"><%= t('contact.g-thomat-title') %></a>
+      <a class="nav-item nav-link" id="nav-d-gatumel-tab" data-toggle="tab" href="#nav-d-gatumel" role="tab" aria-controls="nav-d-gatumel" aria-selected="false"><%= t('contact.d-gatumel-title') %></a>
+      <a class="nav-item nav-link" id="nav-a-favre-tab" data-toggle="tab" href="#nav-a-favre" role="tab" aria-controls="nav-a-favre" aria-selected="false"><%= t('contact.a-favre-title') %></a>
     </div>
-    <script src="https://player.vimeo.com/api/player.js"></script>
-    <p class="small">
-      <a href="https://vimeo.com/383557366">Roger Vilder, film annonce</a>
-      de
-      <a href="https://vimeo.com/gillesthomatvideo">Gilles Thomat</a>.
-    </p>
-  </div>
+  </nav>
 
-  <div class="text-right">
-    <h6 id="g-thomat-info"><%= t('contact.g-thomat-title') %></h6>
-    <p class="small">
-      <%= t('contact.g-thomat-text-1') %><br>
-      <%= t('contact.g-thomat-text-2') %><br>
-      <%= t('contact.g-thomat-text-3') %><br>
-      <%= t('contact.g-thomat-text-4') %><br>
-      <%= t('contact.g-thomat-text-5') %><br>
-      <%= t('contact.g-thomat-text-6') %><br>
-      <em>D.Rousselet</em>
+  <div class="tab-content" id="nav-tabContent">
+    <div class="tab-pane show active film-box" id="nav-g-thomat" role="tabpanel" aria-labelledby="nav-g-thomat-tab">
+      <div class="m-3">
+        <div style="padding:56.25% 0 0 0;position:relative;">
+          <iframe src="https://player.vimeo.com/video/383557366?autoplay=0&color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+      <div class="text-right m-3">
+        <p>
+          <a class="link" href="https://vimeo.com/383557366"><%= t('contact.g-thomat-title') %></a>
+          de
+          <a class="link" href="https://vimeo.com/gillesthomatvideo">Gilles Thomat</a>.
+        </p>
+        <h6><%= t('contact.g-thomat-author') %></h6>
+        <p class="small">
+          <%= t('contact.g-thomat-text-1') %><br>
+          <%= t('contact.g-thomat-text-2') %><br>
+          <%= t('contact.g-thomat-text-3') %><br>
+          <%= t('contact.g-thomat-text-4') %><br>
+          <%= t('contact.g-thomat-text-5') %><br>
+          <%= t('contact.g-thomat-text-6') %><br>
+          <em>D.Rousselet</em>
 
-      <p class="small">
-        Contact:<br>
-        <a class="link" href="http://gillesthomat.com/">gillesthomat.com</a><br>
-        0664168149
-      </p>
-    </p>
-
+          <p class="small">
+            Contact:<br>
+            <a class="link" href="http://gillesthomat.com/">gillesthomat.com</a><br>
+            0664168149
+          </p>
+        </p>
+      </div>
+    </div>
+    <div class="tab-pane film-box" id="nav-d-gatumel" role="tabpanel" aria-labelledby="nav-d-gatumel-tab">
+      <div class="m-3">
+        <div style="padding:56.25% 0 0 0;position:relative;">
+          <iframe src="https://player.vimeo.com/video/383557366?autoplay=0&color=ffffff&title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+        </div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+      <div class="text-right m-3">
+        <h6><%= t('contact.d-gatumel-title') %> de <%= t('contact.d-gatumel-author') %></h6>
+        <p class="small">
+          <%= t('contact.d-gatumel-text-1') %><br>
+          <%= t('contact.d-gatumel-text-2') %><br>
+        </p>
+      </div>
+    </div>
+    <div class="tab-pane film-box" id="nav-a-favre" role="tabpanel" aria-labelledby="nav-a-favre-tab">
+      <div class="m-3">
+        <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/50721813?title=0&byline=0&portrait=0" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+      </div>
+      <div class="text-right m-3">
+        <h6>
+          <a class="link" href="https://vimeo.com/305513857"><%= t('contact.a-favre-title') %></a>
+          de
+          <%= t('contact.a-favre-author') %>
+        </h6>
+        <p class="small">
+          <%= simple_format(t('contact.a-favre-text-1'), class: "small") %>
+          <%= simple_format(t('contact.a-favre-text-2'), class: "small") %>
+          <%= simple_format(t('contact.a-favre-text-3'), class: "small") %>
+          <%= simple_format(t('contact.a-favre-text-4'), class: "small") %>
+          <%= simple_format(t('contact.a-favre-text-5'), class: "small") %>
+          <%= simple_format(t('contact.a-favre-text-6'), class: "small") %>
+          <p class="small">
+            Contact:<br>
+            <a class="link" href="http://www.pulsation-lefilm.fr/index.html">www.pulsation-lefilm.fr</a>
+          </p>
+        </p>
+      </div>
+    </div>
   </div>
 </div>

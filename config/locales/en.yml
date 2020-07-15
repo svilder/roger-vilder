@@ -29,7 +29,8 @@ en:
     films: "Films"
     show-more: "See more"
     texts: "texts"
-    g-thomat-title: "Gilles Thomat, film-maker"
+    g-thomat-author: "Gilles Thomat, film-maker"
+    g-thomat-title: "Roger Vilder, France, 2019, 10’"
     g-thomat-text-1: "Gilles Thomat nous invite dans les ateliers d'artistes, il les filme au travail, concentrés, maniant le fusain, le pinceau, les ciseaux, les outils..."
     g-thomat-text-2: "Nous découvrons une chose rare, l’artiste dans son atelier, dans le silence de la création."
     g-thomat-text-3: "Dans ces films, il n’y a pas de dialogue, pas de commentaire, pas d’échange avec l’artiste."
@@ -37,6 +38,20 @@ en:
     g-thomat-text-5: "Par la sensibilité et la précision de son regard, il est allé à l’essentiel, par bouts, par fragments. Il a su capter la lumière, le noir, la couleur, il s’arrête sur une main, une épaule."
     g-thomat-text-6: "Au son, c’est la même chose, fragments, sensations, souffle...
       Ces films sont comme des révélations, pourtant le mystère reste entier."
+    d-gatumel-author: "Damien Gatumel"
+    d-gatumel-title: "France, 2015, 3’"
+    d-gatumel-text-1: "Présentation de l’oeuvre de Roger Vilder pour le lycée Dhuoda."
+    d-gatumel-text-2: "Ce film ne comporte pas de bande-son."
+    a-favre-author: "Antoine Favre"
+    a-favre-title: "Pulsations, France, 2012, 26’"
+    a-favre-text-1: "Pulsation est un documentaire de cr&eacute;ation dʼune dur&eacute;e de 26 minutes. Il dessine le portrait de lʼartiste contemporain franco-canadien Roger Vilder."
+    a-favre-text-2: "Le film sʼouvre au mus&eacute;e dʼart contemporain de Montr&eacute;al. Nous p&eacute;n&eacute;trons la salle des archives dʼo&ugrave; nous extrayons une oeuvre sign&eacute;e Roger Vilder : &laquo;Pulsation 7&raquo;. Cʼest le moment pour le septuag&eacute;naire de revoir un travail vieux dʼune quarantaine dʼann&eacute;es. Une oeuvre qui date de cette d&eacute;cennie, 1968-1978, pendant lesquelles lʼartiste a connu un succ&egrave;s &eacute;clair.
+    Succ&egrave;s objectif conclu par un arr&ecirc;t brutal de toute production artistique par lʼinventeur du mouvement cin&eacute;tique &agrave; Montr&eacute;al."
+    a-favre-text-3: "&laquo;Apr&egrave;s tout, on se demande : pourquoi on est artiste?&raquo;"
+    a-favre-text-4: "Dans lʼatelier de lʼartiste &agrave; N&icirc;mes, Pulsation vous propose de suivre la cr&eacute;ation dʼune sculpture de Roger Vilder et de se questionner avec lui : pourquoi cet arr&ecirc;t ? Et pourquoi avoir voulu recommencer au d&eacute;but des ann&eacute;es 2000 ?"
+    a-favre-text-5: "&laquo;Jʼai arr&ecirc;t&eacute; en 78, jʼavais 40 ans ... cʼest comme si aujourdʼhui jʼavais 40 ans &agrave; nouveau et je continue !&raquo;"
+    a-favre-text-6: "De lʼatelier dʼun n&eacute;oniste &agrave; un lieu dʼexposition inattendu, Pulsation souhaite donner &agrave; voir les doutes, les r&eacute;ussites et les interrogations dʼun artiste qui lance un regard r&eacute;trospectif sur son parcours.
+    Un parcours capt&eacute; au travers dʼun regard singulier, celui dʼun jeune r&eacute;alisateur au d&eacute;but du sien."
   index:
     name: Name
     description: Precisions
