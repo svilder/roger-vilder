@@ -15,6 +15,7 @@ gem 'sassc-rails'
 gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
+gem 'particles-js-rails'
 
 gem 'activeadmin'
 gem 'devise-i18n', '~> 1.2'

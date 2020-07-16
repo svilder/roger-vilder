@@ -1,11 +1,19 @@
+#particles-js {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+}
+
 .home-wrapper {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   height: 100vh;
   margin: 0;
   text-align: center;
+
   p {
     margin-top: 24px;
     color: white;
