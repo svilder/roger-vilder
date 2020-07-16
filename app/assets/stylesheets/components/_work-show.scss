@@ -1,0 +1,28 @@
+.one-work-card {
+  border-radius: $border-radius;
+}
+
+.work-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.work-card-image {
+  object-fit: contain;
+}
+
+.video,
+.work-card-image {
+  margin: 8px 0;
+}
+
+.work-description {
+  p {
+  margin: 0;
+  }
+}
+
+.name-year {
+  display: flex;
+  justify-content: space-between;
+}

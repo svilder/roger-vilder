@@ -1,11 +1,11 @@
 <div class="container-less-navbar">
   <div class="wrapper">
-    <div class="my-cards">
+    <div class="icon-grid">
       <% @works.each do |work| %>
         <%= link_to work_path(locale: I18n.locale, id: work.id) do %>
-          <div class="my-card">
-            <%= instance_image_tag work.photo, width: 150, crop: :fill, class: "my-card-image" %>
-            <div class="my-card-details">
+          <div class="icon">
+            <%= instance_image_tag work.photo, width: 150, height: 150, crop: :fill, class: "icon-image" %>
+            <div class="icon-details">
               <p><%= work.name %></p>
               <p><%= work.year %></p>
             </div>
