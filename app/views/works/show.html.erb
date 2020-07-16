@@ -1,6 +1,6 @@
 <div class="container-less-navbar">
   <div class="wrapper d-flex align-items-center">
-    <%= link_to work_path(locale: I18n.locale, id: @previous_work.id), class: "m-3 link" do %>
+    <%= link_to work_path(locale: I18n.locale, id: @previous_work.id), class: "m-3 link-black" do %>
       <h3><i class="fas fa-long-arrow-alt-left"></i></h3>
     <% end %>
 
@@ -24,7 +24,7 @@
       </div>
     </div>
 
-    <%= link_to work_path(locale: I18n.locale, id: @next_work.id), class: "m-3 link" do %>
+    <%= link_to work_path(locale: I18n.locale, id: @next_work.id), class: "m-3 link-black" do %>
       <h3><i class="fas fa-long-arrow-alt-right"></i></h3>
     <% end %>
 

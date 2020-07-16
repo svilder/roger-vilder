@@ -1,82 +1,54 @@
-.biographie {
-  max-width: 504px;
-  p {
-    margin: 0px;
-  }
+.exhibition-year {
+  margin: 0 4px;
+  font-weight: bolder;
 }
 
-.texts-title {
-  font-weight: bold;
-  text-align: center;
-  margin-bottom: 32px;
-}
-
-.text-content {
-  padding: 24px;
-  font-size: 14px;
+.exhibition-place {
   font-style: oblique;
-  max-height: 320px;
-  overflow-x: scroll;
-  border-radius: $border-radius;
+  margin: 0 4px;
 }
 
-// .text-container {
-//   border: 1px solid white;
-//   border-radius: $border-radius;
-//   margin: 24px 0px;
-// }
-
-// .text-source {
-//   margin: 0 24px;
-//   align-item: center;
-//   border-top: 1px solid white;
-//   p {
-//     margin: 8px 0px;
-//   }
-
-//   .text-title {
-//     font-style: oblique;
-//     padding-left: 8px;
-//   }
-
-//   .text-year {
-//     font-weight: bold;
-//     padding-left: 16px;
-//   }
-// }
-
-.nav-link {
-  color: black;
-  &:hover{
-    color: black;
-  }
-}
-
-.nav {
-  margin: 0 1px -1px 1px;
-}
-
-.nav-link {
-  margin-bottom: -1px;
-}
-
-.nav-link.active {
-  border-bottom: 1px solid $gray;
-}
-
-.nav-tabs .nav-link.active {
-  border-color: white white $gray;
+.title {
   color: white;
 }
 
-.nav-tabs .nav-link:hover {
-  border-color: white white $gray;
-}
-
-.link {
+.profile-img a {
   color: black;
   &:hover{
     color: white;
     text-decoration: none;
+  }
+}
+
+.contact-infos {
+  margin-right: 32px;
+  padding-right: 16px;
+  min-width: 152px;
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  p {
+    margin-bottom: 0px;
+  }
+}
+
+.awards {
+  h6 {
+    margin: 16px 0px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  p {
+    padding: 0;
+    margin: 0;
   }
 }

@@ -1,14 +1,3 @@
-.nav-item {
-  text-decoration: none;
-  color: white;
-  font-size: large;
-  font-family: 'Open Sans Condensed', sans-serif;
-  border-bottom: solid 1px transparent;
-  &:hover {
-    color: black;
-  }
-}
-
 .nav-categories {
   width: 100%;
   display: flex;
@@ -20,4 +9,40 @@
 
 .content-center {
   display: flex;
+}
+
+.nav-item {
+  text-decoration: none;
+  color: white;
+  font-size: large;
+  font-family: 'Open Sans Condensed', sans-serif;
+  border-bottom: solid 1px transparent;
+  &:hover {
+    color: black;
+  }
+}
+
+.nav {
+  margin: 0 1px -1px 1px;
+}
+
+.nav-link {
+  color: black;
+  margin-bottom: -1px;
+  &:hover{
+    color: black;
+  }
+}
+
+.nav-link.active {
+  border-bottom: 1px solid $gray;
+}
+
+.nav-tabs .nav-link.active {
+  border-color: white white $gray;
+  color: white;
+}
+
+.nav-tabs .nav-link:hover {
+  border-color: white white $gray;
 }

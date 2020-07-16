@@ -1,9 +1,10 @@
 .wrapper {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
-.my-cards {
+.icon-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 96px;
@@ -28,21 +29,17 @@
   grid-column-end: 2;
 }
 
-.my-card {
+.icon {
   height: 160px;
   width: 160px;
-
   img {
     border-radius: $border-radius;
   }
-
   &:hover {
-
     img {
       filter: brightness(50%) hue-rotate(90deg);
     }
-
-    .my-card-details {
+    .icon-details {
       display: block;
       text-align: center;
       font-size: small;
@@ -59,44 +56,31 @@
   }
 }
 
-.my-card-image {
+.icon-image {
   width: 160px;
-  // height: 160px;
+  height: 160px;
 }
 
-.my-card-details {
+.icon-details {
   display: none;
 }
 
-.one-work-card {
-  border-radius: $border-radius;
-}
 
-.work-card {
-  display: flex;
-  flex-direction: column;
-}
+// @include media-breakpoint-only(xs) {
 
-.work-card-image {
-  object-fit: contain;
-}
+// }
+// @include media-breakpoint-only(sm) {
 
-.video,
-.work-card-image {
-  margin: 8px 0;
-}
+// }
+// @include media-breakpoint-only(md) {
 
-.work-description {
-  p {
-  margin: 0;
-  }
-}
+// }
+// @include media-breakpoint-only(lg) {
 
-.name-year {
-  display: flex;
-  justify-content: space-between;
-}
+// }
+// @include media-breakpoint-only(xl) {
 
+// }
 
 // -- Mobile version
 @media (max-width: 768px) {
@@ -107,15 +91,13 @@
     justify-content: center;
   }
 
-  .my-cards {
+  .icon-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .one-work-card {
     position: relative;
     margin: 30px;
-    // height: 336px;
-    // width: 312px;
   }
 
   .work-description {
@@ -125,14 +107,14 @@
 
 // Medium devices (desktops, 768px and up)
 @media (min-width: 768px) {
-  .my-cards {
+  .icon-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
-  .my-cards {
+  .icon-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
