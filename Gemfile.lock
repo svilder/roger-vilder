@@ -151,7 +151,6 @@ GEM
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
     orm_adapter (0.5.0)
-    particles-js-rails (2.0.0)
     pg (0.21.0)
     polyamorous (2.3.0)
       activerecord (>= 5.0)
@@ -275,7 +274,6 @@ DEPENDENCIES
   font-awesome-sass (~> 5.6.1)
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
-  particles-js-rails
   pg (~> 0.21)
   pry-byebug
   pry-rails
