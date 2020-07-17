@@ -1,5 +1,5 @@
 import "bootstrap";
 
-particlesJS.load('particles-js', 'assets/particles.json', function() {
+particlesJS.load('particles-js', 'https://api.jsonbin.io/b/5f116b519180616628434b4a', function() {
   console.log('callback - particles.js config loaded');
 });
