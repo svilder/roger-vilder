@@ -4,7 +4,7 @@
       <% @works.each do |work| %>
         <%= link_to work_path(locale: I18n.locale, id: work.id) do %>
           <div class="icon">
-            <%= instance_image_tag work.photo, width: 150, height: 150, crop: :fill, class: "icon-image" %>
+            <%= instance_image_tag work.photo, width: 150, height: 150, crop: :fill, class: "icon-image", id: "work#{work.id}" %>
             <div class="icon-details">
               <p><%= work.name %></p>
               <p><%= work.year %></p>

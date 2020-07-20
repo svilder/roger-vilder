@@ -6,8 +6,6 @@ class TextsController < ApplicationController
       @text = Text.find(params[:id]) if params[:id]
       @content = @text.content_fr
       @title = @text.title_fr
-
-
     else
       @texts = Text.all.order(year: :asc)
       @text = Text.all.order(year: :asc).first

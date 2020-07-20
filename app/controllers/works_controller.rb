@@ -15,23 +15,8 @@ class WorksController < ApplicationController
     else
       @work = Work.find(params[:id])
     end
-
     @previous_work = @work.previous
     @next_work = @work.next
-
-    # if @work.previous.nil?
-    #   id = (@work.id - 2).to_i
-    #   @previous_work = Work.find_by(id: id)
-    # else
-    #   @previous_work = @work.previous
-    # end
-
-    # if @work.next.nil?
-    #   id = (@work.id + 2).to_i
-    #   @next_work = Work.find_by(id: id)
-    # else
-    #   @next_work = @work.next
-    # end
   end
 
   private
