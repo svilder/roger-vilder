@@ -2,9 +2,9 @@
   <div class="wrapper">
     <div class="icon-grid">
       <% @works.each do |work| %>
-        <%= link_to work_path(locale: I18n.locale, id: work.id) do %>
+        <%= link_to work_path(locale: I18n.locale, id: work.id), id: "work#{work.id}" do %>
           <div class="icon">
-            <%= instance_image_tag work.photo, width: 150, height: 150, crop: :fill, class: "icon-image", id: "work#{work.id}" %>
+            <%= instance_image_tag work.photo,  crop: :fill, class: "icon-image" %>
             <div class="icon-details">
               <p><%= work.name %></p>
               <p><%= work.year %></p>
