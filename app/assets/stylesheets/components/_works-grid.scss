@@ -9,17 +9,22 @@
   grid-template-columns: repeat(6, 1fr);
   grid-gap: 96px;
   justify-content: center;
-
   a {
     text-decoration: none;
     color: black;
   }
-
   a:hover {
     text-decoration: none;
     color: $red;
   }
 }
+
+
+
+// #work590 {
+//   grid-column-start: 2;
+//   grid-column-end: 4;
+// }
 
 .row2 {
   grid-row-end: 2;
@@ -57,8 +62,8 @@
 }
 
 .icon-image {
-  width: 160px;
-  height: 160px;
+  max-width: 160px;
+  max-height: 160px;
 }
 
 .icon-details {
