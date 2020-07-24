@@ -19,9 +19,8 @@ gem 'particles-js-rails', '~> 2.0'
 
 gem 'activeadmin'
 gem 'devise-i18n', '~> 1.2'
-gem 'dotenv-rails', groups: [:development, :test]
 gem 'cloudinary', '~> 1.12.0'
-gem "browser"
+gem 'browser'
 
 group :development do
   gem 'web-console', '>= 3.3.0'

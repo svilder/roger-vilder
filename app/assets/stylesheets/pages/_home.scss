@@ -13,6 +13,7 @@
   height: 100vh;
   margin: 0;
   text-align: center;
+  background-color: red;
 
   p {
     margin-top: 24px;
@@ -33,15 +34,15 @@
   }
 }
 
-.rv-title {
-  color: transparent;
-  font-weight: bold;
-  font-size: 10rem;
-  -webkit-text-stroke: 6px white;
-  letter-spacing: 1rem;
-  line-height: 1;
-  margin-bottom: 56px;
-}
+// .rv-title {
+//   color: transparent;
+//   font-weight: bold;
+//   font-size: 10rem;
+//   -webkit-text-stroke: 6px white;
+//   letter-spacing: 1rem;
+//   line-height: 1;
+//   margin-bottom: 56px;
+// }
 
 
 @include media-breakpoint-only(xs) {
