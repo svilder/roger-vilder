@@ -1,14 +1,14 @@
-<div class="container-less-navbar">
-  <div class="wrapper d-flex align-items-center">
+<div class="container-for-work">
+  <div class="wrapper align-items-center">
     <%= link_to work_path(locale: I18n.locale, id: @previous_work.id), class: "m-3 link-black" do %>
       <h3><i class="fas fa-long-arrow-alt-left"></i></h3>
     <% end %>
 
     <div class="one-work-card">
       <div class="work-card">
-        <% if @work.category == "Vimeo" %>
-          <div class="video">
-            <%= youtube_video @work.youtube_link, @height, @width %>
+        <% if @work.display_option == "Vimeo" %>
+          <div class="work-card-video">
+            <%= vimeo_video @work.video_key %>
           </div>
         <% else %>
           <%= instance_image_tag @work.photo, crop: :fill, class: "work-card-image" %>

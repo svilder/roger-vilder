@@ -10,4 +10,8 @@ module ApplicationHelper
   def youtube_video(url, height, width)
     render :partial => 'shared/video', :locals => { :url => url, :height => height, :width => width }
   end
+
+  def vimeo_video(key)
+    render :partial => 'shared/video', :locals => { :url => key }
+  end
 end

@@ -17,6 +17,7 @@ class WorksController < ApplicationController
     end
     @previous_work = @work.previous
     @next_work = @work.next
+
   end
 
   private

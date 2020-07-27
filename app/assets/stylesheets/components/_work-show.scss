@@ -9,16 +9,16 @@
 
 .work-card-image {
   object-fit: contain;
+  margin: 8px 0;
 }
 
-.video,
-.work-card-image {
-  margin: 8px 0;
+.work-card-video {
+  width: 140vh;
 }
 
 .work-description {
   p {
-  margin: 0;
+    margin: 0;
   }
 }
 

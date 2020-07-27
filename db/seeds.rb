@@ -19,7 +19,7 @@ if Rails.env.development?
     t.title = row['title']
     t.place = row['place']
     t.city = row['city']
-    t.category = row['category']
+    t.display_option = row['display_option']
     t.year = row['year']
     t.associates = row['associates']
     t.save
@@ -53,8 +53,8 @@ if Rails.env.development?
     t.dimensions = row['dimensions']
     t.year = row['year']
     t.image = row['image']
-    t.youtube_link = row['youtube_link']
-    t.category = row['category']
+    t.video_key = row['video_key']
+    t.display_option = row['display_option']
     t.collection = row['collection']
     t.save
     puts "#{t.name}, #{t.dimensions} saved"
