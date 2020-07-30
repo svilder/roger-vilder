@@ -1,10 +1,10 @@
 class Work < ApplicationRecord
   has_one_attached :photo
 
-  CATEGORIES = ["Vimeo", "Image"]
+  DISPLAY_OPTIONS = ["Vimeo", "Image"]
   COLLECTIONS = ["Kinetic", "Neon", "Sculptur", "Drawing", "Photo", "Animation", "Video"]
 
-  # validates :category, presence: true, inclusion: { in: CATEGORIES }
+  # validates :display_option, presence: true, inclusion: { in: DISPLAY_OPTIONS }
   # validates :collection, presence: true, inclusion: { in: COLLECTIONS }
   # validates :name, presence: true
   # validates :year, presence: true

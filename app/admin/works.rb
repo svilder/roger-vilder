@@ -63,7 +63,7 @@ ActiveAdmin.register Work do
     actions
   end
 
-  permit_params :name, :description, :dimensions, :year, :image, :youtube_link, :category, :collection, :photo
+  permit_params :name, :description, :dimensions, :year, :image, :video_key, :display_option, :collection, :photo
 
   form title: 'Nouvelle piece' do |f|
     inputs "Infos" do
@@ -72,10 +72,10 @@ ActiveAdmin.register Work do
       input :dimensions, label: 'Dimensions', placeholder:'Format : 150 x 150 x 18 cm'
       input :year, label: 'Année', placeholder:'2040'
       input :collection, collection: Work::COLLECTIONS, label: 'Collection', include_blank: false
-      input :category, collection: Work::CATEGORIES, label: 'Categorie', include_blank: false
+      input :display_option, collection: Work::CATEGORIES, label: 'Categorie', include_blank: false
     end
     inputs "Images" do
-      input :youtube_link, label: 'Lien Youtube', placeholder:'Format : chiffres et lettres après : [https://www.youtube.com/watch?v=] ex: 9PhhMhKAF2o '
+      input :video_key, label: 'Lien Youtube', placeholder:'Format : chiffres et lettres après : [https://www.youtube.com/watch?v=] ex: 9PhhMhKAF2o '
       input :photo, as: :file, label: "Photo"
     end
     actions

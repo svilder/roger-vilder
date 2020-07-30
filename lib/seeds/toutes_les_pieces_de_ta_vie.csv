@@ -1,4 +1,4 @@
-name,description,dimensions,year,image,youtube_link,category,collection
+name,description,dimensions,year,image,video_key,display_option,collection
 Dessin,,,,pieces/dessins/3.jpg,,Statics,Drawing
 Dessin,,,,pieces/dessins/B.jpg,,Statics,Drawing
 Dessin,,,,pieces/dessins/D.jpg,,Statics,Drawing
