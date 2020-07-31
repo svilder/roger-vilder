@@ -10,15 +10,6 @@ class Work < ApplicationRecord
   # validates :year, presence: true
   # validates :dimensions, presence: true
 
-
-  def next
-    self.class.where("id > ?", id).first
-  end
-
-  def previous
-    self.class.where("id < ?", id).last
-  end
-
   private
 
   def self.year

@@ -6,10 +6,9 @@
 
     <div class="one-work-card">
       <div class="work-card">
-        <% if @work.display_option == "Image" || @work.video_key.nil? %>
+        <% if @work.display_option == "Image" || @work.display_option == "Vimeo" && @work.video_key.nil? %>
           <%= instance_image_tag @work.photo, crop: :fill, class: "work-card-image" %>
         <% else %>
-
           <div class="work-card-video">
             <%= vimeo_video @work.video_key %>
           </div>
