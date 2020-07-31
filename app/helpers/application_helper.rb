@@ -12,6 +12,6 @@ module ApplicationHelper
   end
 
   def vimeo_video(key)
-    render :partial => 'shared/video', :locals => { :url => key }
+    render :partial => 'shared/video', :locals => { :key => key }
   end
 end
