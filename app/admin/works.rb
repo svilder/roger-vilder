@@ -4,6 +4,7 @@ ActiveAdmin.register Work do
   menu priority: 1
 
   filter :collection, as: :check_boxes, collection: proc { Work::COLLECTIONS }
+  filter :display_option, as: :check_boxes, collection: proc { Work::DISPLAY_OPTIONS }
 
   action_item :view_site do
     link_to "Voir le site", works_path, target: "_blank"
@@ -54,8 +55,11 @@ ActiveAdmin.register Work do
     column "Année", sortable: :year do |work|
       link_to work.year, admin_work_path(work)
     end
-    column "Collection" do |work|
+    column "Collection", sortable: :collection  do |work|
       link_to work.collection, admin_work_path(work)
+    end
+    column "Display option", sortable: :display_option  do |work|
+      link_to work.display_option, admin_work_path(work)
     end
     column "id", sortable: :id do |work|
       link_to work.id, admin_work_path(work)
@@ -75,7 +79,7 @@ ActiveAdmin.register Work do
       input :display_option, collection: Work::DISPLAY_OPTIONS, label: 'Option de visualisation', include_blank: false
     end
     inputs "Images" do
-      input :video_key, label: 'Lien Youtube', placeholder:'Format : chiffres et lettres après : [https://vimeo.com/] ex: 441970843 '
+      input :video_key, label: 'Lien Viméo', placeholder:'Format : chiffres et lettres après : [https://vimeo.com/] ex: 441970843 '
       input :photo, as: :file, label: "Photo"
     end
     actions
