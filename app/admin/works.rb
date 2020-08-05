@@ -72,10 +72,10 @@ ActiveAdmin.register Work do
       input :dimensions, label: 'Dimensions', placeholder:'Format : 150 x 150 x 18 cm'
       input :year, label: 'Année', placeholder:'2040'
       input :collection, collection: Work::COLLECTIONS, label: 'Collection', include_blank: false
-      input :display_option, collection: Work::CATEGORIES, label: 'Categorie', include_blank: false
+      input :display_option, collection: Work::DISPLAY_OPTIONS, label: 'Option de visualisation', include_blank: false
     end
     inputs "Images" do
-      input :video_key, label: 'Lien Youtube', placeholder:'Format : chiffres et lettres après : [https://www.youtube.com/watch?v=] ex: 9PhhMhKAF2o '
+      input :video_key, label: 'Lien Youtube', placeholder:'Format : chiffres et lettres après : [https://vimeo.com/] ex: 441970843 '
       input :photo, as: :file, label: "Photo"
     end
     actions
