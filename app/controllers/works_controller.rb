@@ -21,6 +21,7 @@ class WorksController < ApplicationController
       works_hash[work] = index
     end
     @previous_work = works_hash.key(works_hash[@work] - 1)
+    @previous_work = works_hash.key(works_hash[@work] - 2) if @previous_work.nil?
     @next_work = works_hash.key(works_hash[@work] + 1)
   end
 
