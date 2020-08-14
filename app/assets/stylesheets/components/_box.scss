@@ -1,20 +1,15 @@
 .box {
   border-radius: $border-radius;
   height: fit-content;
-  max-height: 420px;
+  max-height: 528px;
   overflow: scroll;
   padding: 24px;
   border: 1px solid transparent;
   border-color: transparent white white white;
   p {
     padding-bottom: 0px 4px;
-    margin: 0 8px;
+    margin: 0 120px;
   }
-}
-
-.text p {
-  // column-count: 2;
-  margin: 0 120px;
 }
 
 .film-box {
