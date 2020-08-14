@@ -19,8 +19,16 @@ class WorksController < ApplicationController
     works_hash = Hash.new
     @works.each_with_index { |work, index| works_hash[work] = index }
     end
-    @previous_work.nil? ? @previous_work = Work.last : @previous_work = works_hash.key(works_hash[@work] - 1)
-    @next_work.nil? ? @next_work = Work.last : @next_work = works_hash.key(works_hash[@work] + 1)
+    if @previous_work.nil?
+      @previous_work = Work.last
+    else
+      @previous_work = works_hash.key(works_hash[@work] - 1)
+    end
+    if @next_work.nil?
+      @next_work = Work.last
+    else
+      @next_work = works_hash.key(works_hash[@work] + 1)
+    end
   end
 
   private
