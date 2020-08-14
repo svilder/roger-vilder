@@ -1,6 +1,4 @@
 <div class="container-less-navbar">
-  <h6 class="title mb-5"><%= t('contact.texts').upcase %></h6>
-
   <div class="">
     <ul class="nav nav-tabs" id="myTab" role="tablist">
       <% @texts.each do |text| %>
@@ -21,7 +19,7 @@
     </ul>
 
     <div class="tab-content" id="myTabContent">
-      <div  class="tab-pane fade show active box"
+      <div  class="tab-pane fade show active box text"
             id="<%= @text.id %>"
             role="tabpanel"
             aria-labelledby="<%= @text.id %>tab">
