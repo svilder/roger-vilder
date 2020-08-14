@@ -17,12 +17,10 @@ class WorksController < ApplicationController
     end
     @works = Work.all.order(collection: :desc).order(year: :desc)
     works_hash = Hash.new
-    @works.each_with_index do |work, index|
-      works_hash[work] = index
+    @works.each_with_index { |work, index| works_hash[work] = index }
     end
-    @previous_work = works_hash.key(works_hash[@work] - 1)
-    @previous_work = works_hash.key(works_hash[@work] - 2) if @previous_work.nil?
-    @next_work = works_hash.key(works_hash[@work] + 1)
+    @previous_work.nil? ? @previous_work = Work.last : @previous_work = works_hash.key(works_hash[@work] - 1)
+    @next_work.nil? ? @next_work = Work.last : @next_work = works_hash.key(works_hash[@work] + 1)
   end
 
   private
