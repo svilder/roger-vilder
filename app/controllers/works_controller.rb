@@ -3,9 +3,9 @@ class WorksController < ApplicationController
 
   def index
     if params[:collection].nil?
-      @works = Work.where(collection: "Kinetic").order(year: :desc).order(name: :desc)
+      @works = Work.where(collection: "Kinetic").order(year: :desc).order(name: :asc)
     else
-      @works = Work.where(collection: params[:collection]).order(year: :desc).order(name: :desc)
+      @works = Work.where(collection: params[:collection]).order(year: :desc).order(name: :asc)
     end
   end
 
@@ -15,7 +15,7 @@ class WorksController < ApplicationController
     else
       @work = Work.find(params[:id])
     end
-    @works = Work.all.order(collection: :desc).order(year: :desc).order(name: :desc)
+    @works = Work.all.order(collection: :desc).order(year: :desc).order(name: :asc)
     works_hash = Hash.new
     @works.each_with_index { |work, index| works_hash[work] = index }
     @previous_work.nil? ? @previous_work = Work.last : @previous_work = works_hash.key(works_hash[@work] - 1)
