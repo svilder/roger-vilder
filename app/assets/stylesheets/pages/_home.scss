@@ -6,7 +6,6 @@
   z-index: 0;
 }
 
-
 .home-wrapper {
   display: flex;
   justify-content: center;
@@ -17,7 +16,6 @@
   text-align: center;
 
   p {
-    margin-top: 24px;
     color: white;
   }
   hr {
@@ -25,10 +23,15 @@
   }
 }
 
+.catchphrase {
+  margin: 24px 96px;
+}
+
 .content-wrapper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin: 0 96px;
   img {
     position: relative;
     right: 204px;
