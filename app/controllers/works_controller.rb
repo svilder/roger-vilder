@@ -15,11 +15,22 @@ class WorksController < ApplicationController
     else
       @work = Work.find(params[:id])
     end
+
     @works = Work.all.order(collection: :desc).order(year: :desc).order(name: :asc)
     works_hash = Hash.new
     @works.each_with_index { |work, index| works_hash[work] = index }
-    @previous_work.nil? ? @previous_work = works_hash.key(works_hash[@work] - 2 : @previous_work = works_hash.key(works_hash[@work] - 1)
-    @next_work.nil? ? @next_work = works_hash.key(works_hash[@work] + 2 : @next_work = works_hash.key(works_hash[@work] + 1)
+
+    if @previous_work.nil?
+      @previous_work = works_hash.key(works_hash[@work] - 2)
+    else
+      @previous_work = works_hash.key(works_hash[@work] - 1)
+    end
+
+    if @next_work.nil?
+      @next_work = works_hash.key(works_hash[@work] + 2)
+    else
+      @next_work = works_hash.key(works_hash[@work] + 1)
+    end
   end
 
   private
