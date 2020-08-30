@@ -11,8 +11,8 @@
                       role: "tab",
                       ariaControls: "#{text.id}tab",
                       ariaSelected: "#{'true' if params[:id].to_i == text.id}" do %>
-            <%= text.author %><br>
-            <%= text.year %>
+            <h5> <%= text.author %><br>
+            <%= text.year %></h5>
           <% end %>
         </li>
       <% end %>
@@ -23,7 +23,7 @@
             id="<%= @text.id %>"
             role="tabpanel"
             aria-labelledby="<%= @text.id %>tab">
-        <%= tag.h3 @title %>
+        <p class="title-text"><%= @title %></p>
         <p><%= simple_format(@content) %></p>
       </div>
     </div>

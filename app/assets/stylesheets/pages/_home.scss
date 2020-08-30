@@ -21,10 +21,15 @@
   hr {
     border-top: 3px solid white;
   }
+  .nav-item {
+    font-size: large;
+    font-family: 'Open Sans Condensed', sans-serif;
+  }
 }
 
 .catchphrase {
-  margin: 24px 96px;
+  margin: 16px 96px;
+  font-size: large;
 }
 
 .content-wrapper {
@@ -46,6 +51,7 @@
   letter-spacing: 1rem;
   line-height: 1;
   margin-bottom: 56px;
+  font-family: 'Open Sans Condensed', sans-serif;
 }
 
 

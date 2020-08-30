@@ -15,16 +15,16 @@
           <%= link_to t('navbar.animation').upcase, works_path(locale: I18n.locale, collection: "Animation"), class: "nav-item" %>
           <%= link_to t('navbar.video').upcase, works_path(locale: I18n.locale, collection: "Video"), class: "nav-item" %>
         </div>
-        <div class="text-left">
-          <hr>
-          <%= link_to t('navbar.films').upcase, films_path(locale: I18n.locale), class: "nav-item" %> <br>
-          <%= link_to t('navbar.texts').upcase, text_path(locale: I18n.locale, id: @text), class: "nav-item" %> <br>
+        <hr>
+        <div class="nav-categories">
+          <%= link_to t('navbar.films').upcase, films_path(locale: I18n.locale), class: "nav-item" %>
+          <%= link_to t('navbar.texts').upcase, text_path(locale: I18n.locale, id: @text), class: "nav-item" %>
           <%= link_to t('navbar.about').upcase, about_path(locale: I18n.locale), class: "nav-item" %>
           <div>
             <% if I18n.locale == :fr %>
-              <h1><%= link_to "🇬🇧", { :locale=>'en' } %></h1>
+              <h2><%= link_to "🇬🇧", { :locale=>'en' } %></h2>
             <% else %>
-              <h1><%= link_to "🇫🇷", { :locale=>'fr' } %></h1>
+              <h2><%= link_to "🇫🇷", { :locale=>'fr' } %></h2>
             <% end %>
           </div>
         </div>
