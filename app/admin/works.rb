@@ -73,8 +73,8 @@ ActiveAdmin.register Work do
     inputs "Infos" do
       input :name, placeholder: 'Circonvolutions 17'
       input :description, label: 'Description', placeholder: 'Musée Pompidou, ou toute autre précision'
-      input :dimensions, label: 'Dimensions', placeholder:'Format : 150 x 150 x 18 cm'
-      input :year, label: 'Année', placeholder:'2040'
+      input :dimensions, label: 'Dimensions', placeholder: 'Format : 150 x 150 x 18 cm'
+      input :year, label: 'Année', placeholder: '2040'
       input :collection, collection: Work::COLLECTIONS, label: 'Collection', include_blank: false
       input :display_option, collection: Work::DISPLAY_OPTIONS, label: 'Option de visualisation', include_blank: false
     end
