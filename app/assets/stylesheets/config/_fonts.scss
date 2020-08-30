@@ -1,16 +1,17 @@
 // Import Google fonts
 // @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@400;700|Asap:wght@400;700|Raleway:wght@900|Open+Sans:wght@800|Lato:wght@900&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@400;700&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Raleway:wght@700&family=Amiko:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@400;700&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Raleway:wght@700&ffamily=Amiko:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed:wght@400;700&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&family=Raleway:wght@700&ffamily=Amiko:wght@400;700&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;0,700;1,400&family=Unna:ital,wght@0,400;0,700;1,400&family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&display=swap');
 
 
 // @import url('https://fonts.googleapis.com/css2?family=family=Open+Sans+Condensed:ital,wght@0,300;0,700;1,300&Asap+Condensed:wght@400;700&family=Asap:wght@400;700&family=Raleway:wght@500;600;700;800;900&display=swap');
 // @import url('https://fonts.googleapis.com/css2?family=Amiko:wght@400;700&family=Raleway:wght@700&display=swap');
 
 // Define fonts for body and headers
-$body-font: "Open Sans", "Open Sans Condensed", "sans-serif";
-$headers-font: "Open Sans Condensed", "Raleway", "sans-serif";
+$body-font: "Quattrocento Sans", "Open Sans Condensed", "sans-serif";
+$headers-font: "Unna", "Raleway", "sans-serif";
 
 // To use a font file (.woff) uncomment following lines
 // @font-face {
@@ -29,3 +30,5 @@ $headers-font: "Open Sans Condensed", "Raleway", "sans-serif";
 // font-family: 'Open Sans Condensed', sans-serif;
 // font-family: 'Raleway', sans-serif;
 // font-family: 'Amiko', sans-serif;
+// font-family: 'Unna', serif;
+// font-family: 'Quattrocento Sans', sans-serif;
