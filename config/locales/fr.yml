@@ -2,6 +2,7 @@
 fr:
   navbar:
     all: "Toutes les pièces"
+    home: "Accueil"
     animation: "Animations"
     drawing: "Dessins"
     kinetic: "Cinétiques"
