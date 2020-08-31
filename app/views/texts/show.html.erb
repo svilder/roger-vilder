@@ -11,8 +11,8 @@
                       role: "tab",
                       ariaControls: "#{text.id}tab",
                       ariaSelected: "#{'true' if params[:id].to_i == text.id}" do %>
-            <h5> <%= text.author %><br>
-            <%= text.year %></h5>
+            <h6> <%= text.author %><br>
+            <%= text.year %></h6>
           <% end %>
         </li>
       <% end %>
