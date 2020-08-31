@@ -4,15 +4,15 @@
 
 .container-less-navbar {
   margin: 56px;
+  min-height: 40vw;
 }
 
 .container-for-work {
   margin: 56px 20px 20px 20px;
+  min-height: 40vw;
 }
 
-.container-vertical-navbar {
-  margin: 16px 16px 16px 236px;
-}
+
 
 @media (max-width: 768px) {
   .container-with-navbar {
