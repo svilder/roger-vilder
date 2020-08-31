@@ -1,5 +1,5 @@
 class WorksController < ApplicationController
-  before_action :set_video_size
+  before_action :set_video_size, :set_default_text
 
   def index
     if params[:collection].nil?

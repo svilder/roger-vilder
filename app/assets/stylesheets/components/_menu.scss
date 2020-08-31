@@ -1,3 +1,16 @@
+.nav-menu {
+  color: white;
+  font-family: 'Open Sans Condensed', sans-serif;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.margin-menu {
+  margin: 8px 56px;
+}
+
 .nav-categories {
   width: 100%;
   display: flex;

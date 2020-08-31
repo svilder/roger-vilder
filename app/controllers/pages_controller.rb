@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
+  before_action :set_default_text
+
   def home
-    @text = Text.all.order(year: :desc).first
   end
 
   def about

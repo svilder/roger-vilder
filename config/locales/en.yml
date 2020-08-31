@@ -1,6 +1,7 @@
 en:
   navbar:
     all: "All pieces"
+    home: "Home"
     animation: "Animations"
     drawing: "Drawings"
     kinetic: "Kinetics"

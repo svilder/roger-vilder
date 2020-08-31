@@ -11,4 +11,8 @@ class ApplicationController < ActionController::Base
   def set_locale
     I18n.locale = params.fetch(:locale, I18n.default_locale).to_sym
   end
+
+  def set_default_text
+    @text = Text.all.order(year: :desc).first
+  end
 end
