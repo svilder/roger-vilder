@@ -1,7 +1,3 @@
-.container-with-navbar {
-  margin: 80px 20px;
-}
-
 .container-less-navbar {
   margin: 56px;
   min-height: 40vw;
@@ -13,14 +9,12 @@
 }
 
 
-
 @media (max-width: 768px) {
-  .container-with-navbar {
-    margin: 20px 20px;
+  .container-less-navbar {
+    margin: 20px;
   }
-}
-
-
-.container-contact-page {
-  margin: 120px 56px;
+  .container-for-work {
+    margin: 20px;
+    min-height: 40vw;
+  }
 }
