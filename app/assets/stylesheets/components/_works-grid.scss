@@ -7,7 +7,7 @@
 .icon-grid {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-gap: 96px;
+  grid-gap: 44px;
   justify-content: center;
   a {
     text-decoration: none;
@@ -82,7 +82,7 @@
   }
 
   .icon-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
 
   .one-work-card {
@@ -98,14 +98,14 @@
 // Medium devices (desktops, 768px and up)
 @media (min-width: 768px) {
   .icon-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px) {
   .icon-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
   }
 }
 
