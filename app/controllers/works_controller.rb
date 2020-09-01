@@ -10,12 +10,7 @@ class WorksController < ApplicationController
   end
 
   def show
-    if params[:id].nil?
-      @work = Work.first
-    else
-      @work = Work.find(params[:id])
-    end
-
+    @work = Work.find(params[:id])
     @works = Work.where(collection: params[:collection]).order(year: :desc).order(name: :asc)
     @works_hash = Hash.new
     @works.each_with_index { |work, index| @works_hash[work] = index }
