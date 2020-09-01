@@ -6,6 +6,8 @@
 .container-for-work {
   margin: 20px;
   min-height: 40vw;
+  display: flex;
+  justify-content: center;
 }
 
 @media (max-width: 768px) {
