@@ -11,26 +11,14 @@ class WorksController < ApplicationController
 
   def show
     if params[:id].nil?
-      @work = Work.last
+      @work = Work.first
     else
       @work = Work.find(params[:id])
     end
 
-    @works = Work.all.order(collection: :desc).order(year: :desc).order(name: :asc)
-    works_hash = Hash.new
-    @works.each_with_index { |work, index| works_hash[work] = index }
-
-    if @previous_work.nil?
-      @previous_work = works_hash.key(works_hash[@work] - 2)
-    else
-      @previous_work = works_hash.key(works_hash[@work] - 1)
-    end
-
-    if @next_work.nil?
-      @next_work = works_hash.key(works_hash[@work] + 2)
-    else
-      @next_work = works_hash.key(works_hash[@work] + 1)
-    end
+    @works = Work.where(collection: params[:collection]).order(year: :desc).order(name: :asc)
+    @works_hash = Hash.new
+    @works.each_with_index { |work, index| @works_hash[work] = index }
   end
 
   private

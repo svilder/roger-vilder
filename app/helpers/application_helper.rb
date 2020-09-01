@@ -7,11 +7,28 @@ module ApplicationHelper
     end
   end
 
-  def youtube_video(url, height, width)
-    render :partial => 'shared/video', :locals => { :url => url, :height => height, :width => width }
-  end
-
   def vimeo_video(key)
     render :partial => 'shared/video', :locals => { :key => key }
   end
+
+  def render_previous_work(works_hash, work)
+    if works_hash[work] == 0
+      ""
+    else
+      previous_work = works_hash.key(works_hash[work] - 1)
+      render :partial => 'shared/previous_work_link', :locals => { :id => previous_work.id }
+    end
+  end
+
+  def render_next_work(works_hash, work)
+    if works_hash[work] == (works_hash.length - 1)
+      ""
+    else
+      next_work = works_hash.key(works_hash[work] + 1)
+      render :partial => 'shared/next_work_link', :locals => { :id => next_work.id }
+    end
+  end
 end
+
+
+

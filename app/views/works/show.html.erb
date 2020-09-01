@@ -1,8 +1,6 @@
 <div class="container-for-work">
   <div class="wrapper align-items-center">
-    <%= link_to work_path(locale: I18n.locale, id: @previous_work.id), class: "m-3 link-black" do %>
-      <h3><i class="fas fa-long-arrow-alt-left"></i></h3>
-    <% end %>
+    <%= render_previous_work(@works_hash, @work) %>
 
     <div class="one-work-card">
       <div class="work-card">
@@ -24,9 +22,6 @@
       </div>
     </div>
 
-    <%= link_to work_path(locale: I18n.locale, id: @next_work.id), class: "m-3 link-black" do %>
-      <h3><i class="fas fa-long-arrow-alt-right"></i></h3>
-    <% end %>
-
+    <%= render_next_work(@works_hash, @work) %>
   </div>
 </div>
