@@ -23,5 +23,9 @@
     </div>
 
     <%= render_next_work(@works_hash, @work) %>
+
   </div>
+  <%= link_to works_path(locale: I18n.locale, collection: @work.collection), class: "link-black position-right" do %>
+    <i class="fas fa-times"></i>
+  <% end %>
 </div>
