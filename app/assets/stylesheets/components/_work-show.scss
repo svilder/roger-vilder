@@ -1,3 +1,14 @@
+.directions {
+  max-width: 20px;
+}
+
+.cross {
+  max-width: 15px;
+  height: 15px;
+  position: relative;
+  right: 32px;
+}
+
 .one-work-card {
   border-radius: $border-radius;
 }

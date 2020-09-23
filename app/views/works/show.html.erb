@@ -26,6 +26,7 @@
 
   </div>
   <%= link_to works_path(locale: I18n.locale, collection: @work.collection), class: "link-black position-right" do %>
-    <i class="fas fa-times"></i>
+    <%= image_tag "cancel.png", alt: "Icon made by Freepik", class: "cross" %>
+
   <% end %>
 </div>
