@@ -1,7 +1,7 @@
 class Work < ApplicationRecord
   has_one_attached :photo
 
-  DISPLAY_OPTIONS = ["Vimeo", "Image"]
+  DISPLAY_OPTIONS = ["Vimeo", "Image", "Js_animation"]
   COLLECTIONS = ["Kinetic", "Neon", "Sculptur", "Drawing", "Photo", "Animation", "Video"]
 
   # validates :display_option, presence: true, inclusion: { in: DISPLAY_OPTIONS }

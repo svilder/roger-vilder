@@ -6,6 +6,8 @@
       <div class="work-card">
         <% if @work.display_option == "Image" || @work.display_option == "Vimeo" && @work.video_key.nil? || @work.video_key == "" %>
           <%= instance_image_tag @work.photo, crop: :fill, class: "work-card-image" %>
+        <% elsif  @work.display_option == "Js_animation"%>
+          <%= render "cinetic_animations", work: @work %>
         <% else %>
           <div class="work-card-video">
             <%= vimeo_video @work.video_key %>
