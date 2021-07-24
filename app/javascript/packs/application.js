@@ -1,5 +1,4 @@
 import "bootstrap";
-
 // assets/particles.json
 
 if (document.getElementById('particles-js')) {

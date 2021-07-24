@@ -19,7 +19,6 @@ if Rails.env.development?
     t.title = row['title']
     t.place = row['place']
     t.city = row['city']
-    t.display_option = row['display_option']
     t.year = row['year']
     t.associates = row['associates']
     t.save
