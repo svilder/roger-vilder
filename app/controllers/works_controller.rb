@@ -1,12 +1,10 @@
 class WorksController < ApplicationController
   before_action :set_video_size, :set_default_text
+  DEFAULT_COLLECTION =  "Kinetic"
 
   def index
-    if params[:collection].nil?
-      @works = Work.where(collection: "Kinetic").order(year: :desc).order(name: :asc)
-    else
-      @works = Work.where(collection: params[:collection]).order(year: :desc).order(name: :asc)
-    end
+    collection = params[:collection] ? params[:collection] : DEFAULT_COLLECTION
+    @works = Work.where(collection: collection).order(year: :desc).order(name: :asc)
   end
 
   def show
@@ -14,6 +12,7 @@ class WorksController < ApplicationController
     @works = Work.where(collection: params[:collection]).order(year: :desc).order(name: :asc)
     @works_hash = Hash.new
     @works.each_with_index { |work, index| @works_hash[work] = index }
+    @display_options = Work.display_options
   end
 
   private

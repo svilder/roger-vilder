@@ -4,7 +4,7 @@ ActiveAdmin.register Work do
   menu priority: 1
 
   filter :collection, as: :check_boxes, collection: proc { Work::COLLECTIONS }
-  filter :display_option, as: :check_boxes, collection: proc { Work::DISPLAY_OPTIONS }
+  filter :display_option, as: :check_boxes, collection: proc { Work.display_options.map {|display_value| display_value} }
 
   action_item :view_site do
     link_to "Voir le site", works_path, target: "_blank"
