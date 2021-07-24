@@ -4,7 +4,7 @@ ActiveAdmin.register Work do
   menu priority: 1
 
   filter :collection, as: :check_boxes, collection: proc { Work::COLLECTIONS }
-  filter :display_option, as: :check_boxes, collection: proc { Work.display_options.map {|display_value| display_value} }
+  filter :display_option, as: :check_boxes, collection: proc { Work.display_options.to_a }
 
   action_item :view_site do
     link_to "Voir le site", works_path, target: "_blank"
@@ -76,7 +76,7 @@ ActiveAdmin.register Work do
       input :dimensions, label: 'Dimensions', placeholder: 'Format : 150 x 150 x 18 cm'
       input :year, label: 'Année', placeholder: '2040'
       input :collection, collection: Work::COLLECTIONS, label: 'Collection', include_blank: false
-      input :display_option, collection: Work::DISPLAY_OPTIONS, label: 'Option de visualisation', include_blank: false
+      input :display_option, collection: Work.display_options.to_a, label: 'Option de visualisation', include_blank: false
     end
     inputs "Images" do
       input :video_key, label: 'Lien Viméo', placeholder:'Format : chiffres et lettres après : [https://vimeo.com/] ex: 441970843 '
