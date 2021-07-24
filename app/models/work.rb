@@ -4,7 +4,7 @@ class Work < ApplicationRecord
 
   DISPLAY_CATEGORIES = {
     video: 'Vimeo',
-    image: 'Statics',
+    image: 'Image',
     animation: 'Js_animation'
   }.freeze
 
