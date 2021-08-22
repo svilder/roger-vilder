@@ -1,0 +1,220 @@
+<script>
+// 4 Carrés MxN couleur RVBJ de Roger Vilder / code by Alain Longuet --- sept 2019 v.0
+
+let tousLesCarrets = [] ; // liste des carrés
+
+let nombreDeLignes = 5;
+let v = 1.4;
+let vv = 0.7;
+let numOrdre ;
+
+let positif = false;
+
+
+//let x=0; let y=0; // position des carrés
+let cc; //coté des carrés
+//let f1 = (random(v)+vv)/(nombreDeLignes/4);let f2 = (random(v)+vv)/(nombreDeLignes/4);let f3 = (random(v)+vv)/(nombreDeLignes/4);let f4 = (random(v)+vv)/(nombreDeLignes/4); // fréquence de balayage des 4 carrés
+let tempo = 700; // temporisation de départ de chaque groupe
+let arretSurImage = false;
+let deplace =false;
+let zoom = 1;
+let deplaceX=0;let deplaceY=0;
+let rouge;let magenta;let jaune;let bleu;let vert;
+
+
+function setup(){
+
+  frameRate(25);
+  let fenetreAffichage = createCanvas (800, 800);
+  fenetreAffichage.parent('containerProcessing');
+  cc = 800/nombreDeLignes/2;
+  let couleurDeFond = 0;
+  rouge = color(252,0,0);
+  bleu = color(0,22,255);
+  vert = color(0,125,21);
+  jaune = color(249,226,0);
+  magenta = color(162,30,129);
+  background(couleurDeFond);
+  fill (255);
+  noStroke ();
+
+  let f1 = (random(v)+vv)/(nombreDeLignes/4);let f2 = (random(v)+vv)/(nombreDeLignes/4);let f3 = (random(v)+vv)/(nombreDeLignes/4);let f4 = (random(v)+vv)/(nombreDeLignes/4); // fréquence de balayage des 4 carrés
+
+  //curseur inactif pour écran tactile
+  //noCursor();
+
+  //tousLesCarrets = new carret[0];
+
+  for (let y=0; y<= height-1; y=y+2*cc){
+    for (let x=0; x<= width-1; x=x+2*cc){
+    let f1 = (random(0.8)+0.5)/(nombreDeLignes/4);
+    let f2 = (random(0.8)+0.5)/(nombreDeLignes/4);
+    let f3 = (random(0.8)+0.5)/(nombreDeLignes/4);
+    let f4 = (random(0.8)+0.5)/(nombreDeLignes/4); // fréquence de balayage des 4 carrés
+    tousLesCarrets.push(new carret(cc,x+cc,y,0,cc,-1,true,f1,f2,f3,f4));
+    tousLesCarrets.push(new carret(cc,x+cc,y+cc,cc,0,cc/1.5,false,f1,f2,f3,f4));
+    tousLesCarrets.push(new carret(cc,x,y+cc,cc,0,1,true,f1,f2,f3,f4));
+    tousLesCarrets.push(new carret(cc,x+cc,y+cc,0,cc,cc/2,true,f1,f2,f3,f4));
+   //println ("coté "+ cc +", colonne "+ y +", ligne " + x);
+    }
+    }
+
+}
+
+
+function draw(){
+  background (0);
+  numOrdre = 0;
+  for (let l = 0; l<= (height-1)/(2*cc); l=l+1){
+    for (let n = 0; n<= (width-1)/(2*cc) ; n=n+1){
+    translate(deplaceX,deplaceY);
+    x=n*2*cc; y=l*2*cc;
+    tousLesCarrets[numOrdre].anime1();
+    tousLesCarrets[numOrdre+1].anime2();
+    tousLesCarrets[numOrdre+2].anime3();
+    tousLesCarrets[numOrdre+3].anime4();
+    numOrdre = numOrdre+4 ;
+    translate(-deplaceX,-deplaceY);
+    //println ("coté "+ cc +"  colonne "+ l +", ligne " + n);
+    //println ("numOrdre "+ numOrdre );
+    }
+
+  }
+}
+
+// Interactivité
+
+function mousePressed() {
+  if (arretSurImage==false && mouseX<100 && mouseY<100){
+    arretSurImage=true;
+    }
+  else {
+    if (mouseX<100 && mouseY<100){arretSurImage=false;}
+    }
+  //println ("arretSurImage "+arretSurImage);
+
+  if (mouseX>width-100 && mouseY>height-100){
+    zoom=zoom+1;
+    }
+  if (mouseX<100 && mouseY>height-100){
+    zoom=zoom-1;
+    if (zoom<1){zoom=1;}
+    }
+    //println ("zoom "+zoom+" cc="+cc);
+
+    //println ("positif "+positif );
+}
+
+function mouseDragged() {
+  deplaceX = deplaceX+(mouseX-pmouseX);
+  deplaceY = deplaceY+(mouseY-pmouseY);
+}
+
+// Class des carrés animés
+
+class carret {
+  constructor(c,ox,oy,cx,cy,i,ar,f1,f2,f3,f4){
+  this.c= c;
+  this.ox= ox;
+  this.oy= oy;
+  this.cx= cx;
+  this.cy= cy;
+  this.i= i;
+  this.ar= ar;
+  this.f1= f1; this.f2= f2; this.f3= f3; this.f4= f4;
+
+  }
+
+  anime1(){
+     if ( this.i<=this.c && this.ar==true ){
+       if (arretSurImage==false){this.i=this.i+this.f1;}
+       if (this.i>=this.c){this.ar=false;}
+     }
+     if ( this.i>=0 && this.ar==false ){
+       if (arretSurImage==false){this.i=this.i-this.f1;}
+       if (this.i<=0){this.ar=true;}
+     }
+     push();
+     translate(-(width/2)*(zoom-1),-(height/2)*(zoom-1));
+     scale(zoom);
+
+     //fill(jaune);
+     //rect (this.ox,this.oy,-this.c,this.c);
+     this.cx = -this.i;
+     fill(rouge);
+     rect (this.ox,this.oy,this.cx,this.cy);
+     scale(1/zoom);
+     pop();
+  }
+
+  anime2(){
+    if ( this.i<=this.c && this.ar==true ){
+        if (arretSurImage==false){this.i=this.i+this.f2;}
+        if (this.i>=this.c){this.ar=false;}
+        }
+    if ( this.i>=0 && this.ar==false ){
+        if (arretSurImage==false){this.i=this.i-this.f2;}
+        if (this.i<=0){this.ar=true;}
+        }
+        push();
+        translate(-(width/2)*(zoom-1),-(height/2)*(zoom-1));
+        scale(zoom);
+        //fill(bleu);
+        //rect (this.ox,this.oy,this.c,-this.c);
+        this.cy = -this.i;
+        fill(vert);
+        rect (this.ox,this.oy,this.cx,this.cy);
+        scale(1/zoom);
+        pop();
+
+  }
+
+  anime3(){
+   if ( this.i<=this.c && this.ar==true ){
+      if (arretSurImage==false){this.i=this.i+this.f3;}
+      if (this.i>=this.c){this.ar=false;}
+      }
+   if ( this.i>=0 && this.ar==false ){
+      if (arretSurImage==false){this.i=this.i-this.f3;}
+      if (this.i<=0){this.ar=true;}
+      }
+        push();
+        translate(-(width/2)*(zoom-1),-(height/2)*(zoom-1));
+        scale(zoom);
+        //fill(bleu);
+        //rect (this.ox,this.oy,this.c,this.c);
+        this.cy = this.i;
+        fill(bleu);
+        rect (this.ox,this.oy,this.cx,this.cy);
+        scale(1/zoom);
+        pop();
+
+
+  }
+
+  anime4(){
+    if ( this.i<=this.c && this.ar==true ){
+        if (arretSurImage==false){this.i=this.i+this.f4;}
+        if (this.i>=this.c){this.ar=false;}
+      }
+    if ( this.i>=0 && this.ar==false ){
+        if (arretSurImage==false){this.i=this.i-this.f4;}
+        if (this.i<=0){this.ar=true;}
+      }
+
+        push();
+        translate(-(width/2)*(zoom-1),-(height/2)*(zoom-1));
+        scale(zoom);
+        //this.ox = this.x+this.c;
+        //fill(jaune);
+        //rect (this.ox,this.oy,this.c,this.c);
+        fill(jaune);
+        this.cx = this.i;
+        rect (this.ox,this.oy,this.cx,this.cy);
+        scale(1/zoom);
+        pop();
+
+  }
+}
+
+</script>
