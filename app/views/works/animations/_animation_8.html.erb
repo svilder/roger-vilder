@@ -1,0 +1,199 @@
+<script>
+
+// Vague quantique de Roger Vilder / code p5.js by Alain Longuet --- Sept 2020 v.1 interactif
+
+let n = 15; // <<<<<<<<<<<< nombre de carrés
+let v= 0.6; // <<<<<<<<<< vitesse moyenne d'animation des carrés
+let tousLesCarrets = []; // liste des carrés
+
+let x=0; let y=0; // position des carrés
+let cc ; //coté des carrés
+
+let f1 = 0.5;let f2 = 0.5;let f3 = 0.5;let f4 = 0.5;
+let tempo = 700; // temporisation de départ de chaque groupe
+let arretSurImage = false;
+let deplace =false;
+let zoom = 1;
+let deplaceX=0;let deplaceY=0;
+
+let positif = false;
+let couleurDeFond = 0;
+
+
+function setup(){
+  frameRate (25);
+  let fenetreAffichage = createCanvas (1200, 800);
+  fenetreAffichage.parent('containerProcessing');
+  cc = 1200/(2*n);
+  y=800/2-cc;
+  background(0);
+  fill (255);
+  noStroke ();
+  f1 = random(v)+0.5;
+  f2 = random(v)+0.5;
+  f3 = random(v)+0.5;
+  f4 = random(v)+0.5; // fréquence de balayage variable des 4 carrés
+  //noCursor();
+  //tousLesCarrets = new carret[0];
+  for (let x=0; x<= 1200; x=x+2*cc){
+  tousLesCarrets.push(new carret(cc,x+cc,y,0,cc,-1,true));
+  tousLesCarrets.push(new carret(cc,x+cc,y+cc,cc,0,cc/1.5,false));
+  tousLesCarrets.push(new carret(cc,x,y+cc,cc,0,1,true));
+  tousLesCarrets.push(new carret(cc,x+cc,y+cc,0,cc,cc/2,true));
+  }
+
+  //print(tousLesCarrets[0]);
+}
+
+
+function draw(){
+
+  background (couleurDeFond);
+
+  for (let n = 0; n< width/(2*cc) ; n=n+1){
+    if (millis()>n*tempo+1000){
+    translate(deplaceX,deplaceY);
+    x=n*2*cc;
+    tousLesCarrets[4*n].anime1();
+    tousLesCarrets[4*n+1].anime2();
+    tousLesCarrets[4*n+2].anime3();
+    tousLesCarrets[4*n+3].anime4();
+    translate(-deplaceX,-deplaceY);
+    }
+  }
+}
+
+// Interactivité
+
+function mousePressed() {
+  if (arretSurImage==false && mouseX<100 && mouseY<100){
+    arretSurImage=true;
+    }
+  else {
+    if (mouseX<100 && mouseY<100){arretSurImage=false;}
+   }
+
+
+  if (mouseX>width-100 && mouseY>height-100){
+    zoom=zoom+1;
+    }
+  if (mouseX<100 && mouseY>height-100){
+    zoom=zoom-1;
+    if (zoom<1){zoom=1;}
+    }
+    if (positif==true && mouseX>width-100 && mouseY<100){
+      couleurDeFond = 0;
+      fill(255);
+      positif=false;
+      }
+    else {
+      if (positif==false && mouseX>width-100 && mouseY<100){
+      couleurDeFond = 255;
+      fill(0);
+      positif=true;
+      }
+    }
+}
+
+function mouseDragged() {
+  deplaceX = deplaceX+(mouseX-pmouseX);
+  deplaceY = deplaceY+(mouseY-pmouseY);
+  print(deplaceX);
+}
+
+// Class des carrés animés
+
+class carret {
+  constructor(c,ox,oy,cx,cy,i,ar){
+  this.c= c;
+  this.ox= ox;
+  this.oy= oy;
+  this.cx= cx;
+  this.cy= cy;
+  this.i= i;
+  this.ar= ar;
+
+  }
+
+  anime1(){
+     if ( this.i<=this.c && this.ar==true ){
+       if (arretSurImage==false){this.i=this.i+f1;}
+       if (this.i>=this.c){this.ar=false;}
+     }
+     if ( this.i>=0 && this.ar==false ){
+       if (arretSurImage==false){this.i=this.i-f1;}
+       if (this.i<=0){this.ar=true;}
+     }
+
+        //translate(0,-10);
+        translate(-(width/2)*(zoom-1),-(height/2)*(zoom-1));
+        scale(zoom);
+
+        this.cx = -this.i;
+        rect (this.ox,this.oy,this.cx,this.cy);
+
+        scale(1/zoom);
+        translate((width/2)*(zoom-1),(height/2)*(zoom-1));
+        //translate(0,10);
+
+  }
+
+  anime2(){
+    if ( this.i<=this.c && this.ar==true ){
+        if (arretSurImage==false){this.i=this.i+f2;}
+        if (this.i>=this.c){this.ar=false;}
+        }
+    if ( this.i>=0 && this.ar==false ){
+        if (arretSurImage==false){this.i=this.i-f2;}
+        if (this.i<=0){this.ar=true;}
+        }
+
+        translate(-(width/2)*(zoom-1),-(height/2)*(zoom-1));
+        scale(zoom);
+        this.cy = -this.i;
+        rect (this.ox,this.oy,this.cx,this.cy);
+        scale(1/zoom);
+        translate((width/2)*(zoom-1),(height/2)*(zoom-1));
+
+  }
+
+  anime3(){
+   if ( this.i<=this.c && this.ar==true ){
+      if (arretSurImage==false){this.i=this.i+f3;}
+      if (this.i>=this.c){this.ar=false;}
+      }
+   if ( this.i>=0 && this.ar==false ){
+      if (arretSurImage==false){this.i=this.i-f3;}
+      if (this.i<=0){this.ar=true;}
+      }
+        translate(-(width/2)*(zoom-1),-(height/2)*(zoom-1));
+        scale(zoom);
+        this.cy = this.i;
+        rect (this.ox,this.oy,this.cx,this.cy);
+        scale(1/zoom);
+        translate((width/2)*(zoom-1),(height/2)*(zoom-1));
+      //print(this.i);
+  }
+
+  anime4(){
+   if ( this.i<=this.c && this.ar==true ){
+      if (arretSurImage==false){this.i=this.i+f4;}
+      if (this.i>=this.c){this.ar=false;}
+      }
+   if ( this.i>=0 && this.ar==false ){
+      if (arretSurImage==false){this.i=this.i-f4;}
+      if (this.i<=0){this.ar=true;}
+      }
+        translate(-(width/2)*(zoom-1),-(height/2)*(zoom-1));
+        scale(zoom);
+        this.cx = this.i;
+        this.ox = x+this.c;
+        rect (this.ox,this.oy,this.cx,this.cy);
+        scale(1/zoom);
+        translate((width/2)*(zoom-1),(height/2)*(zoom-1));
+    //print(this.x);
+
+  }
+}
+
+</script>
