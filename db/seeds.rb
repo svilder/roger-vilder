@@ -1,8 +1,6 @@
 require 'csv'
 require 'open-uri'
 
-# ---------------------------- DONT REMOVE WHATS BELOW----------------------------
-
 if Rails.env.development?
   puts " Destroying EVERYTHING ( in developpement :) )"
   AdminUser.destroy_all
@@ -42,6 +40,23 @@ if Rails.env.development?
     end
     puts " #{t.id}, #{t.author} has been seeded "
   end
+  puts "Parsing texts"
+  csv_text = File.read(Rails.root.join('lib', 'seeds', 'texts.csv'))
+  csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
+  csv.each do |row|
+    t = Text.new
+    t.title_fr = row['Title fr']
+    t.title_en = row['Title en']
+    t.author = row['Author']
+    t.content_fr = row['Content fr']
+    t.content_en = row['Content en']
+    t.year = row['Year']
+    t.save
+    unless t.valid?
+      puts "#{t.errors.messages}t."
+    end
+    puts " #{t.id}, #{t.author} has been seeded "
+  end
   puts "starting to parse CSV for works"
   csv_text = File.read(Rails.root.join('lib', 'seeds', 'toutes_les_pieces_de_ta_vie.csv'))
   csv = CSV.parse(csv_text, :headers => true, :encoding => 'ISO-8859-1')
@@ -51,7 +66,6 @@ if Rails.env.development?
     t.description = row['description']
     t.dimensions = row['dimensions']
     t.year = row['year']
-    t.image = row['image']
     t.video_key = row['video_key']
     t.display_option = row['display_option']
     t.collection = row['collection']
@@ -59,6 +73,10 @@ if Rails.env.development?
     puts "#{t.name}, #{t.dimensions} saved"
   end
   puts "Now, there are #{Work.count} saved via seed in tha Database"
+  puts "Creating a admin user for testing active admin"
+  admin = AdminUser.new(email: "supertoto@gmail.com", password: "grostoto")
+  admin.save 
+  unless admin.valid? puts "errors : #{admin.errors.messages}"
   puts " Seed done ✌️"
 end
 
