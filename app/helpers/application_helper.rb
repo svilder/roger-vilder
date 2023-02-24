@@ -7,8 +7,8 @@ module ApplicationHelper
     end
   end
 
-  def vimeo_video(key)
-    render :partial => 'shared/video', :locals => { :key => key }
+  def vimeo_video(record)
+    render :partial => 'shared/video', :locals => { :record => record }
   end
 
   def render_previous_work(works_hash, work)
@@ -34,6 +34,7 @@ module ApplicationHelper
     return instance_image_tag(record.photo, options) unless record.image
 
     src = "https://res.cloudinary.com/dfbhkicfg/image/upload/#{record.image}"
+
     image_tag(src, options)
   end
 end
