@@ -22,9 +22,17 @@
           <%= link_to t('navbar.about').upcase, about_path(locale: I18n.locale), class: "nav-item" %>
           <div>
             <% if I18n.locale == :fr %>
-              <h2><%= link_to "🇬🇧", { :locale=>'en' } %></h2>
+              <h2>
+                <%= link_to :locale=>'en' do %>
+                  <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg", width: "18px", style: "right: 0;" %>
+                <% end %>
+              </h2>
             <% else %>
-              <h2><%= link_to "🇫🇷", { :locale=>'fr' } %></h2>
+              <h2>
+                <%= link_to :locale=>'fr' do %>
+                  <%= image_tag "https://upload.wikimedia.org/wikipedia/commons/b/bc/Flag_of_France_%281794%E2%80%931815%2C_1830%E2%80%931974%2C_2020%E2%80%93present%29.svg", width: "18px", style: "right: 0;" %>
+                <% end %>
+              </h2>
             <% end %>
           </div>
         </div>
