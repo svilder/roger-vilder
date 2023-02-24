@@ -1,36 +1,30 @@
+require_relative 'seed/work_seed.rb'
+require_relative 'seed/text_seed.rb'
+require_relative 'seed/exhibition_seed.rb'
+require_relative 'seed/bibliography_seed.rb'
 require 'csv'
 require 'open-uri'
 
-#add environment safe clause
+MODELS = %w[Work Text Exhibition Bibliography]
 
 strip = lambda {|f| f ? f.strip : nil}
 
-Work.destroy_all
+if Rails.env.development?
+  AdminUser.destroy_all
+  puts "Creating an admin user for testing active admin"
+  admin = AdminUser.new(email: "supertoto@gmail.com", password: "grostoto")
+  admin.save
 
-puts 'Generate Works seed data'
-csv_text = File.read(Rails.root.join('db','works.csv'))
-csv = CSV.parse(csv_text, headers: true,  converters: strip)
+  MODELS.each do |model|
+    puts "#{model.pluralize} cleaning"
+    model.constantize.destroy_all
+    puts "Generating #{model} data"
 
-csv.each do |work|
+    csv_text = File.read(Rails.root.join('lib',"seeds/#{model.underscore.pluralize}.csv"))
+    csv = CSV.parse(csv_text, headers: true, converters: strip)
 
-  model = Work.new(
-    name: work["name"],
-    description: work["description"],
-    dimensions: work["dimensions"],
-    year: work["year"],
-    image: work["image"],
-    video_key: work["video_key"],
-    display_option: work["display_option"],
-    collection: work['collection'],
-  )
-  
-  if model.valid?
-    p model
-    p 'is valid'
-    model.save
-  else
-    p "error: #{model.errors.messages}"
+    "#{model}Seed".constantize.new(csv).call
+    
+    puts "#{model.constantize.count} #{model.pluralize} has been seeded"
   end
-
 end
-puts "#{Work.count} Works has been seeded"
