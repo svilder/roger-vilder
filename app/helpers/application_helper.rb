@@ -28,6 +28,14 @@ module ApplicationHelper
       render :partial => 'shared/next_work_link', :locals => { :id => next_work.id }
     end
   end
+
+  def handle_image_work(record, options = {})
+    # Helper to handle DB removal from December 2022
+    return instance_image_tag(record.photo, options) unless record.image
+
+    src = "https://res.cloudinary.com/dfbhkicfg/image/upload/#{record.image}"
+    image_tag(src, options)
+  end
 end
 
 

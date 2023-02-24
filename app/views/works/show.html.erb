@@ -5,7 +5,7 @@
     <div class="one-work-card">
       <div class="work-card">
         <% if @work.static_content? %>
-          <%= instance_image_tag @work.photo, crop: :fill, class: "work-card-image" %>
+          <%= handle_image_work @work, crop: :fill, class: "work-card-image" %>
         <% elsif  @work.display_option == @display_options.animation %>
           <%= render "cinetic_animations", work: @work %>
         <% else %>
