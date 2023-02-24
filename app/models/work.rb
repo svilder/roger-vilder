@@ -12,12 +12,6 @@ class Work < ApplicationRecord
 
   COLLECTIONS = ["Kinetic", "Neon", "Sculptur", "Drawing", "Photo", "Animation", "Video"]
 
-  # validates :display_option, presence: true, inclusion: { in: DISPLAY_OPTIONS }
-  # validates :collection, presence: true, inclusion: { in: COLLECTIONS }
-  # validates :name, presence: true
-  # validates :year, presence: true
-  # validates :dimensions, presence: true
-
   def self.display_options
     DisplayOptions.new.tap do |options|
       options.video = DISPLAY_CATEGORIES[:video]

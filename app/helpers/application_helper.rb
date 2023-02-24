@@ -29,13 +29,12 @@ module ApplicationHelper
     end
   end
 
-  # Helper to handle DB removal from December 2022
   def handle_image_work(record, options = {})
+    # Helper to handle DB removal from December 2022
     return instance_image_tag(record.photo, options) unless record.image
 
     src = "https://res.cloudinary.com/dfbhkicfg/image/upload/#{record.image}"
-
-    render inline: "<image class='icon-image' src=#{src} />"
+    image_tag(src, options)
   end
 end
 

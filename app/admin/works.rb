@@ -14,18 +14,6 @@ ActiveAdmin.register Work do
     link_to "Retour sur l'index des pièces", admin_works_path
   end
 
-  # controller do
-  #   def delete_photo
-  #     work.photo.purge
-  #   end
-  # end
-
-  # member_action :delete_photo, method: :delete do
-  #  @photo = ActiveStorage::Attachment.find(params[:id])
-  #  @photo.purge_later
-  #  redirect_back(fallback_location: admin_works_path)
-  # end
-
   controller do
     def create
       super do |format|
@@ -47,7 +35,7 @@ ActiveAdmin.register Work do
   index do
     selectable_column
     column "Photo" do |work|
-      instance_image_tag work.photo, height: 150, width: 150, crop: :fill
+      handle_image_work work, height: 150, width: 150, crop: :fill
     end
     column "Pièce", sortable: :name do |work|
       link_to work.name, admin_work_path(work)
