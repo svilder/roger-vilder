@@ -3,11 +3,13 @@ require 'open-uri'
 
 #add environment safe clause
 
+strip = lambda {|f| f ? f.strip : nil}
+
 Work.destroy_all
 
 puts 'Generate Works seed data'
 csv_text = File.read(Rails.root.join('db','works.csv'))
-csv = CSV.parse(csv_text, :headers => true)
+csv = CSV.parse(csv_text, headers: true,  converters: strip)
 
 csv.each do |work|
 
