@@ -2,7 +2,7 @@
   "name": "roger-vilder",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "5.4.4",
+    "@rails/webpacker": "5.4.3",
     "bootstrap": "^4.4.1",
     "jquery": "^3.5.0",
     "particles.js": "^2.0.0",
@@ -10,5 +10,8 @@
   },
   "devDependencies": {
     "webpack-dev-server": "^3.10.1"
+  },
+  "resolutions": {
+    "node-sass": "6.0.0"
   }
 }
