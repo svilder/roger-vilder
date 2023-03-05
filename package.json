@@ -2,14 +2,16 @@
   "name": "roger-vilder",
   "private": true,
   "dependencies": {
-    "@rails/webpacker": "5.4.3",
+    "@rails/webpacker": "5.4.4",
     "bootstrap": "^4.4.1",
     "jquery": "^3.5.0",
     "particles.js": "^2.0.0",
-    "popper.js": "^1.16.0"
+    "popper.js": "^1.16.0",
+    "webpack": "^4.46.0",
+    "webpack-cli": "^3.3.12"
   },
   "devDependencies": {
-    "webpack-dev-server": "^3.10.1"
+    "webpack-dev-server": "^3"
   },
   "resolutions": {
     "node-sass": "6.0.0"
