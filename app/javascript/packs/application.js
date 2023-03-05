@@ -1,4 +1,4 @@
-import "bootstrap";
+require("bootstrap");
 // assets/particles.json
 
 // if (document.getElementById('particles-js')) {
