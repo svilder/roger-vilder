@@ -3,7 +3,7 @@
   "private": true,
   "dependencies": {
     "@rails/webpacker": "5.4.4",
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^5.2.3",
     "jquery": "^3.5.0",
     "particles.js": "^2.0.0",
     "popper.js": "^1.16.0",
