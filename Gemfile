@@ -20,11 +20,11 @@ gem 'autoprefixer-rails'
 gem 'font-awesome-sass', '~> 5.6.1'
 gem 'sassc-rails'
 gem 'simple_form', github: "heartcombo/simple_form"
+gem 'browser'
 
 # gem 'redis'
 # gem 'uglifier'
 # gem 'webpacker'
-gem 'browser'
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 # gem "image_processing", "~> 1.2"
 
