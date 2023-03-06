@@ -10,7 +10,7 @@ gem 'devise'
 gem 'devise-i18n', '~> 1.2'
 gem 'activeadmin'
 gem "jsbundling-rails"
-
+gem "sprockets-rails"
 
 gem 'jbuilder', '~> 2.0'
 gem 'bootsnap', require: false
