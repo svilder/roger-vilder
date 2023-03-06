@@ -31,8 +31,9 @@
     <meta name="twitter:creator" content="<%= DEFAULT_META["twitter_account"] %>">
     <meta name="twitter:image:src" content="<%= meta_image %>">
     <%= csrf_meta_tags %>
-    <%= action_cable_meta_tag %>
-    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
   <body>
     <% unless action_name == "home" %>
@@ -43,9 +44,6 @@
     <% unless action_name == "home" %>
       <%= render 'shared/footer' %>
     <% end %>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
     <script src="https://player.vimeo.com/api/player.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.js"></script>
   </body>
 </html>
