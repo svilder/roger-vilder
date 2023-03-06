@@ -132,8 +132,8 @@ GEM
     erubi (1.12.0)
     execjs (2.8.1)
     ffi (1.15.5)
-    font-awesome-sass (5.6.1)
-      sassc (>= 1.11)
+    font-awesome-sass (6.3.0)
+      sassc (~> 2.0)
     formtastic (4.0.0)
       actionpack (>= 5.2.0)
     formtastic_i18n (0.7.0)
@@ -327,7 +327,7 @@ DEPENDENCIES
   devise
   devise-i18n (~> 1.2)
   dotenv-rails
-  font-awesome-sass (~> 5.6.1)
+  font-awesome-sass (~> 6.1)
   jbuilder (~> 2.0)
   jsbundling-rails
   pg (~> 1.4.6)
