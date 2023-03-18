@@ -336,6 +336,7 @@ DEPENDENCIES
   sassc-rails
   selenium-webdriver
   simple_form!
+  sprockets-rails
   turbo-rails
   web-console (>= 3.3.0)
   webdrivers
