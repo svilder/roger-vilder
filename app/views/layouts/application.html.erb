@@ -33,6 +33,7 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
   <body>
     <% unless action_name == "home" %>
@@ -43,8 +44,6 @@
     <% unless action_name == "home" %>
       <%= render 'shared/footer' %>
     <% end %>
-    <%= javascript_include_tag 'application' %>
-    <%= javascript_pack_tag 'application' %>
     <script src="https://player.vimeo.com/api/player.js"></script>
   </body>
 </html>
