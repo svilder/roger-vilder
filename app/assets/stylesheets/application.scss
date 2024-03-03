@@ -3,9 +3,9 @@
 @import "config/colors";
 @import "config/bootstrap_variables";
 
-// // External libraries
-@import "font-awesome-sprockets";
-@import "font-awesome";
+// External libraries
+// @import "font-awesome-sprockets";
+// @import "font-awesome";
 
 // Your CSS partials
 @import "components/index";
@@ -14,3 +14,4 @@
 a:hover {
   text-decoration: none;
 }
+
