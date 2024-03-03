@@ -16,6 +16,7 @@
     "sass-loader": "13.3.3"
   },
   "scripts": {
-    "build": "webpack --config ./config/webpack/webpack.config.js --watch"
+    "build": "webpack --config ./config/webpack/webpack.config.js",
+    "build-dev": "webpack --config ./config/webpack/webpack.config.js --watch"
   }
 }
