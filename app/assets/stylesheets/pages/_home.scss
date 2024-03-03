@@ -71,7 +71,7 @@
     }
   }
 }
-@include media-breakpoint-only(sm) {
+@media (max-width: 1024px)  {
   .rv-title {
     color: transparent;
     font-weight: bold;
@@ -87,27 +87,4 @@
       margin: 32px;
     }
   }
-}
-@include media-breakpoint-only(md) {
-  .rv-title {
-    color: transparent;
-    font-weight: bold;
-    font-size: 4.5rem;
-    -webkit-text-stroke: 3px white;
-    letter-spacing: .2rem;
-  }
-  .content-wrapper {
-    justify-content: center;
-    img {
-      position: unset;
-      width: 128px;
-      margin: 32px;
-    }
-  }
-}
-@include media-breakpoint-only(lg) {
-
-}
-@include media-breakpoint-only(xl) {
-
 }
